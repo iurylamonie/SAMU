@@ -69,13 +69,48 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Atendente\Inicial.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\login-atendente.css" />
+    <Content Include="css\ocorrencia.css" />
+    <Content Include="css\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\mentone-semibol.svg" />
+    <Content Include="img\645dcb8246117.560b9cfebfd94.png" />
+    <Content Include="img\ambulancia.png" />
+    <Content Include="img\arrow-refresh-2-icon.png" />
+    <Content Include="img\background-login.jpg" />
+    <Content Include="img\editar.png" />
+    <Content Include="img\Editar_icon.png" />
+    <Content Include="img\excluir.png" />
+    <Content Include="img\health.png" />
+    <Content Include="img\home.png" />
+    <Content Include="img\hospitais.png" />
+    <Content Include="img\hospital-icon-7286.png" />
+    <Content Include="img\hr.png" />
+    <Content Include="img\hrcontinuo.png" />
+    <Content Include="img\icon-remote-delete.png" />
+    <Content Include="img\Indexpsd.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\mapa.png" />
+    <Content Include="img\nova_ocorrencia.png" />
+    <Content Include="img\ocorrencia.png" />
+    <Content Include="img\ocorrencias.png" />
+    <Content Include="img\placeholder-on-map-paper-in-perspective.png" />
+    <Content Include="img\prancheta.png" />
+    <Content Include="img\pranchetac.png" />
+    <Content Include="img\refresh-arrow-icon-72947.png" />
+    <Content Include="img\refresh.png" />
+    <Content Include="img\rightarrow_derecha_5813.png" />
+    <Content Include="img\sambulance.png" />
+    <Content Include="img\samu.png" />
+    <Content Include="img\setadir.png" />
+    <Content Include="img\setaesq.png" />
+    <Content Include="img\usuario.png" />
     <Content Include="js\glyphicons-halflings-regular.svg" />
-    <Content Include="Login\LoginTest.aspx" />
     <Content Include="packages.config" />
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap-theme.min.css.map" />
@@ -90,6 +125,11 @@
     <Content Include="js\glyphicons-halflings-regular.woff" />
     <Content Include="js\glyphicons-halflings-regular.woff2" />
     <Content Include="MasterPage.Master" />
+    <Content Include="img\mentone-semibol.otf" />
+    <Content Include="fonts\mentone-semibol.eot" />
+    <Content Include="fonts\mentone-semibol.otf" />
+    <Content Include="fonts\mentone-semibol.ttf" />
+    <Content Include="fonts\mentone-semibol.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -101,12 +141,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login\LoginTest.aspx.cs">
-      <DependentUpon>LoginTest.aspx</DependentUpon>
+    <Compile Include="Atendente\Inicial.aspx.cs">
+      <DependentUpon>Inicial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login\LoginTest.aspx.designer.cs">
-      <DependentUpon>LoginTest.aspx</DependentUpon>
+    <Compile Include="Atendente\Inicial.aspx.designer.cs">
+      <DependentUpon>Inicial.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
@@ -122,7 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrador\" />
-    <Folder Include="Atendente\" />
+    <Folder Include="Login\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

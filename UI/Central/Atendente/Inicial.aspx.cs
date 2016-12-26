@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Central.Login
+namespace Central.Atendente
 {
-    public partial class LoginTest : System.Web.UI.Page
+    public partial class Inicial : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
