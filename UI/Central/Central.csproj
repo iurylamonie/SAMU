@@ -70,7 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Atendente\Inicial.aspx" />
-    <Content Include="Atendente\WebFormTest.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -148,13 +147,6 @@
     </Compile>
     <Compile Include="Atendente\Inicial.aspx.designer.cs">
       <DependentUpon>Inicial.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Atendente\WebFormTest.aspx.cs">
-      <DependentUpon>WebFormTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Atendente\WebFormTest.aspx.designer.cs">
-      <DependentUpon>WebFormTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

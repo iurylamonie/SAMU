@@ -39,7 +39,7 @@
         <!--Painel de Ultimas Ocorrências e Chamados-->
 
         <div class="panel panel-default">
-
+        <!--Ocorrências-->
           <div class="panel-heading">
               <ul class="menu cf">
                 <li><p>Ocorrências recentes:</p></li>     
@@ -47,16 +47,32 @@
           </div>
             
           <div class="panel-body">
-              Ocorrências
+              <asp:DataList ID="DataListOcorrencias" runat="server" RepeatDirection="Horizontal">
+                  <ItemTemplate>
+                      <asp:Image ID="Image1" runat="server" Height="80px" ImageUrl="~/img/mapa.png" />
+                      <br />
+                      <asp:Label ID="Label1" runat="server" Text='<%# Eval("Tipo") %>' CssClass="tipoocor"></asp:Label>
+                      <br />
+                      <asp:Button ID="ButtonIr" runat="server" CommandArgument='<%# Eval("Id") %>' Text='<%# Eval("Id") %>' />
+                  </ItemTemplate>
+              </asp:DataList>
           </div>
            <div class="panel-heading">
               <ul class="menu cf">
                 <li><p>Chamados recentes:</p></li>     
               </ul>
           </div>
-            
+          <!--Chamados-->  
           <div class="panel-body">
-              Chamados
+              <asp:DataList ID="DataListChamados" runat="server" RepeatDirection="Horizontal">
+                  <ItemTemplate>
+                      <asp:Image ID="Image1" runat="server" Height="80px" ImageUrl="~/img/mapa.png" />
+                      <br />
+                      <asp:Label ID="Label1" runat="server" Text='<%# Eval("Tipo") %>' CssClass="tipoocor"></asp:Label>
+                      <br />
+                      <asp:Button ID="ButtonIr" runat="server" CommandArgument='<%# Eval("Id") %>' Text='<%# Eval("Id") %>' />
+                  </ItemTemplate>
+              </asp:DataList>
           </div>
        </div>  
 
