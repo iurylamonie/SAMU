@@ -69,6 +69,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Atendente\GerenciadorOcorrencia\NovaOcorrencia.aspx" />
+    <Content Include="Atendente\GerenciadorOcorrencia\Principal.aspx" />
     <Content Include="Atendente\Inicial.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
@@ -130,6 +132,7 @@
     <Content Include="fonts\mentone-semibol.otf" />
     <Content Include="fonts\mentone-semibol.ttf" />
     <Content Include="fonts\mentone-semibol.woff" />
+    <Content Include="Atendente\GerenciadorOcorrencia\GOMasterPage.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -141,6 +144,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atendente\GerenciadorOcorrencia\GOMasterPage.master.cs">
+      <DependentUpon>GOMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorOcorrencia\GOMasterPage.master.designer.cs">
+      <DependentUpon>GOMasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorOcorrencia\NovaOcorrencia.aspx.cs">
+      <DependentUpon>NovaOcorrencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorOcorrencia\NovaOcorrencia.aspx.designer.cs">
+      <DependentUpon>NovaOcorrencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorOcorrencia\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorOcorrencia\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Atendente\Inicial.aspx.cs">
       <DependentUpon>Inicial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
