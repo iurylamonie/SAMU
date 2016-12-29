@@ -23,7 +23,7 @@
 
           <div class="panel-body">
                 <div id="opcoes">					
-					 <a href="ocorrencia.aspx"><div id="opcao2" class="opcao">
+					 <a href="GerenciadorOcorrencia/Principal.aspx"><div id="opcao2" class="opcao">
 						<div id="imgopcao2" class="imgopcao"></div>
 						<a class="tituloopcao" href="#">Ocorrências</a>
 					</div></a>

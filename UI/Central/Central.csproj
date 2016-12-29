@@ -69,6 +69,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Atendente\GerenciadorOcorrencia\DetalharOcorrencia.aspx" />
     <Content Include="Atendente\GerenciadorOcorrencia\NovaOcorrencia.aspx" />
     <Content Include="Atendente\GerenciadorOcorrencia\Principal.aspx" />
     <Content Include="Atendente\Inicial.aspx" />
@@ -144,6 +145,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atendente\GerenciadorOcorrencia\DetalharOcorrencia.aspx.cs">
+      <DependentUpon>DetalharOcorrencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorOcorrencia\DetalharOcorrencia.aspx.designer.cs">
+      <DependentUpon>DetalharOcorrencia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Atendente\GerenciadorOcorrencia\GOMasterPage.master.cs">
       <DependentUpon>GOMasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
