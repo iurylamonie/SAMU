@@ -10,7 +10,6 @@
                 <li class="active">Gerenciador de Ocorrências</li>
             </ol>
         </div>
-        
         <div class="center">
              <div id="opcoes">
                     <div id="opcao2" class="opcao">

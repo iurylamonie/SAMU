@@ -13,7 +13,7 @@
        </div> 
 
         <!--Painel de Gerenciamento-->
-       <div class="panel panel-default">
+       <div class="panel panel-samu">
 
           <div class="panel-heading">
               <ul class="menu cf">
