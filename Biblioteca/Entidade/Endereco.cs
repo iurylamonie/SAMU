@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidade
 {
-    class Endereco
+    public class Endereco
     {
         private string cep, logradouro, complemento, bairro, localidade, uf, unidade, ibge, gia;
 
