@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SAMU">
+  <DataContextMoniker Name="/SAMUDataContext" />
+  <nestedChildShapes>
+    <classShape Id="adc4c1aa-6887-45f1-a25b-2eb0598869d1" absoluteBounds="4, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SAMUDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51a9ba28-25e4-41a4-b9e9-b5f758e7e3f8" absoluteBounds="4.0150000000000006, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26180def-3603-4359-bf53-eb7710a53466" absoluteBounds="0.5, 1.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SAMUDataContext/Ocorrencia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27edfdd2-01bb-4491-8599-a69401852222" absoluteBounds="0.51500000000000012, 1.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 2.16429768880208); (2.5 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SAMUDataContext/Usuario/Usuario_Ocorrencia" />
+      <nodes>
+        <classShapeMoniker Id="adc4c1aa-6887-45f1-a25b-2eb0598869d1" />
+        <classShapeMoniker Id="26180def-3603-4359-bf53-eb7710a53466" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

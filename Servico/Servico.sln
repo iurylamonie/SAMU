@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST", "REST\REST.csproj", "{43336ECF-8E88-4668-B8CA-AC80A3A64D82}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tabelas SQL", "Tabelas SQL", "{B6BEC837-E236-48E6-BD97-FD1FC9C7B9E0}"
+	ProjectSection(SolutionItems) = preProject
+		Tabelas SQL\dbo.Ocorrencia.sql = Tabelas SQL\dbo.Ocorrencia.sql
+		Tabelas SQL\dbo.Usuario.sql = Tabelas SQL\dbo.Usuario.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

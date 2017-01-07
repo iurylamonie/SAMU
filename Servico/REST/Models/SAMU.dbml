@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SAMU" Class="SAMUDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=IURY-NOTEBOOK\ILDEVELOPER;Initial Catalog=SAMU;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SAMUConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Usuario" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="cpf" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="senha" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Usuario_Ocorrencia" Member="Ocorrencias" ThisKey="id" OtherKey="usuario_id" Type="Ocorrencia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ocorrencia" Member="Ocorrencias">
+    <Type Name="Ocorrencia">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuario_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="nomeSolicitante" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="nomeVitima" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="quantidadeVitimas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="endereco" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="cep" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="informacaoAdicional" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacao" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Ocorrencia" Member="Usuario" AccessModifier="Internal" ThisKey="usuario_id" OtherKey="id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
