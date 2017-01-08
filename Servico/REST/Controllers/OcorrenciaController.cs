@@ -44,6 +44,17 @@ namespace REST.Controllers
         }
 
         [AcceptVerbs("GET")]
+        [Route("Consultar/{id}")]
+        public Models.Ocorrencia Consultar(int id)
+        {
+            Models.SAMUDataContext sdc = new Models.SAMUDataContext();
+            var ocorrencias = (from o in sdc.Ocorrencias
+                              where o.id == id
+                              select o).Single();
+            return ocorrencias;
+        }
+
+        [AcceptVerbs("GET")]
         [Route("ListarEmAtendimento/{usuario_id}")]
         public List<Models.Ocorrencia> ListarEmAtendimento(int usuario_id)
         {
@@ -82,7 +93,7 @@ namespace REST.Controllers
             r.cep = putOcorrencia.cep;
             r.informacaoAdicional = putOcorrencia.informacaoAdicional;
             r.tipo = putOcorrencia.tipo;
-
+            
             sdc.SubmitChanges();
         }
 

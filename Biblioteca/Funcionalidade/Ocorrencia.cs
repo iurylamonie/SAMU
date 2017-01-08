@@ -27,6 +27,16 @@ namespace Funcionalidade
             httpClient.PostAsync("api/Ocorrencia/Criar", content);
         }
 
+        static public Entidade.Ocorrencia Consultar(int _id)
+        {
+            IniciarHttp();
+            var response = httpClient.GetAsync("api/Ocorrencia/Consultar/" + _id);
+            HttpResponseMessage rm = response.Result;
+            string str = rm.Content.ReadAsStringAsync().Result;
+            var ocorrencia = JsonConvert.DeserializeObject<Entidade.Ocorrencia>(str);
+            return ocorrencia;
+        }
+
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Ocorrencia> Listar(int _usuario_id)
         {

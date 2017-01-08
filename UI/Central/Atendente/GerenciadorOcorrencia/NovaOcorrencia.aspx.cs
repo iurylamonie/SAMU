@@ -18,26 +18,10 @@ namespace Central.Atendente.GerenciadorOcorrencia
         {
             if (RadioButtonList1.SelectedValue == "CEP")
             {
-                ButtonConfirar.Enabled = true;
+                ButtonConfirar.Enabled = false;
 
                 LabelCEP.Visible = true;
                 TextBoxCEP.Visible = true;
-
-                LabelCidade.Visible = false;
-                TextBoxCidade.Visible = false;
-                LabelBairro.Visible = false;
-                TextBoxBairro.Visible = false;
-                LabelRua.Visible = false;
-                TextBoxRua.Visible = false;
-
-                LabelNumeroResidencia.Visible = true;
-                TextBoxNumeroResidencia.Visible = true;
-            }
-            else if (RadioButtonList1.SelectedValue == "Nomes")
-            {
-                ButtonConfirar.Enabled = true;
-                LabelCEP.Visible = false;
-                TextBoxCEP.Visible = false;
 
                 LabelCidade.Visible = true;
                 TextBoxCidade.Visible = true;
@@ -48,15 +32,83 @@ namespace Central.Atendente.GerenciadorOcorrencia
 
                 LabelNumeroResidencia.Visible = true;
                 TextBoxNumeroResidencia.Visible = true;
+
+                //Enabled
+
+                TextBoxCidade.Enabled = false;
+                TextBoxBairro.Enabled = false;
+                TextBoxRua.Enabled = false;
+
+                TextBoxCEP.Text = null;
+                TextBoxCidade.Text = null;
+                TextBoxBairro.Text = null;
+                TextBoxRua.Text = null;
+            }
+            else if (RadioButtonList1.SelectedValue == "Nomes")
+            {
+                ButtonConfirar.Enabled = true;
+                LabelCEP.Visible = false;
+                TextBoxCEP.Visible = false;
+                LabelAvisoCep.Visible = false;
+
+                LabelCidade.Visible = true;
+                TextBoxCidade.Visible = true;
+                LabelBairro.Visible = true;
+                TextBoxBairro.Visible = true;
+                LabelRua.Visible = true;
+                TextBoxRua.Visible = true;
+
+                LabelNumeroResidencia.Visible = true;
+                TextBoxNumeroResidencia.Visible = true;
+
+                TextBoxCidade.Enabled = true;
+                TextBoxBairro.Enabled = true;
+                TextBoxRua.Enabled = true;
+
+                TextBoxCEP.Text = null;
+                TextBoxCidade.Text = null;
+                TextBoxBairro.Text = null;
+                TextBoxRua.Text = null;
             }
         }
 
         protected void ButtonConfirar_Click(object sender, EventArgs e)
         {
-            if (RadioButtonList1.SelectedValue == "CEP")
+            Entidade.Ocorrencia ocorrencia = new Entidade.Ocorrencia
             {
+                Tipo = TextBoxTipo.Text,
+                NomeSolicitante = TextBoxNomeSolicitante.Text,
+                NomeVitima = TextBoxNomeNomeVitima.Text,
+                QuantidadeVitimas = int.Parse(TextBoxQuantidaVitimas.Text),
+                Cep = TextBoxCEP.Text,
+                Endereco = TextBoxCidade.Text + ", " + TextBoxBairro.Text + ", " + TextBoxRua.Text + ", " + TextBoxNumeroResidencia.Text,
+                InformacaoAdicional = TextBoxInfAdicional.Text,
+                Situacao = "Espera",
+                Usuario_id = 1
+            };
+            Funcionalidade.Ocorrencia.Criar(ocorrencia);
+            Response.Redirect("~/Atendente/GerenciadorOcorrencia/Principal.aspx");
 
+        }
+
+        protected void TextBoxCEP_TextChanged(object sender, EventArgs e)
+        {
+            Entidade.Endereco endereco = Funcionalidade.ViaCEP.ConsultarPorCep(TextBoxCEP.Text);
+            if (endereco.Logradouro == null)
+            {
+                LabelAvisoCep.Text = "CEP Não encontrado";
+                LabelAvisoCep.Visible = true;
+                ButtonConfirar.Enabled = false;
             }
+            else
+            {
+                ButtonConfirar.Enabled = true;
+                TextBoxCidade.Text = endereco.Localidade;
+                TextBoxBairro.Text = endereco.Bairro;
+                TextBoxRua.Text = endereco.Logradouro;
+            }
+
+
         }
 
         /*protected void TextBoxCEP_TextChanged(object sender, EventArgs e)

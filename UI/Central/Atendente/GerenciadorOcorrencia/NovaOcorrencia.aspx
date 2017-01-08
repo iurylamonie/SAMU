@@ -21,7 +21,7 @@
         <asp:ListItem Value="CEP">Informar CEP</asp:ListItem>
         <asp:ListItem Value="Nomes">Informar Nomes</asp:ListItem>
     </asp:RadioButtonList> <br />
-    <asp:Label ID="LabelCEP" runat="server" Text="CEP:" Visible="false"/> <asp:TextBox ID="TextBoxCEP" runat="server" Visible="false"/> <br />
+    <asp:Label ID="LabelCEP" runat="server" Text="CEP:" Visible="false"/> <asp:TextBox ID="TextBoxCEP" runat="server" Visible="false" AutoPostBack="True" OnTextChanged="TextBoxCEP_TextChanged"/> <asp:Label Id="LabelAvisoCep" runat="server" /><br />
     <asp:Label ID="LabelCidade" runat="server" Text="Cidade:" Visible="false"/> <asp:TextBox ID="TextBoxCidade" runat="server" Visible="false"/> <br />
     <asp:Label ID="LabelBairro" runat="server" Text="Nome da Bairro:" Visible="false"/> <asp:TextBox ID="TextBoxBairro" runat="server" Visible="false"/> <br />
     <asp:Label ID="LabelRua" runat="server" Text="Nome da Rua:" Visible="false"/> <asp:TextBox ID="TextBoxRua" runat="server" Visible="false"/> <br />

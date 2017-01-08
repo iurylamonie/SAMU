@@ -13,7 +13,7 @@ namespace Central
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["pinto"] = "rx";
         }
 
         protected void buttonGerar_Click(object sender, EventArgs e)

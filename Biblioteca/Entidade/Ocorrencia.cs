@@ -9,7 +9,7 @@ namespace Entidade
     public class Ocorrencia
     {
         private int id, usuario_id, quantidadeVitimas;
-        private string tipo, nomeSolicitante, nomeVitima, endereço, cep, informacaoAdicional, situacao;
+        private string tipo, nomeSolicitante, nomeVitima, endereco, cep, informacaoAdicional, situacao;
 
         public int Id
         {
@@ -83,16 +83,16 @@ namespace Entidade
                 nomeVitima = value;
             }
         }
-        public string Endereço
+        public string Endereco
         {
             get
             {
-                return endereço;
+                return endereco;
             }
 
             set
             {
-                endereço = value;
+                endereco = value;
             }
         }
         public string Cep

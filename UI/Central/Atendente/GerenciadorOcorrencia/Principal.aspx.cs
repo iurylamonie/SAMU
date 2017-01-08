@@ -19,6 +19,18 @@ namespace Central.Atendente.GerenciadorOcorrencia
         {
             if (e.CommandName == "Detalhar")
             {
+                string codigoOcorrencia;
+                int index = Convert.ToInt32(e.CommandArgument);
+                codigoOcorrencia = GridViewOcorrencias.Rows[index].Cells[0].Text;
+                Entidade.Ocorrencia ocorrencia = Funcionalidade.Ocorrencia.Consultar(int.Parse(codigoOcorrencia));
+                Session["idOcorrencia"] = ocorrencia.Id;
+                Session["tipoOcorrencia"] = ocorrencia.Tipo;
+                Session["nomeSolicitanteOcorrencia"] = ocorrencia.NomeSolicitante;
+                Session["nomeVitimaOcorrencia"] = ocorrencia.NomeVitima;
+                Session["quantidadeVitimasOcorrencia"] = ocorrencia.QuantidadeVitimas;
+                Session["cepOcorrencia"] = ocorrencia.Cep;
+                Session["enderecoOcorrencia"] = ocorrencia.Endereco;
+                Session["infAdicionalOcorrencia"] = ocorrencia.InformacaoAdicional;
                 Response.Redirect("~/Atendente/GerenciadorOcorrencia/DetalharOcorrencia.aspx");
             }
         }

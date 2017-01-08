@@ -27,7 +27,17 @@
                             </ul>
                         </div>
                         <div class="panel-body">
-
+                            <a class="titulosinput">Tipo de Ocorrência:</a> <asp:Label ID="LabelTipo" runat="server" /> <asp:TextBox ID="TextBoxTipo" Enabled="false" runat="server" /> <br />
+                            <a class="titulosinput">Nome do Solicitante:</a> <asp:Label ID="LabelNomeSolicitante" runat="server" />  <asp:TextBox CssClass="inputs" Enabled="false" ID="TextBoxNomeSolicitante" runat ="server" /> <br />
+                            <a class="titulosinput">Nome da(s) Vítima(s):</a> <asp:Label ID="LabelNomeVitima" runat="server" /> <asp:TextBox CssClass="inputs" Enabled="false" ID="TextBoxNomeNomeVitima" runat ="server" /> <br />
+                            <a class="titulosinput">Quantidade de Vítimas:</a> <asp:Label ID="LabelQuantidadeVitimas" runat="server" /> <asp:TextBox CssClass="inputs" Enabled="false" ID="TextBoxQuantidaVitimas" runat ="server" /> <br />               
+                            <asp:Label ID="LabelCEP" runat="server" Text="CEP:"/> <asp:Label ID="LabelCEPinf" runat="server" /> <asp:TextBox ID="TextBoxCEP" runat="server" Enabled="false"/> <br />
+                            <asp:Label ID="LabelEndereco" runat="server" Text="Endereco (Cidade, Bairro, Rua, Número):" Visible="true"/> <asp:Label ID="LabelEnderecoinf" runat="server" /><br /><asp:TextBox ID="TextBoxEndereco" runat="server" Enabled="false" TextMode="MultiLine"/> <br />                                                      
+                            <a class="titulosinput">Informação Adicional</a> <br />
+                            <asp:Label ID="LabelInfoAdicional" runat="server" />
+                            <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" Enabled="false" TextMode="MultiLine" Height="156px" Width="360px" />	  <br />  
+                            <asp:Button id="ButtonEditar" Text="Editar" runat="server" OnClick="ButtonEditar_Click"/>
+                            <asp:Button id="ButtonConfirar" runat="server" Text="Confirmar" Enabled="false" OnClick="ButtonConfirar_Click"/>
                         </div>
                     </div>                    
                 </div>

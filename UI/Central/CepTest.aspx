@@ -12,6 +12,10 @@
         <asp:Button ID="buttonGerar" runat="server" Text="Gerar" OnClick="buttonGerar_Click" />
         <br />
     <asp:Label ID="labelRua" runat="server" />
+        
+        <br />
+        <asp:Label ID="Label1" runat="server" Text='<%#Session["pinto"]%>'></asp:Label>
+
     </div>
     </form>
 </body>

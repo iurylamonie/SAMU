@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Funcionalidade
 {
-    class ViaCEP
+    public class ViaCEP
     {
         private static HttpClient httpClient;
 
@@ -20,12 +20,22 @@ namespace Funcionalidade
 
         public static Entidade.Endereco ConsultarPorCep(string _cep)
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("ws/" + _cep + "/json/");
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var endereco = JsonConvert.DeserializeObject<Entidade.Endereco>(str);
-            return endereco;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("ws/" + _cep + "/json/");
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var endereco = JsonConvert.DeserializeObject<Entidade.Endereco>(str);
+                return endereco;
+            }
+            catch (Exception)
+            {
+
+                Entidade.Endereco endereco = new Entidade.Endereco();
+                return endereco;
+            }
+            
         }
     }
 }

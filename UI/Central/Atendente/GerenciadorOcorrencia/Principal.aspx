@@ -34,20 +34,20 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrencias" CssClass="table table-condensed" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceTest" AllowPaging="True" HorizontalAlign="Center" OnRowCommand="GridViewOcorrencias_RowCommand">
+                      <asp:GridView ID="GridViewOcorrencias" CssClass="table table-condensed" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarOcorrencia" AllowPaging="True" HorizontalAlign="Center" OnRowCommand="GridViewOcorrencias_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
-                              <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
-                              <asp:BoundField DataField="NomeSolicitante" HeaderText="Nome do Solicitante" SortExpression="NomeSolicitante" />
-                              <asp:ButtonField Text="Detalhar" CommandName="Detalhar">
-                              <ControlStyle CssClass="btn btn-info" />
-                              </asp:ButtonField>
-                              <asp:ButtonField Text="Remover" CommandName="Remover">
-                              <ControlStyle CssClass="btn btn-danger" />
-                              </asp:ButtonField>
+                              <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
+                              <asp:BoundField DataField="Situacao" HeaderText="Situação" SortExpression="Situacao" />
+                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                              <asp:ButtonField CommandName="Excluir" Text="Excluir" />
                           </Columns>
                       </asp:GridView>
-                      <asp:ObjectDataSource ID="ObjectDataSourceTest" runat="server" SelectMethod="Listar" TypeName="Central.Atendente.GerenciadorOcorrencia.Ocorrencia"></asp:ObjectDataSource>
+                      <asp:ObjectDataSource ID="ObjectDataSourceListarOcorrencia" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Ocorrencia">
+                          <SelectParameters>
+                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                          </SelectParameters>
+                      </asp:ObjectDataSource>
                   </div>
            
               </div>  
@@ -63,7 +63,19 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrenciaSemChamado" runat="server"></asp:GridView>
+                      <asp:GridView ID="GridViewOcorrenciaSemChamado" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarSemChamado">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
+                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                              <asp:ButtonField CommandName="Excluir" Text="Excluir" />
+                          </Columns>
+                      </asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceListarSemChamado" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">
+                          <SelectParameters>
+                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                          </SelectParameters>
+                      </asp:ObjectDataSource>
                   </div>
            
               </div> 
@@ -79,7 +91,18 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrenciasFinalizadas" runat="server"></asp:GridView>
+                      <asp:GridView ID="GridViewOcorrenciasFinalizadas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceFinalizados">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
+                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                          </Columns>
+                      </asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceFinalizados" runat="server" SelectMethod="ListarFinalizados" TypeName="Funcionalidade.Ocorrencia">
+                          <SelectParameters>
+                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                          </SelectParameters>
+                      </asp:ObjectDataSource>
                   </div>
            
               </div> 
