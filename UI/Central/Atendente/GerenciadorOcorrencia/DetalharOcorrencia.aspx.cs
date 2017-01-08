@@ -12,33 +12,44 @@ namespace Central.Atendente.GerenciadorOcorrencia
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            LabelNumeroOcorrencia.Text = "Ocorrência Numero " + Session["idOcorrencia"].ToString();
+           /* LabelNumeroOcorrencia.Text = "Ocorrência Numero " + Session["idOcorrencia"].ToString();
             LabelTipo.Text = Session["tipoOcorrencia"].ToString();
             LabelNomeSolicitante.Text = Session["nomeSolicitanteOcorrencia"].ToString();
             LabelNomeVitima.Text = Session["nomeVitimaOcorrencia"].ToString();
             LabelQuantidadeVitimas.Text = Session["quantidadeVitimasOcorrencia"].ToString();
             LabelCEPinf.Text = Session["cepOcorrencia"].ToString();
             LabelEnderecoinf.Text = Session["enderecoOcorrencia"].ToString();
-            LabelInfoAdicional.Text = Session["infAdicionalOcorrencia"].ToString();
+            LabelInfoAdicional.Text = Session["infAdicionalOcorrencia"].ToString();*/
+            if (!IsPostBack)
+            {
+                LabelNumeroOcorrencia.Text = "Ocorrência Numero " + Session["idOcorrencia"].ToString();
+                TextBoxTipo.Text = Session["tipoOcorrencia"].ToString();
+                TextBoxNomeSolicitante.Text = Session["nomeSolicitanteOcorrencia"].ToString();
+                TextBoxNomeNomeVitima.Text = Session["nomeVitimaOcorrencia"].ToString();
+                TextBoxQuantidaVitimas.Text = Session["quantidadeVitimasOcorrencia"].ToString();
+                TextBoxCEP.Text = Session["cepOcorrencia"].ToString();
+                TextBoxEndereco.Text = Session["enderecoOcorrencia"].ToString();
+                TextBoxInfAdicional.Text = Session["infAdicionalOcorrencia"].ToString();
+            }
         }
 
         protected void ButtonEditar_Click(object sender, EventArgs e)
         {
-            TextBoxTipo.Text = LabelTipo.Text;
+            /*TextBoxTipo.Text = LabelTipo.Text;
             TextBoxNomeSolicitante.Text = LabelNomeSolicitante.Text;
             TextBoxNomeNomeVitima.Text = LabelNomeVitima.Text;
             TextBoxQuantidaVitimas.Text = LabelQuantidadeVitimas.Text;
             TextBoxCEP.Text = LabelCEPinf.Text;
             TextBoxEndereco.Text = LabelEnderecoinf.Text;
-            TextBoxInfAdicional.Text = LabelInfoAdicional.Text;
+            TextBoxInfAdicional.Text = LabelInfoAdicional.Text;*/
 
-            LabelTipo.Visible = false;
+           /* LabelTipo.Visible = false;
             LabelNomeSolicitante.Visible = false;
             LabelNomeVitima.Visible = false;
             LabelQuantidadeVitimas.Visible = false;
             LabelCEPinf.Visible = false;
             LabelEnderecoinf.Visible = false;
-            LabelInfoAdicional.Visible = false;
+            LabelInfoAdicional.Visible = false;*/
 
             TextBoxTipo.Visible = true;
             TextBoxNomeSolicitante.Visible = true;
@@ -82,6 +93,15 @@ namespace Central.Atendente.GerenciadorOcorrencia
             Session["cepOcorrencia"] = ocorrencia.Cep;
             Session["enderecoOcorrencia"] = ocorrencia.Endereco;
             Session["infAdicionalOcorrencia"] = ocorrencia.InformacaoAdicional;
+
+            LabelNumeroOcorrencia.Text = "Ocorrência Numero " + Session["idOcorrencia"].ToString();
+            TextBoxTipo.Text = Session["tipoOcorrencia"].ToString();
+            TextBoxNomeSolicitante.Text = Session["nomeSolicitanteOcorrencia"].ToString();
+            TextBoxNomeNomeVitima.Text = Session["nomeVitimaOcorrencia"].ToString();
+            TextBoxQuantidaVitimas.Text = Session["quantidadeVitimasOcorrencia"].ToString();
+            TextBoxCEP.Text = Session["cepOcorrencia"].ToString();
+            TextBoxEndereco.Text = Session["enderecoOcorrencia"].ToString();
+            TextBoxInfAdicional.Text = Session["infAdicionalOcorrencia"].ToString();
 
             ButtonEditar.Enabled = true;
             ButtonConfirar.Enabled = false;

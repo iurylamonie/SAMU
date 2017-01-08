@@ -33,6 +33,14 @@ namespace Central.Atendente.GerenciadorOcorrencia
                 Session["infAdicionalOcorrencia"] = ocorrencia.InformacaoAdicional;
                 Response.Redirect("~/Atendente/GerenciadorOcorrencia/DetalharOcorrencia.aspx");
             }
+            else if (e.CommandName == "Excluir")
+            {
+                string codigoOcorrencia;
+                int index = Convert.ToInt32(e.CommandArgument);
+                codigoOcorrencia = GridViewOcorrencias.Rows[index].Cells[0].Text;
+                Funcionalidade.Ocorrencia.DeletarOcorrencia(int.Parse(codigoOcorrencia));                
+            }
+
         }
     }
     //Classe criada apenas para ver como iria ficar a tabela
