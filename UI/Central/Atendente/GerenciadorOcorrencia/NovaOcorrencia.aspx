@@ -29,5 +29,9 @@
     <a class="titulosinput">Informação Adicional</a> <br />
     <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" TextMode="MultiLine" Height="156px" Width="360px" />	  <br />  
     <asp:Button id="ButtonLimpar" Text="Limpar" runat="server"/>
-    <asp:Button id="ButtonConfirar" runat="server" Text="Confirmar" Enabled="false" OnClick="ButtonConfirar_Click"/>
+    <asp:Button id="ButtonConfirar" runat="server" Text="Confirmar" Enabled="false" OnClick="ButtonConfirar_Click"/><br />
+
+    <asp:Label ID="LabelChamado" runat="server"  Text="Deseja Realizar um Chamado?" Visible="false"/><br />
+    <asp:Button ID="ButtonSim" runat="server" Text="Sim" visible="false"/>
+    <asp:Button ID="ButtonNao" runat="server" Text="Não" visible="false"/>
 </asp:Content>

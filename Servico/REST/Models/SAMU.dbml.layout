@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SAMU">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 8.5" name="SAMU">
   <DataContextMoniker Name="/SAMUDataContext" />
   <nestedChildShapes>
     <classShape Id="adc4c1aa-6887-45f1-a25b-2eb0598869d1" absoluteBounds="4, 1.375, 2, 1.5785953776041666">
@@ -19,6 +19,65 @@
       <nodes>
         <classShapeMoniker Id="adc4c1aa-6887-45f1-a25b-2eb0598869d1" />
         <classShapeMoniker Id="26180def-3603-4359-bf53-eb7710a53466" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21f47f58-acde-4a77-ab8c-ac817c61ac8d" absoluteBounds="6.75, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SAMUDataContext/Hospital" />
+      <nestedChildShapes>
+        <elementListCompartment Id="566f4974-7db1-404e-9374-50066c10eadc" absoluteBounds="6.765, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be76f95f-ba0c-4a8d-a6ac-30e584ed59d8" absoluteBounds="6.75, 1.125, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/SAMUDataContext/VeiculoAtendimento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d70c01a5-f4e1-44fd-bbee-a6f17384beb4" absoluteBounds="6.765, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe50198e-47aa-4675-b7e9-a54db8e2f60c" absoluteBounds="4, 5.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SAMUDataContext/Ambulancia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4f1858f-b01c-49bf-98b2-ee5ada8402e7" absoluteBounds="4.015, 5.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70e7ef2b-60c7-4644-8787-1af01a088bed" absoluteBounds="9.5, 1.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SAMUDataContext/Chamado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66be455c-a459-4011-a931-ecf8b3ce0bf3" absoluteBounds="9.515, 1.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 2.16429768880208); (6.29166666666667 : 2.16429768880208 : JumpStart); (6.45833333333333 : 2.16429768880208 : JumpEnd); (6.75 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SAMUDataContext/Usuario/Usuario_VeiculoAtendimento" />
+      <nodes>
+        <classShapeMoniker Id="adc4c1aa-6887-45f1-a25b-2eb0598869d1" />
+        <classShapeMoniker Id="be76f95f-ba0c-4a8d-a6ac-30e584ed59d8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6 : 5.5); (6.375 : 5.125); (6.375 : 1.61339684440104); (6.75 : 1.61339684440104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SAMUDataContext/Ambulancia/Ambulancia_VeiculoAtendimento" />
+      <nodes>
+        <classShapeMoniker Id="fe50198e-47aa-4675-b7e9-a54db8e2f60c" />
+        <classShapeMoniker Id="be76f95f-ba0c-4a8d-a6ac-30e584ed59d8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 6.53929768880208); (10.5 : 6.53929768880208); (10.5 : 3.53049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SAMUDataContext/Hospital/Hospital_Chamado" />
+      <nodes>
+        <classShapeMoniker Id="21f47f58-acde-4a77-ab8c-ac817c61ac8d" />
+        <classShapeMoniker Id="70e7ef2b-60c7-4644-8787-1af01a088bed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.34059895833333); (6.29166666666667 : 3.34059895833333 : JumpStart); (6.45833333333333 : 3.34059895833333 : JumpEnd); (9.5 : 3.34059895833333)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SAMUDataContext/Ocorrencia/Ocorrencia_Chamado" />
+      <nodes>
+        <classShapeMoniker Id="26180def-3603-4359-bf53-eb7710a53466" />
+        <classShapeMoniker Id="70e7ef2b-60c7-4644-8787-1af01a088bed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 2.23159912109375); (9.5 : 2.23159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SAMUDataContext/VeiculoAtendimento/VeiculoAtendimento_Chamado" />
+      <nodes>
+        <classShapeMoniker Id="be76f95f-ba0c-4a8d-a6ac-30e584ed59d8" />
+        <classShapeMoniker Id="70e7ef2b-60c7-4644-8787-1af01a088bed" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

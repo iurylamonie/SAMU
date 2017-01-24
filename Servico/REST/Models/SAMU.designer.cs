@@ -36,6 +36,18 @@ namespace REST.Models
     partial void InsertOcorrencia(Ocorrencia instance);
     partial void UpdateOcorrencia(Ocorrencia instance);
     partial void DeleteOcorrencia(Ocorrencia instance);
+    partial void InsertHospital(Hospital instance);
+    partial void UpdateHospital(Hospital instance);
+    partial void DeleteHospital(Hospital instance);
+    partial void InsertVeiculoAtendimento(VeiculoAtendimento instance);
+    partial void UpdateVeiculoAtendimento(VeiculoAtendimento instance);
+    partial void DeleteVeiculoAtendimento(VeiculoAtendimento instance);
+    partial void InsertAmbulancia(Ambulancia instance);
+    partial void UpdateAmbulancia(Ambulancia instance);
+    partial void DeleteAmbulancia(Ambulancia instance);
+    partial void InsertChamado(Chamado instance);
+    partial void UpdateChamado(Chamado instance);
+    partial void DeleteChamado(Chamado instance);
     #endregion
 		
 		public SAMUDataContext() : 
@@ -83,6 +95,38 @@ namespace REST.Models
 				return this.GetTable<Ocorrencia>();
 			}
 		}
+		
+		public System.Data.Linq.Table<Hospital> Hospitals
+		{
+			get
+			{
+				return this.GetTable<Hospital>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VeiculoAtendimento> VeiculoAtendimentos
+		{
+			get
+			{
+				return this.GetTable<VeiculoAtendimento>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Ambulancia> Ambulancias
+		{
+			get
+			{
+				return this.GetTable<Ambulancia>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Chamado> Chamados
+		{
+			get
+			{
+				return this.GetTable<Chamado>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usuario")]
@@ -101,6 +145,8 @@ namespace REST.Models
 		
 		private EntitySet<Ocorrencia> _Ocorrencias;
 		
+		private EntitySet<VeiculoAtendimento> _VeiculoAtendimentos;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -118,6 +164,7 @@ namespace REST.Models
 		public Usuario()
 		{
 			this._Ocorrencias = new EntitySet<Ocorrencia>(new Action<Ocorrencia>(this.attach_Ocorrencias), new Action<Ocorrencia>(this.detach_Ocorrencias));
+			this._VeiculoAtendimentos = new EntitySet<VeiculoAtendimento>(new Action<VeiculoAtendimento>(this.attach_VeiculoAtendimentos), new Action<VeiculoAtendimento>(this.detach_VeiculoAtendimentos));
 			OnCreated();
 		}
 		
@@ -214,6 +261,19 @@ namespace REST.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Usuario_id")]
+		public EntitySet<VeiculoAtendimento> VeiculoAtendimentos
+		{
+			get
+			{
+				return this._VeiculoAtendimentos;
+			}
+			set
+			{
+				this._VeiculoAtendimentos.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -241,6 +301,18 @@ namespace REST.Models
 		}
 		
 		private void detach_Ocorrencias(Ocorrencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuario = null;
+		}
+		
+		private void attach_VeiculoAtendimentos(VeiculoAtendimento entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuario = this;
+		}
+		
+		private void detach_VeiculoAtendimentos(VeiculoAtendimento entity)
 		{
 			this.SendPropertyChanging();
 			entity.Usuario = null;
@@ -273,6 +345,8 @@ namespace REST.Models
 		
 		private string _situacao;
 		
+		private EntitySet<Chamado> _Chamados;
+		
 		private EntityRef<Usuario> _Usuario;
 		
     #region Extensibility Method Definitions
@@ -303,6 +377,7 @@ namespace REST.Models
 		
 		public Ocorrencia()
 		{
+			this._Chamados = new EntitySet<Chamado>(new Action<Chamado>(this.attach_Chamados), new Action<Chamado>(this.detach_Chamados));
 			this._Usuario = default(EntityRef<Usuario>);
 			OnCreated();
 		}
@@ -511,6 +586,19 @@ namespace REST.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ocorrencia_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="Ocorrencia_id")]
+		public EntitySet<Chamado> Chamados
+		{
+			get
+			{
+				return this._Chamados;
+			}
+			set
+			{
+				this._Chamados.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Ocorrencia", Storage="_Usuario", ThisKey="usuario_id", OtherKey="id", IsForeignKey=true)]
 		internal Usuario Usuario
 		{
@@ -541,6 +629,939 @@ namespace REST.Models
 						this._usuario_id = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Usuario");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Chamados(Chamado entity)
+		{
+			this.SendPropertyChanging();
+			entity.Ocorrencia = this;
+		}
+		
+		private void detach_Chamados(Chamado entity)
+		{
+			this.SendPropertyChanging();
+			entity.Ocorrencia = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hospital")]
+	public partial class Hospital : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _nome;
+		
+		private string _endereco;
+		
+		private string _tipo;
+		
+		private EntitySet<Chamado> _Chamados;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnnomeChanging(string value);
+    partial void OnnomeChanged();
+    partial void OnenderecoChanging(string value);
+    partial void OnenderecoChanged();
+    partial void OntipoChanging(string value);
+    partial void OntipoChanged();
+    #endregion
+		
+		public Hospital()
+		{
+			this._Chamados = new EntitySet<Chamado>(new Action<Chamado>(this.attach_Chamados), new Action<Chamado>(this.detach_Chamados));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string nome
+		{
+			get
+			{
+				return this._nome;
+			}
+			set
+			{
+				if ((this._nome != value))
+				{
+					this.OnnomeChanging(value);
+					this.SendPropertyChanging();
+					this._nome = value;
+					this.SendPropertyChanged("nome");
+					this.OnnomeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_endereco", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string endereco
+		{
+			get
+			{
+				return this._endereco;
+			}
+			set
+			{
+				if ((this._endereco != value))
+				{
+					this.OnenderecoChanging(value);
+					this.SendPropertyChanging();
+					this._endereco = value;
+					this.SendPropertyChanged("endereco");
+					this.OnenderecoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipo", DbType="VarChar(MAX)")]
+		public string tipo
+		{
+			get
+			{
+				return this._tipo;
+			}
+			set
+			{
+				if ((this._tipo != value))
+				{
+					this.OntipoChanging(value);
+					this.SendPropertyChanging();
+					this._tipo = value;
+					this.SendPropertyChanged("tipo");
+					this.OntipoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hospital_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="Hospital_id")]
+		public EntitySet<Chamado> Chamados
+		{
+			get
+			{
+				return this._Chamados;
+			}
+			set
+			{
+				this._Chamados.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Chamados(Chamado entity)
+		{
+			this.SendPropertyChanging();
+			entity.Hospital = this;
+		}
+		
+		private void detach_Chamados(Chamado entity)
+		{
+			this.SendPropertyChanging();
+			entity.Hospital = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VeiculoAtendimento")]
+	public partial class VeiculoAtendimento : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private System.Nullable<int> _Ambulancia_id;
+		
+		private System.Nullable<int> _Usuario_id;
+		
+		private System.Nullable<bool> _atendimento;
+		
+		private string _localizacao;
+		
+		private System.Nullable<bool> _disponibilidade;
+		
+		private EntitySet<Chamado> _Chamados;
+		
+		private EntityRef<Usuario> _Usuario;
+		
+		private EntityRef<Ambulancia> _Ambulancia;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnAmbulancia_idChanging(System.Nullable<int> value);
+    partial void OnAmbulancia_idChanged();
+    partial void OnUsuario_idChanging(System.Nullable<int> value);
+    partial void OnUsuario_idChanged();
+    partial void OnatendimentoChanging(System.Nullable<bool> value);
+    partial void OnatendimentoChanged();
+    partial void OnlocalizacaoChanging(string value);
+    partial void OnlocalizacaoChanged();
+    partial void OndisponibilidadeChanging(System.Nullable<bool> value);
+    partial void OndisponibilidadeChanged();
+    #endregion
+		
+		public VeiculoAtendimento()
+		{
+			this._Chamados = new EntitySet<Chamado>(new Action<Chamado>(this.attach_Chamados), new Action<Chamado>(this.detach_Chamados));
+			this._Usuario = default(EntityRef<Usuario>);
+			this._Ambulancia = default(EntityRef<Ambulancia>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ambulancia_id", DbType="Int")]
+		public System.Nullable<int> Ambulancia_id
+		{
+			get
+			{
+				return this._Ambulancia_id;
+			}
+			set
+			{
+				if ((this._Ambulancia_id != value))
+				{
+					if (this._Ambulancia.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnAmbulancia_idChanging(value);
+					this.SendPropertyChanging();
+					this._Ambulancia_id = value;
+					this.SendPropertyChanged("Ambulancia_id");
+					this.OnAmbulancia_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usuario_id", DbType="Int")]
+		public System.Nullable<int> Usuario_id
+		{
+			get
+			{
+				return this._Usuario_id;
+			}
+			set
+			{
+				if ((this._Usuario_id != value))
+				{
+					if (this._Usuario.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnUsuario_idChanging(value);
+					this.SendPropertyChanging();
+					this._Usuario_id = value;
+					this.SendPropertyChanged("Usuario_id");
+					this.OnUsuario_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_atendimento", DbType="Bit")]
+		public System.Nullable<bool> atendimento
+		{
+			get
+			{
+				return this._atendimento;
+			}
+			set
+			{
+				if ((this._atendimento != value))
+				{
+					this.OnatendimentoChanging(value);
+					this.SendPropertyChanging();
+					this._atendimento = value;
+					this.SendPropertyChanged("atendimento");
+					this.OnatendimentoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_localizacao", DbType="VarChar(MAX)")]
+		public string localizacao
+		{
+			get
+			{
+				return this._localizacao;
+			}
+			set
+			{
+				if ((this._localizacao != value))
+				{
+					this.OnlocalizacaoChanging(value);
+					this.SendPropertyChanging();
+					this._localizacao = value;
+					this.SendPropertyChanged("localizacao");
+					this.OnlocalizacaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_disponibilidade", DbType="Bit")]
+		public System.Nullable<bool> disponibilidade
+		{
+			get
+			{
+				return this._disponibilidade;
+			}
+			set
+			{
+				if ((this._disponibilidade != value))
+				{
+					this.OndisponibilidadeChanging(value);
+					this.SendPropertyChanging();
+					this._disponibilidade = value;
+					this.SendPropertyChanged("disponibilidade");
+					this.OndisponibilidadeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VeiculoAtendimento_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="VeiculoAtendimento_id")]
+		public EntitySet<Chamado> Chamados
+		{
+			get
+			{
+				return this._Chamados;
+			}
+			set
+			{
+				this._Chamados.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_VeiculoAtendimento", Storage="_Usuario", ThisKey="Usuario_id", OtherKey="id", IsForeignKey=true)]
+		internal Usuario Usuario
+		{
+			get
+			{
+				return this._Usuario.Entity;
+			}
+			set
+			{
+				Usuario previousValue = this._Usuario.Entity;
+				if (((previousValue != value) 
+							|| (this._Usuario.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usuario.Entity = null;
+						previousValue.VeiculoAtendimentos.Remove(this);
+					}
+					this._Usuario.Entity = value;
+					if ((value != null))
+					{
+						value.VeiculoAtendimentos.Add(this);
+						this._Usuario_id = value.id;
+					}
+					else
+					{
+						this._Usuario_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Usuario");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_Ambulancia", ThisKey="Ambulancia_id", OtherKey="id", IsForeignKey=true)]
+		internal Ambulancia Ambulancia
+		{
+			get
+			{
+				return this._Ambulancia.Entity;
+			}
+			set
+			{
+				Ambulancia previousValue = this._Ambulancia.Entity;
+				if (((previousValue != value) 
+							|| (this._Ambulancia.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Ambulancia.Entity = null;
+						previousValue.VeiculoAtendimentos.Remove(this);
+					}
+					this._Ambulancia.Entity = value;
+					if ((value != null))
+					{
+						value.VeiculoAtendimentos.Add(this);
+						this._Ambulancia_id = value.id;
+					}
+					else
+					{
+						this._Ambulancia_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Ambulancia");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Chamados(Chamado entity)
+		{
+			this.SendPropertyChanging();
+			entity.VeiculoAtendimento = this;
+		}
+		
+		private void detach_Chamados(Chamado entity)
+		{
+			this.SendPropertyChanging();
+			entity.VeiculoAtendimento = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ambulancia")]
+	public partial class Ambulancia : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _placa;
+		
+		private string _tipo;
+		
+		private EntitySet<VeiculoAtendimento> _VeiculoAtendimentos;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnplacaChanging(string value);
+    partial void OnplacaChanged();
+    partial void OntipoChanging(string value);
+    partial void OntipoChanged();
+    #endregion
+		
+		public Ambulancia()
+		{
+			this._VeiculoAtendimentos = new EntitySet<VeiculoAtendimento>(new Action<VeiculoAtendimento>(this.attach_VeiculoAtendimentos), new Action<VeiculoAtendimento>(this.detach_VeiculoAtendimentos));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_placa", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string placa
+		{
+			get
+			{
+				return this._placa;
+			}
+			set
+			{
+				if ((this._placa != value))
+				{
+					this.OnplacaChanging(value);
+					this.SendPropertyChanging();
+					this._placa = value;
+					this.SendPropertyChanged("placa");
+					this.OnplacaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipo", DbType="VarChar(MAX)")]
+		public string tipo
+		{
+			get
+			{
+				return this._tipo;
+			}
+			set
+			{
+				if ((this._tipo != value))
+				{
+					this.OntipoChanging(value);
+					this.SendPropertyChanging();
+					this._tipo = value;
+					this.SendPropertyChanged("tipo");
+					this.OntipoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Ambulancia_id")]
+		public EntitySet<VeiculoAtendimento> VeiculoAtendimentos
+		{
+			get
+			{
+				return this._VeiculoAtendimentos;
+			}
+			set
+			{
+				this._VeiculoAtendimentos.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_VeiculoAtendimentos(VeiculoAtendimento entity)
+		{
+			this.SendPropertyChanging();
+			entity.Ambulancia = this;
+		}
+		
+		private void detach_VeiculoAtendimentos(VeiculoAtendimento entity)
+		{
+			this.SendPropertyChanging();
+			entity.Ambulancia = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Chamado")]
+	public partial class Chamado : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private System.Nullable<int> _Ocorrencia_id;
+		
+		private System.Nullable<int> _VeiculoAtendimento_id;
+		
+		private System.Nullable<int> _Hospital_id;
+		
+		private string _trajetoOcorrencia;
+		
+		private string _trajetoHospital;
+		
+		private string _situacao;
+		
+		private EntityRef<Hospital> _Hospital;
+		
+		private EntityRef<Ocorrencia> _Ocorrencia;
+		
+		private EntityRef<VeiculoAtendimento> _VeiculoAtendimento;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnOcorrencia_idChanging(System.Nullable<int> value);
+    partial void OnOcorrencia_idChanged();
+    partial void OnVeiculoAtendimento_idChanging(System.Nullable<int> value);
+    partial void OnVeiculoAtendimento_idChanged();
+    partial void OnHospital_idChanging(System.Nullable<int> value);
+    partial void OnHospital_idChanged();
+    partial void OntrajetoOcorrenciaChanging(string value);
+    partial void OntrajetoOcorrenciaChanged();
+    partial void OntrajetoHospitalChanging(string value);
+    partial void OntrajetoHospitalChanged();
+    partial void OnsituacaoChanging(string value);
+    partial void OnsituacaoChanged();
+    #endregion
+		
+		public Chamado()
+		{
+			this._Hospital = default(EntityRef<Hospital>);
+			this._Ocorrencia = default(EntityRef<Ocorrencia>);
+			this._VeiculoAtendimento = default(EntityRef<VeiculoAtendimento>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ocorrencia_id", DbType="Int")]
+		public System.Nullable<int> Ocorrencia_id
+		{
+			get
+			{
+				return this._Ocorrencia_id;
+			}
+			set
+			{
+				if ((this._Ocorrencia_id != value))
+				{
+					if (this._Ocorrencia.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnOcorrencia_idChanging(value);
+					this.SendPropertyChanging();
+					this._Ocorrencia_id = value;
+					this.SendPropertyChanged("Ocorrencia_id");
+					this.OnOcorrencia_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VeiculoAtendimento_id", DbType="Int")]
+		public System.Nullable<int> VeiculoAtendimento_id
+		{
+			get
+			{
+				return this._VeiculoAtendimento_id;
+			}
+			set
+			{
+				if ((this._VeiculoAtendimento_id != value))
+				{
+					if (this._VeiculoAtendimento.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnVeiculoAtendimento_idChanging(value);
+					this.SendPropertyChanging();
+					this._VeiculoAtendimento_id = value;
+					this.SendPropertyChanged("VeiculoAtendimento_id");
+					this.OnVeiculoAtendimento_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hospital_id", DbType="Int")]
+		public System.Nullable<int> Hospital_id
+		{
+			get
+			{
+				return this._Hospital_id;
+			}
+			set
+			{
+				if ((this._Hospital_id != value))
+				{
+					if (this._Hospital.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnHospital_idChanging(value);
+					this.SendPropertyChanging();
+					this._Hospital_id = value;
+					this.SendPropertyChanged("Hospital_id");
+					this.OnHospital_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_trajetoOcorrencia", DbType="VarChar(MAX)")]
+		public string trajetoOcorrencia
+		{
+			get
+			{
+				return this._trajetoOcorrencia;
+			}
+			set
+			{
+				if ((this._trajetoOcorrencia != value))
+				{
+					this.OntrajetoOcorrenciaChanging(value);
+					this.SendPropertyChanging();
+					this._trajetoOcorrencia = value;
+					this.SendPropertyChanged("trajetoOcorrencia");
+					this.OntrajetoOcorrenciaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_trajetoHospital", DbType="VarChar(MAX)")]
+		public string trajetoHospital
+		{
+			get
+			{
+				return this._trajetoHospital;
+			}
+			set
+			{
+				if ((this._trajetoHospital != value))
+				{
+					this.OntrajetoHospitalChanging(value);
+					this.SendPropertyChanging();
+					this._trajetoHospital = value;
+					this.SendPropertyChanged("trajetoHospital");
+					this.OntrajetoHospitalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacao", DbType="VarChar(MAX)")]
+		public string situacao
+		{
+			get
+			{
+				return this._situacao;
+			}
+			set
+			{
+				if ((this._situacao != value))
+				{
+					this.OnsituacaoChanging(value);
+					this.SendPropertyChanging();
+					this._situacao = value;
+					this.SendPropertyChanged("situacao");
+					this.OnsituacaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hospital_Chamado", Storage="_Hospital", ThisKey="Hospital_id", OtherKey="id", IsForeignKey=true)]
+		internal Hospital Hospital
+		{
+			get
+			{
+				return this._Hospital.Entity;
+			}
+			set
+			{
+				Hospital previousValue = this._Hospital.Entity;
+				if (((previousValue != value) 
+							|| (this._Hospital.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Hospital.Entity = null;
+						previousValue.Chamados.Remove(this);
+					}
+					this._Hospital.Entity = value;
+					if ((value != null))
+					{
+						value.Chamados.Add(this);
+						this._Hospital_id = value.id;
+					}
+					else
+					{
+						this._Hospital_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Hospital");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ocorrencia_Chamado", Storage="_Ocorrencia", ThisKey="Ocorrencia_id", OtherKey="id", IsForeignKey=true)]
+		internal Ocorrencia Ocorrencia
+		{
+			get
+			{
+				return this._Ocorrencia.Entity;
+			}
+			set
+			{
+				Ocorrencia previousValue = this._Ocorrencia.Entity;
+				if (((previousValue != value) 
+							|| (this._Ocorrencia.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Ocorrencia.Entity = null;
+						previousValue.Chamados.Remove(this);
+					}
+					this._Ocorrencia.Entity = value;
+					if ((value != null))
+					{
+						value.Chamados.Add(this);
+						this._Ocorrencia_id = value.id;
+					}
+					else
+					{
+						this._Ocorrencia_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Ocorrencia");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VeiculoAtendimento_Chamado", Storage="_VeiculoAtendimento", ThisKey="VeiculoAtendimento_id", OtherKey="id", IsForeignKey=true)]
+		internal VeiculoAtendimento VeiculoAtendimento
+		{
+			get
+			{
+				return this._VeiculoAtendimento.Entity;
+			}
+			set
+			{
+				VeiculoAtendimento previousValue = this._VeiculoAtendimento.Entity;
+				if (((previousValue != value) 
+							|| (this._VeiculoAtendimento.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._VeiculoAtendimento.Entity = null;
+						previousValue.Chamados.Remove(this);
+					}
+					this._VeiculoAtendimento.Entity = value;
+					if ((value != null))
+					{
+						value.Chamados.Add(this);
+						this._VeiculoAtendimento_id = value.id;
+					}
+					else
+					{
+						this._VeiculoAtendimento_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("VeiculoAtendimento");
 				}
 			}
 		}
