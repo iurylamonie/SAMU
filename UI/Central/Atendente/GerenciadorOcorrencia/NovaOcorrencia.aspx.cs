@@ -87,7 +87,10 @@ namespace Central.Atendente.GerenciadorOcorrencia
                 Usuario_id = 1
             };
             Funcionalidade.Ocorrencia.Criar(ocorrencia);
-            Response.Redirect("~/Atendente/GerenciadorOcorrencia/Principal.aspx");
+            LabelChamado.Visible = true;
+            ButtonSim.Visible = true;
+            ButtonNao.Visible = true;
+            
 
         }
 
@@ -108,6 +111,19 @@ namespace Central.Atendente.GerenciadorOcorrencia
                 TextBoxRua.Text = endereco.Logradouro;
             }
 
+
+        }
+
+        protected void ButtonNao_Click(object sender, EventArgs e)
+        {
+            LabelChamado.Visible = false;
+            ButtonSim.Visible = false;
+            ButtonNao.Visible = false;
+            Response.Redirect("~/Atendente/GerenciadorOcorrencia/Principal.aspx");
+        }
+
+        protected void ButtonSim_Click(object sender, EventArgs e)
+        {
 
         }
 

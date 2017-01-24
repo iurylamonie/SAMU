@@ -32,6 +32,6 @@
     <asp:Button id="ButtonConfirar" runat="server" Text="Confirmar" Enabled="false" OnClick="ButtonConfirar_Click"/><br />
 
     <asp:Label ID="LabelChamado" runat="server"  Text="Deseja Realizar um Chamado?" Visible="false"/><br />
-    <asp:Button ID="ButtonSim" runat="server" Text="Sim" visible="false"/>
-    <asp:Button ID="ButtonNao" runat="server" Text="Não" visible="false"/>
+    <asp:Button ID="ButtonSim" runat="server" Text="Sim" visible="false" OnClick="ButtonSim_Click"/>
+    <asp:Button ID="ButtonNao" runat="server" Text="Não" visible="false" OnClick="ButtonNao_Click"/>
 </asp:Content>

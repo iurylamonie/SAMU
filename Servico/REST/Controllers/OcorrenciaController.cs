@@ -39,6 +39,7 @@ namespace REST.Controllers
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
             var ocorrencias = from o in sdc.Ocorrencias
                               where o.usuario_id == usuario_id && o.situacao == "Espera"
+                              orderby o.id descending
                               select o;
             return ocorrencias.ToList();
         }
@@ -94,6 +95,21 @@ namespace REST.Controllers
             r.informacaoAdicional = putOcorrencia.informacaoAdicional;
             r.tipo = putOcorrencia.tipo;
             
+            sdc.SubmitChanges();
+        }
+
+        [AcceptVerbs("PUT")]
+        [Route("AtualizarSituacao/{id}")]
+        public void AtualizarSituacao(int id, [FromBody] string conteudo)
+        {
+            Models.Ocorrencia putOcorrencia = JsonConvert.DeserializeObject<Models.Ocorrencia>(conteudo);
+            Models.SAMUDataContext sdc = new Models.SAMUDataContext();
+            var r = (from o in sdc.Ocorrencias
+                     where o.id == id
+                     select o).Single();
+
+            r.situacao = putOcorrencia.situacao;
+
             sdc.SubmitChanges();
         }
 

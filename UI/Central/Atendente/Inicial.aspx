@@ -28,7 +28,8 @@
 						<a class="tituloopcao" href="#">Ocorrências</a>
 					</div></a>
 					<div id="opcao3" class="opcao">
-						<div id="imgopcao3" class="imgopcao"></div>
+                        <a href="GerenciadorChamado/Principal.aspx">
+						<div id="imgopcao3" class="imgopcao"></div></a>
 						<a class="tituloopcao" href="#">Chamados</a>
 					</div>
 				</div>

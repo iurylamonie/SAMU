@@ -113,5 +113,19 @@ namespace Central.Atendente.GerenciadorOcorrencia
             TextBoxEndereco.Enabled = false;
             TextBoxInfAdicional.Enabled = false;
         }
+
+        protected void GridViewChamados_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Detalhar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                Entidade.Chamado chamado = Funcionalidade.Chamado.Consultar(int.Parse(GridViewChamados.Rows[index].Cells[0].Text));
+                Session["gc-chamado_id"] = chamado.Id;
+                Session["gc-hospital_id"] = chamado.Hospital_id;
+                Session["gc-ocorrencia_id"] = chamado.Ocorrencia_id;
+                Session["gc-ambulancia_id"] = chamado.VeiculoAtendimento_id;
+                Response.Redirect("~/Atendente/GerenciadorChamado/DetalharChamado.aspx");
+            }
+        }
     }
 }

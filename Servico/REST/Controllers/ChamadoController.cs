@@ -52,11 +52,25 @@ namespace REST.Controllers
         }
 
         [AcceptVerbs("GET")]
-        [Route("Listar/{ocorrencia_id}")]
-        public List<Models.Chamado> Listar(int ocorrencia_id)
+        [Route("ListarPorOcorrencia/{ocorrencia_id}")]
+        public List<Models.Chamado> ListarPorOcorrencia(int ocorrencia_id)
         {
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
-            var r = from c in sdc.Chamados where c.Ocorrencia_id == ocorrencia_id select c;
+            var r = from c in sdc.Chamados
+                    where c.Ocorrencia_id == ocorrencia_id
+                    select c;
+            return r.ToList();
+        }
+
+        [AcceptVerbs("GET")]
+        [Route("Listar/{atendente_id}")]
+        public List<Models.Chamado> Listar(int atendente_id)
+        {
+            Models.SAMUDataContext sdc = new Models.SAMUDataContext();
+            var r = from c in sdc.Chamados
+                    where c.Ocorrencia.usuario_id == atendente_id
+                    orderby c.id descending
+                    select c;
             return r.ToList();
         }
 
@@ -84,6 +98,16 @@ namespace REST.Controllers
 
             return chamados;
         }
-       
+
+        [AcceptVerbs("GET")]
+        [Route("Consultar/{id}")]
+        public Models.Chamado Consultar(int id)
+        {
+            Models.SAMUDataContext sdc = new Models.SAMUDataContext();
+            var chamado = (from c in sdc.Chamados
+                               where c.id == id
+                               select c).Single();
+            return chamado;
+        }
     }
 }

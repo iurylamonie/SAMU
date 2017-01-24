@@ -22,6 +22,69 @@ namespace Central.Atendente.GerenciadorChamado {
         protected global::System.Web.UI.WebControls.Label LabelNumeroOcorrencia;
         
         /// <summary>
+        /// GridViewAmbulancia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewAmbulancia;
+        
+        /// <summary>
+        /// ObjectDataSourceAmbulancia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceAmbulancia;
+        
+        /// <summary>
+        /// GridViewHospital control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewHospital;
+        
+        /// <summary>
+        /// ObjectDataSourceHospital control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceHospital;
+        
+        /// <summary>
+        /// GridViewOcorrencias control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewOcorrencias;
+        
+        /// <summary>
+        /// ObjectDataSourceOcorrencias control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceOcorrencias;
+        
+        /// <summary>
+        /// LabelAviso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelAviso;
+        
+        /// <summary>
         /// LabelTipo control.
         /// </summary>
         /// <remarks>

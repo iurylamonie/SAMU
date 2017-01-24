@@ -12,8 +12,11 @@
    
      <div class="center" id="opcoes">
         <div id="opcao3" class="opcao">
+            <a href="NovoChamado.aspx">
 			<div id="imgopcao3" class="imgopcao"></div>
+            </a>
 			<a class="tituloopcao" href="#">Novo Chamado</a>
+            
 		</div>
     </div>
         
@@ -25,12 +28,25 @@
                 
                   <div class="panel-heading center-block">
                       <ul class="menu cf">
-                        <li><p>Chamados em Atendimento</p></li>     
+                        <li><p>Chamados</p></li>     
                       </ul>
                   </div>
 
                   <div class="panel-body">
-                      
+                      <asp:GridView ID="GridViewChamados" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceChamados" OnRowCommand="GridViewChamados_RowCommand">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código do Chamado" SortExpression="Id" />
+                              <asp:BoundField DataField="Hospital_id" HeaderText="Có. Hospital" SortExpression="Hospital_id" />
+                              <asp:BoundField DataField="Ocorrencia_id" HeaderText="Có. Ocorrência" SortExpression="Ocorrencia_id" />
+                              <asp:BoundField DataField="VeiculoAtendimento_id" HeaderText="Có. Ambulância" SortExpression="VeiculoAtendimento_id" />
+                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                          </Columns>
+                      </asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceChamados" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Chamado">
+                          <SelectParameters>
+                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                          </SelectParameters>
+                      </asp:ObjectDataSource>
                   </div>
            
               </div>  
@@ -41,12 +57,25 @@
 
                   <div class="panel-heading">
                       <ul class="menu cf">
-                        <li><p>Ocorrências Finalizados</p></li>     
+                        <li><p>Ocorrências sem Chamados</p></li>     
                       </ul>
                   </div>
 
                   <div class="panel-body">
-                      
+                      <asp:GridView ID="GridViewOcorrencia" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencia">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código da Ocorrência" SortExpression="Id" />
+                              <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
+                              <asp:BoundField DataField="Endereco" HeaderText="Endereço" SortExpression="Endereco" />
+                              <asp:ButtonField CommandName="Criar" Text="Criar Chamado" />
+                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                          </Columns>
+                      </asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceOcorrencia" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">
+                          <SelectParameters>
+                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                          </SelectParameters>
+                      </asp:ObjectDataSource>
                   </div>
            
               </div> 

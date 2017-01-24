@@ -30,24 +30,24 @@ namespace REST.Models
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertUsuario(Usuario instance);
-    partial void UpdateUsuario(Usuario instance);
-    partial void DeleteUsuario(Usuario instance);
     partial void InsertOcorrencia(Ocorrencia instance);
     partial void UpdateOcorrencia(Ocorrencia instance);
     partial void DeleteOcorrencia(Ocorrencia instance);
-    partial void InsertHospital(Hospital instance);
-    partial void UpdateHospital(Hospital instance);
-    partial void DeleteHospital(Hospital instance);
-    partial void InsertVeiculoAtendimento(VeiculoAtendimento instance);
-    partial void UpdateVeiculoAtendimento(VeiculoAtendimento instance);
-    partial void DeleteVeiculoAtendimento(VeiculoAtendimento instance);
     partial void InsertAmbulancia(Ambulancia instance);
     partial void UpdateAmbulancia(Ambulancia instance);
     partial void DeleteAmbulancia(Ambulancia instance);
+    partial void InsertVeiculoAtendimento(VeiculoAtendimento instance);
+    partial void UpdateVeiculoAtendimento(VeiculoAtendimento instance);
+    partial void DeleteVeiculoAtendimento(VeiculoAtendimento instance);
+    partial void InsertHospital(Hospital instance);
+    partial void UpdateHospital(Hospital instance);
+    partial void DeleteHospital(Hospital instance);
     partial void InsertChamado(Chamado instance);
     partial void UpdateChamado(Chamado instance);
     partial void DeleteChamado(Chamado instance);
+    partial void InsertUsuario(Usuario instance);
+    partial void UpdateUsuario(Usuario instance);
+    partial void DeleteUsuario(Usuario instance);
     #endregion
 		
 		public SAMUDataContext() : 
@@ -80,35 +80,11 @@ namespace REST.Models
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Usuario> Usuarios
-		{
-			get
-			{
-				return this.GetTable<Usuario>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Ocorrencia> Ocorrencias
 		{
 			get
 			{
 				return this.GetTable<Ocorrencia>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Hospital> Hospitals
-		{
-			get
-			{
-				return this.GetTable<Hospital>();
-			}
-		}
-		
-		public System.Data.Linq.Table<VeiculoAtendimento> VeiculoAtendimentos
-		{
-			get
-			{
-				return this.GetTable<VeiculoAtendimento>();
 			}
 		}
 		
@@ -120,6 +96,22 @@ namespace REST.Models
 			}
 		}
 		
+		public System.Data.Linq.Table<VeiculoAtendimento> VeiculoAtendimentos
+		{
+			get
+			{
+				return this.GetTable<VeiculoAtendimento>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Hospital> Hospitals
+		{
+			get
+			{
+				return this.GetTable<Hospital>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Chamado> Chamados
 		{
 			get
@@ -127,195 +119,13 @@ namespace REST.Models
 				return this.GetTable<Chamado>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usuario")]
-	public partial class Usuario : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _nome;
-		
-		private string _cpf;
-		
-		private string _senha;
-		
-		private EntitySet<Ocorrencia> _Ocorrencias;
-		
-		private EntitySet<VeiculoAtendimento> _VeiculoAtendimentos;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnnomeChanging(string value);
-    partial void OnnomeChanged();
-    partial void OncpfChanging(string value);
-    partial void OncpfChanged();
-    partial void OnsenhaChanging(string value);
-    partial void OnsenhaChanged();
-    #endregion
-		
-		public Usuario()
-		{
-			this._Ocorrencias = new EntitySet<Ocorrencia>(new Action<Ocorrencia>(this.attach_Ocorrencias), new Action<Ocorrencia>(this.detach_Ocorrencias));
-			this._VeiculoAtendimentos = new EntitySet<VeiculoAtendimento>(new Action<VeiculoAtendimento>(this.attach_VeiculoAtendimentos), new Action<VeiculoAtendimento>(this.detach_VeiculoAtendimentos));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
+		public System.Data.Linq.Table<Usuario> Usuarios
 		{
 			get
 			{
-				return this._id;
+				return this.GetTable<Usuario>();
 			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(MAX)")]
-		public string nome
-		{
-			get
-			{
-				return this._nome;
-			}
-			set
-			{
-				if ((this._nome != value))
-				{
-					this.OnnomeChanging(value);
-					this.SendPropertyChanging();
-					this._nome = value;
-					this.SendPropertyChanged("nome");
-					this.OnnomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cpf", DbType="VarChar(MAX)")]
-		public string cpf
-		{
-			get
-			{
-				return this._cpf;
-			}
-			set
-			{
-				if ((this._cpf != value))
-				{
-					this.OncpfChanging(value);
-					this.SendPropertyChanging();
-					this._cpf = value;
-					this.SendPropertyChanged("cpf");
-					this.OncpfChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="VarChar(MAX)")]
-		public string senha
-		{
-			get
-			{
-				return this._senha;
-			}
-			set
-			{
-				if ((this._senha != value))
-				{
-					this.OnsenhaChanging(value);
-					this.SendPropertyChanging();
-					this._senha = value;
-					this.SendPropertyChanged("senha");
-					this.OnsenhaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Ocorrencia", Storage="_Ocorrencias", ThisKey="id", OtherKey="usuario_id")]
-		public EntitySet<Ocorrencia> Ocorrencias
-		{
-			get
-			{
-				return this._Ocorrencias;
-			}
-			set
-			{
-				this._Ocorrencias.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Usuario_id")]
-		public EntitySet<VeiculoAtendimento> VeiculoAtendimentos
-		{
-			get
-			{
-				return this._VeiculoAtendimentos;
-			}
-			set
-			{
-				this._VeiculoAtendimentos.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Ocorrencias(Ocorrencia entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuario = this;
-		}
-		
-		private void detach_Ocorrencias(Ocorrencia entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuario = null;
-		}
-		
-		private void attach_VeiculoAtendimentos(VeiculoAtendimento entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuario = this;
-		}
-		
-		private void detach_VeiculoAtendimentos(VeiculoAtendimento entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuario = null;
 		}
 	}
 	
@@ -587,7 +397,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ocorrencia_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="Ocorrencia_id")]
-		public EntitySet<Chamado> Chamados
+		internal EntitySet<Chamado> Chamados
 		{
 			get
 			{
@@ -666,21 +476,19 @@ namespace REST.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hospital")]
-	public partial class Hospital : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ambulancia")]
+	public partial class Ambulancia : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private string _nome;
-		
-		private string _endereco;
+		private string _placa;
 		
 		private string _tipo;
 		
-		private EntitySet<Chamado> _Chamados;
+		private EntitySet<VeiculoAtendimento> _VeiculoAtendimentos;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -688,17 +496,15 @@ namespace REST.Models
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnnomeChanging(string value);
-    partial void OnnomeChanged();
-    partial void OnenderecoChanging(string value);
-    partial void OnenderecoChanged();
+    partial void OnplacaChanging(string value);
+    partial void OnplacaChanged();
     partial void OntipoChanging(string value);
     partial void OntipoChanged();
     #endregion
 		
-		public Hospital()
+		public Ambulancia()
 		{
-			this._Chamados = new EntitySet<Chamado>(new Action<Chamado>(this.attach_Chamados), new Action<Chamado>(this.detach_Chamados));
+			this._VeiculoAtendimentos = new EntitySet<VeiculoAtendimento>(new Action<VeiculoAtendimento>(this.attach_VeiculoAtendimentos), new Action<VeiculoAtendimento>(this.detach_VeiculoAtendimentos));
 			OnCreated();
 		}
 		
@@ -722,42 +528,22 @@ namespace REST.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string nome
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_placa", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string placa
 		{
 			get
 			{
-				return this._nome;
+				return this._placa;
 			}
 			set
 			{
-				if ((this._nome != value))
+				if ((this._placa != value))
 				{
-					this.OnnomeChanging(value);
+					this.OnplacaChanging(value);
 					this.SendPropertyChanging();
-					this._nome = value;
-					this.SendPropertyChanged("nome");
-					this.OnnomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_endereco", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string endereco
-		{
-			get
-			{
-				return this._endereco;
-			}
-			set
-			{
-				if ((this._endereco != value))
-				{
-					this.OnenderecoChanging(value);
-					this.SendPropertyChanging();
-					this._endereco = value;
-					this.SendPropertyChanged("endereco");
-					this.OnenderecoChanged();
+					this._placa = value;
+					this.SendPropertyChanged("placa");
+					this.OnplacaChanged();
 				}
 			}
 		}
@@ -782,16 +568,16 @@ namespace REST.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hospital_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="Hospital_id")]
-		public EntitySet<Chamado> Chamados
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Ambulancia_id")]
+		internal EntitySet<VeiculoAtendimento> VeiculoAtendimentos
 		{
 			get
 			{
-				return this._Chamados;
+				return this._VeiculoAtendimentos;
 			}
 			set
 			{
-				this._Chamados.Assign(value);
+				this._VeiculoAtendimentos.Assign(value);
 			}
 		}
 		
@@ -815,16 +601,16 @@ namespace REST.Models
 			}
 		}
 		
-		private void attach_Chamados(Chamado entity)
+		private void attach_VeiculoAtendimentos(VeiculoAtendimento entity)
 		{
 			this.SendPropertyChanging();
-			entity.Hospital = this;
+			entity.Ambulancia = this;
 		}
 		
-		private void detach_Chamados(Chamado entity)
+		private void detach_VeiculoAtendimentos(VeiculoAtendimento entity)
 		{
 			this.SendPropertyChanging();
-			entity.Hospital = null;
+			entity.Ambulancia = null;
 		}
 	}
 	
@@ -848,9 +634,9 @@ namespace REST.Models
 		
 		private EntitySet<Chamado> _Chamados;
 		
-		private EntityRef<Usuario> _Usuario;
-		
 		private EntityRef<Ambulancia> _Ambulancia;
+		
+		private EntityRef<Usuario> _Usuario;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -873,8 +659,8 @@ namespace REST.Models
 		public VeiculoAtendimento()
 		{
 			this._Chamados = new EntitySet<Chamado>(new Action<Chamado>(this.attach_Chamados), new Action<Chamado>(this.detach_Chamados));
-			this._Usuario = default(EntityRef<Usuario>);
 			this._Ambulancia = default(EntityRef<Ambulancia>);
+			this._Usuario = default(EntityRef<Usuario>);
 			OnCreated();
 		}
 		
@@ -1007,7 +793,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VeiculoAtendimento_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="VeiculoAtendimento_id")]
-		public EntitySet<Chamado> Chamados
+		internal EntitySet<Chamado> Chamados
 		{
 			get
 			{
@@ -1016,6 +802,40 @@ namespace REST.Models
 			set
 			{
 				this._Chamados.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_Ambulancia", ThisKey="Ambulancia_id", OtherKey="id", IsForeignKey=true)]
+		public Ambulancia Ambulancia
+		{
+			get
+			{
+				return this._Ambulancia.Entity;
+			}
+			set
+			{
+				Ambulancia previousValue = this._Ambulancia.Entity;
+				if (((previousValue != value) 
+							|| (this._Ambulancia.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Ambulancia.Entity = null;
+						previousValue.VeiculoAtendimentos.Remove(this);
+					}
+					this._Ambulancia.Entity = value;
+					if ((value != null))
+					{
+						value.VeiculoAtendimentos.Add(this);
+						this._Ambulancia_id = value.id;
+					}
+					else
+					{
+						this._Ambulancia_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Ambulancia");
+				}
 			}
 		}
 		
@@ -1053,40 +873,6 @@ namespace REST.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_Ambulancia", ThisKey="Ambulancia_id", OtherKey="id", IsForeignKey=true)]
-		internal Ambulancia Ambulancia
-		{
-			get
-			{
-				return this._Ambulancia.Entity;
-			}
-			set
-			{
-				Ambulancia previousValue = this._Ambulancia.Entity;
-				if (((previousValue != value) 
-							|| (this._Ambulancia.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Ambulancia.Entity = null;
-						previousValue.VeiculoAtendimentos.Remove(this);
-					}
-					this._Ambulancia.Entity = value;
-					if ((value != null))
-					{
-						value.VeiculoAtendimentos.Add(this);
-						this._Ambulancia_id = value.id;
-					}
-					else
-					{
-						this._Ambulancia_id = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Ambulancia");
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1120,19 +906,21 @@ namespace REST.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ambulancia")]
-	public partial class Ambulancia : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hospital")]
+	public partial class Hospital : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private string _placa;
+		private string _nome;
+		
+		private string _endereco;
 		
 		private string _tipo;
 		
-		private EntitySet<VeiculoAtendimento> _VeiculoAtendimentos;
+		private EntitySet<Chamado> _Chamados;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1140,15 +928,17 @@ namespace REST.Models
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnplacaChanging(string value);
-    partial void OnplacaChanged();
+    partial void OnnomeChanging(string value);
+    partial void OnnomeChanged();
+    partial void OnenderecoChanging(string value);
+    partial void OnenderecoChanged();
     partial void OntipoChanging(string value);
     partial void OntipoChanged();
     #endregion
 		
-		public Ambulancia()
+		public Hospital()
 		{
-			this._VeiculoAtendimentos = new EntitySet<VeiculoAtendimento>(new Action<VeiculoAtendimento>(this.attach_VeiculoAtendimentos), new Action<VeiculoAtendimento>(this.detach_VeiculoAtendimentos));
+			this._Chamados = new EntitySet<Chamado>(new Action<Chamado>(this.attach_Chamados), new Action<Chamado>(this.detach_Chamados));
 			OnCreated();
 		}
 		
@@ -1172,22 +962,42 @@ namespace REST.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_placa", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string placa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string nome
 		{
 			get
 			{
-				return this._placa;
+				return this._nome;
 			}
 			set
 			{
-				if ((this._placa != value))
+				if ((this._nome != value))
 				{
-					this.OnplacaChanging(value);
+					this.OnnomeChanging(value);
 					this.SendPropertyChanging();
-					this._placa = value;
-					this.SendPropertyChanged("placa");
-					this.OnplacaChanged();
+					this._nome = value;
+					this.SendPropertyChanged("nome");
+					this.OnnomeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_endereco", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string endereco
+		{
+			get
+			{
+				return this._endereco;
+			}
+			set
+			{
+				if ((this._endereco != value))
+				{
+					this.OnenderecoChanging(value);
+					this.SendPropertyChanging();
+					this._endereco = value;
+					this.SendPropertyChanged("endereco");
+					this.OnenderecoChanged();
 				}
 			}
 		}
@@ -1212,16 +1022,16 @@ namespace REST.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Ambulancia_id")]
-		public EntitySet<VeiculoAtendimento> VeiculoAtendimentos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hospital_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="Hospital_id")]
+		internal EntitySet<Chamado> Chamados
 		{
 			get
 			{
-				return this._VeiculoAtendimentos;
+				return this._Chamados;
 			}
 			set
 			{
-				this._VeiculoAtendimentos.Assign(value);
+				this._Chamados.Assign(value);
 			}
 		}
 		
@@ -1245,16 +1055,16 @@ namespace REST.Models
 			}
 		}
 		
-		private void attach_VeiculoAtendimentos(VeiculoAtendimento entity)
+		private void attach_Chamados(Chamado entity)
 		{
 			this.SendPropertyChanging();
-			entity.Ambulancia = this;
+			entity.Hospital = this;
 		}
 		
-		private void detach_VeiculoAtendimentos(VeiculoAtendimento entity)
+		private void detach_Chamados(Chamado entity)
 		{
 			this.SendPropertyChanging();
-			entity.Ambulancia = null;
+			entity.Hospital = null;
 		}
 	}
 	
@@ -1275,8 +1085,6 @@ namespace REST.Models
 		private string _trajetoOcorrencia;
 		
 		private string _trajetoHospital;
-		
-		private string _situacao;
 		
 		private EntityRef<Hospital> _Hospital;
 		
@@ -1300,8 +1108,6 @@ namespace REST.Models
     partial void OntrajetoOcorrenciaChanged();
     partial void OntrajetoHospitalChanging(string value);
     partial void OntrajetoHospitalChanged();
-    partial void OnsituacaoChanging(string value);
-    partial void OnsituacaoChanged();
     #endregion
 		
 		public Chamado()
@@ -1444,28 +1250,8 @@ namespace REST.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacao", DbType="VarChar(MAX)")]
-		public string situacao
-		{
-			get
-			{
-				return this._situacao;
-			}
-			set
-			{
-				if ((this._situacao != value))
-				{
-					this.OnsituacaoChanging(value);
-					this.SendPropertyChanging();
-					this._situacao = value;
-					this.SendPropertyChanged("situacao");
-					this.OnsituacaoChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hospital_Chamado", Storage="_Hospital", ThisKey="Hospital_id", OtherKey="id", IsForeignKey=true)]
-		internal Hospital Hospital
+		public Hospital Hospital
 		{
 			get
 			{
@@ -1499,7 +1285,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ocorrencia_Chamado", Storage="_Ocorrencia", ThisKey="Ocorrencia_id", OtherKey="id", IsForeignKey=true)]
-		internal Ocorrencia Ocorrencia
+		public Ocorrencia Ocorrencia
 		{
 			get
 			{
@@ -1533,7 +1319,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VeiculoAtendimento_Chamado", Storage="_VeiculoAtendimento", ThisKey="VeiculoAtendimento_id", OtherKey="id", IsForeignKey=true)]
-		internal VeiculoAtendimento VeiculoAtendimento
+		public VeiculoAtendimento VeiculoAtendimento
 		{
 			get
 			{
@@ -1584,6 +1370,220 @@ namespace REST.Models
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usuario")]
+	public partial class Usuario : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _nome;
+		
+		private string _cpf;
+		
+		private string _senha;
+		
+		private System.Nullable<int> _tipo;
+		
+		private EntitySet<Ocorrencia> _Ocorrencias;
+		
+		private EntitySet<VeiculoAtendimento> _VeiculoAtendimentos;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnnomeChanging(string value);
+    partial void OnnomeChanged();
+    partial void OncpfChanging(string value);
+    partial void OncpfChanged();
+    partial void OnsenhaChanging(string value);
+    partial void OnsenhaChanged();
+    partial void OntipoChanging(System.Nullable<int> value);
+    partial void OntipoChanged();
+    #endregion
+		
+		public Usuario()
+		{
+			this._Ocorrencias = new EntitySet<Ocorrencia>(new Action<Ocorrencia>(this.attach_Ocorrencias), new Action<Ocorrencia>(this.detach_Ocorrencias));
+			this._VeiculoAtendimentos = new EntitySet<VeiculoAtendimento>(new Action<VeiculoAtendimento>(this.attach_VeiculoAtendimentos), new Action<VeiculoAtendimento>(this.detach_VeiculoAtendimentos));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(MAX)")]
+		public string nome
+		{
+			get
+			{
+				return this._nome;
+			}
+			set
+			{
+				if ((this._nome != value))
+				{
+					this.OnnomeChanging(value);
+					this.SendPropertyChanging();
+					this._nome = value;
+					this.SendPropertyChanged("nome");
+					this.OnnomeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cpf", DbType="VarChar(MAX)")]
+		public string cpf
+		{
+			get
+			{
+				return this._cpf;
+			}
+			set
+			{
+				if ((this._cpf != value))
+				{
+					this.OncpfChanging(value);
+					this.SendPropertyChanging();
+					this._cpf = value;
+					this.SendPropertyChanged("cpf");
+					this.OncpfChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="VarChar(MAX)")]
+		public string senha
+		{
+			get
+			{
+				return this._senha;
+			}
+			set
+			{
+				if ((this._senha != value))
+				{
+					this.OnsenhaChanging(value);
+					this.SendPropertyChanging();
+					this._senha = value;
+					this.SendPropertyChanged("senha");
+					this.OnsenhaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipo", DbType="Int")]
+		public System.Nullable<int> tipo
+		{
+			get
+			{
+				return this._tipo;
+			}
+			set
+			{
+				if ((this._tipo != value))
+				{
+					this.OntipoChanging(value);
+					this.SendPropertyChanging();
+					this._tipo = value;
+					this.SendPropertyChanged("tipo");
+					this.OntipoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Ocorrencia", Storage="_Ocorrencias", ThisKey="id", OtherKey="usuario_id")]
+		internal EntitySet<Ocorrencia> Ocorrencias
+		{
+			get
+			{
+				return this._Ocorrencias;
+			}
+			set
+			{
+				this._Ocorrencias.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Usuario_id")]
+		internal EntitySet<VeiculoAtendimento> VeiculoAtendimentos
+		{
+			get
+			{
+				return this._VeiculoAtendimentos;
+			}
+			set
+			{
+				this._VeiculoAtendimentos.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Ocorrencias(Ocorrencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuario = this;
+		}
+		
+		private void detach_Ocorrencias(Ocorrencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuario = null;
+		}
+		
+		private void attach_VeiculoAtendimentos(VeiculoAtendimento entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuario = this;
+		}
+		
+		private void detach_VeiculoAtendimentos(VeiculoAtendimento entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usuario = null;
 		}
 	}
 }

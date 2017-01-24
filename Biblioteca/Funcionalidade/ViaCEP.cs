@@ -17,7 +17,6 @@ namespace Funcionalidade
             httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri("https://viacep.com.br/");
         }
-
         public static Entidade.Endereco ConsultarPorCep(string _cep)
         {
             try

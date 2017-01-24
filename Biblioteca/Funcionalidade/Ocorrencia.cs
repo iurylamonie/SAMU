@@ -94,5 +94,15 @@ namespace Funcionalidade
             IniciarHttp();
             httpClient.DeleteAsync("api/Ocorrencia/Deletar/" + _id);
         }
+
+        public static void AtualizarSituacao(Entidade.Ocorrencia _ocorrencia)
+        {
+            IniciarHttp();
+            string s = "=" + JsonConvert.SerializeObject(_ocorrencia);
+            var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
+            httpClient.PutAsync("api/Ocorrencia/AtualizarSituacao/" + _ocorrencia.Id, content);
+        }
+
+       
     }
 }

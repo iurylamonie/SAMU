@@ -56,8 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chamado.cs" />
+    <Compile Include="Hospital.cs" />
     <Compile Include="Ocorrencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeiculoAtendimento.cs" />
     <Compile Include="ViaCEP.cs" />
   </ItemGroup>
   <ItemGroup>

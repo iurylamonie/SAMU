@@ -6,7 +6,7 @@
      <div>
             <ol class="breadcrumb">
                 <li><a href="../Inicial.aspx">Início</a></li>
-                <li><a href="Principal.aspx">Gerenciador de Ocorrências</a></li>
+                <li><a href="Principal.aspx">Gerenciador de Chamados</a></li>
                 <li class="active">Novo Chamado</li>
             </ol>
     </div>
@@ -29,7 +29,14 @@
                   </div>
 
                   <div class="panel-body">
-                     
+                      <asp:GridView ID="GridViewAmbulancia" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceAmbulancia" OnRowCommand="GridViewAmbulancia_RowCommand">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código do Veiculo" SortExpression="Id" />
+                              <asp:BoundField DataField="Localizacao" HeaderText="Localização" SortExpression="Localizacao" />
+                              <asp:ButtonField CommandName="Adicionar" Text="Adicionar" />
+                          </Columns>
+                      </asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceAmbulancia" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.VeiculoAtendimento"></asp:ObjectDataSource>
                   </div>
            
               </div>  
@@ -45,7 +52,46 @@
                   </div>
 
                   <div class="panel-body">
-                     
+                      <asp:GridView ID="GridViewHospital" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceHospital" OnRowCommand="GridViewHospital_RowCommand">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Nome" HeaderText="Nome do Hospital" SortExpression="Nome" />
+                              <asp:BoundField DataField="Tipo" HeaderText="Tipo do Hospital" SortExpression="Tipo" />
+                              <asp:ButtonField CommandName="Adicionar" Text="Adicionar" />
+                          </Columns>
+                      </asp:GridView>
+
+                      <asp:ObjectDataSource ID="ObjectDataSourceHospital" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Hospital"></asp:ObjectDataSource>
+
+                  </div>
+           
+              </div> 
+          </div>
+
+             <div class="col-xs-6 col-sm-4 ">
+            <div class="panel panel-default">
+
+                  <div class="panel-heading">
+                      <ul class="menu cf">
+                        <li><p>Escolher Ocorrência</p></li>     
+                      </ul>
+                  </div>
+
+                  <div class="panel-body">
+                      <asp:GridView ID="GridViewOcorrencias" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencias" OnRowCommand="GridViewOcorrencias_RowCommand">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
+                              <asp:BoundField DataField="NomeSolicitante" HeaderText="Nome do Solicitante" SortExpression="NomeSolicitante" />
+                              <asp:BoundField DataField="NomeVitima" HeaderText="Nome(s) da(s) Vitima(s)" SortExpression="NomeVitima" />
+                              <asp:ButtonField CommandName="Adicionar" Text="Adicionar" />
+                          </Columns>
+                      </asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceOcorrencias" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">
+                          <SelectParameters>
+                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                          </SelectParameters>
+                      </asp:ObjectDataSource>
                   </div>
            
               </div> 
@@ -61,6 +107,8 @@
                   </div>
 
                   <div class="panel-body">
+                      <asp:Label ID="LabelAviso" runat="server" Visible="false" Text="Escolha a Ocorrência, Ambulância e o Hospital!" /> <br />
+
                       <a class="titulosinput">Tipo de Ocorrência: </a> <asp:Label ID="LabelTipo" runat="server" /> <br />
                       <a class="titulosinput">Nome do Solicitante: </a> <asp:Label ID="LabelNomeSolicitante" runat="server" />  <br />
                       <a class="titulosinput">Nome da(s) Vítima(s): </a> <asp:Label ID="LabelNomeVitima" runat="server" /> <br />
@@ -68,11 +116,13 @@
                       <a class="titulosinput">Nome do Hospital: </a> <asp:Label ID="LabelHospital" runat="server" /> <br />
                       <br />
                        <asp:Button id="ButtonCancelar" Text="Cancelar" runat="server"/>
-                       <asp:Button id="ButtonCriar" runat="server" Text="Criar"/><br />
+                       <asp:Button id="ButtonCriar" runat="server" Text="Criar" OnClick="ButtonCriar_Click" /><br />
                   </div>
            
               </div> 
           </div>
+
+           
          </div>
 
 </asp:Content>

@@ -50,7 +50,17 @@
                             </ul>
                         </div>
                         <div class="panel-body">
-
+                            <asp:GridView ID="GridViewChamados" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceChamados" OnRowCommand="GridViewChamados_RowCommand">
+                                <Columns>
+                                    <asp:BoundField DataField="Id" HeaderText="Código do Chamado" SortExpression="Id" />
+                                    <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                                </Columns>
+                            </asp:GridView>
+                            <asp:ObjectDataSource ID="ObjectDataSourceChamados" runat="server" SelectMethod="ListarPorOcorrencia" TypeName="Funcionalidade.Chamado">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="_ocorrencia_id" SessionField="idOcorrencia" Type="Int32" />
+                                </SelectParameters>
+                            </asp:ObjectDataSource>
                         </div>
                     </div>                    
                 </div>
