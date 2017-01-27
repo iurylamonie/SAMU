@@ -40,45 +40,85 @@ namespace Funcionalidade
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Ocorrencia> Listar(int _usuario_id)
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("api/Ocorrencia/Listar/" + _usuario_id);
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
-            return ocorrencias;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Ocorrencia/Listar/" + _usuario_id);
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
+                return ocorrencias;
+            }
+            catch (AggregateException)
+            {
+
+                List<Entidade.Ocorrencia> ocorrencia = new List<Entidade.Ocorrencia>();
+                return ocorrencia;
+            }
+            
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Ocorrencia> ListarSemChamado(int _usuario_id)
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("api/Ocorrencia/ListarSemChamado/" + _usuario_id);
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
-            return ocorrencias;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Ocorrencia/ListarSemChamado/" + _usuario_id);
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
+                return ocorrencias;
+            }
+            catch (AggregateException)
+            {
+
+                List<Entidade.Ocorrencia> ocorrencia = new List<Entidade.Ocorrencia>();
+                return ocorrencia;
+            }
+
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Ocorrencia> ListarEmAtendimento(int _usuario_id)
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("api/Ocorrencia/ListarEmAtendimento/" + _usuario_id);
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
-            return ocorrencias;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Ocorrencia/ListarEmAtendimento/" + _usuario_id);
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
+                return ocorrencias;
+            }
+            catch (AggregateException)
+            {
+
+                List<Entidade.Ocorrencia> ocorrencia = new List<Entidade.Ocorrencia>();
+                return ocorrencia;
+            }
+
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Ocorrencia> ListarFinalizados(int _usuario_id)
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("api/Ocorrencia/ListarFinalizados/" + _usuario_id);
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
-            return ocorrencias;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Ocorrencia/ListarFinalizados/" + _usuario_id);
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var ocorrencias = JsonConvert.DeserializeObject<List<Entidade.Ocorrencia>>(str);
+                return ocorrencias;
+            }
+            catch (AggregateException)
+            {
+
+                List<Entidade.Ocorrencia> ocorrencia = new List<Entidade.Ocorrencia>();
+                return ocorrencia;
+            }
+
         }
 
         public static void Alterar(Entidade.Ocorrencia _ocorrencia)
