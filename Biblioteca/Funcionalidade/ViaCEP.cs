@@ -28,7 +28,7 @@ namespace Funcionalidade
                 var endereco = JsonConvert.DeserializeObject<Entidade.Endereco>(str);
                 return endereco;
             }
-            catch (Exception)
+            catch (AggregateException)
             {
 
                 Entidade.Endereco endereco = new Entidade.Endereco();

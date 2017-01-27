@@ -30,23 +30,42 @@ namespace Funcionalidade
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Chamado> Listar(int _usuario_id)
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("api/Chamado/Listar/" + _usuario_id);
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var chamados = JsonConvert.DeserializeObject<List<Entidade.Chamado>>(str);
-            return chamados;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Chamado/Listar/" + _usuario_id);
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var chamados = JsonConvert.DeserializeObject<List<Entidade.Chamado>>(str);
+                return chamados;
+            }
+            catch (AggregateException)
+            {
+                List<Entidade.Chamado> chamados = new List<Entidade.Chamado>();
+                return chamados;
+            }
+            
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Chamado> ListarPorOcorrencia(int _ocorrencia_id)
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("api/Chamado/ListarPorOcorrencia/" + _ocorrencia_id);
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var chamados = JsonConvert.DeserializeObject<List<Entidade.Chamado>>(str);
-            return chamados;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Chamado/ListarPorOcorrencia/" + _ocorrencia_id);
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var chamados = JsonConvert.DeserializeObject<List<Entidade.Chamado>>(str);
+                return chamados;
+            }
+            catch (AggregateException)
+            {
+
+                List<Entidade.Chamado> chamados = new List<Entidade.Chamado>();
+                return chamados;
+            }
+            
         }
 
         public static void Alterar(Entidade.Chamado _chamado)

@@ -22,12 +22,22 @@ namespace Funcionalidade
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Entidade.Hospital> Listar()
         {
-            IniciarHttp();
-            var response = httpClient.GetAsync("api/Hospital/Listar");
-            HttpResponseMessage rm = response.Result;
-            string str = rm.Content.ReadAsStringAsync().Result;
-            var hospitais = JsonConvert.DeserializeObject<List<Entidade.Hospital>>(str);
-            return hospitais;
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Hospital/Listar");
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var hospitais = JsonConvert.DeserializeObject<List<Entidade.Hospital>>(str);
+                return hospitais;
+            }
+            catch (AggregateException)
+            {
+
+                List<Entidade.Hospital> hospitais = new List<Entidade.Hospital>();
+                return hospitais;
+            }
+            
         }
     }
 }
