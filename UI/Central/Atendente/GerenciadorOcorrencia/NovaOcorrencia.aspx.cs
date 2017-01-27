@@ -87,6 +87,10 @@ namespace Central.Atendente.GerenciadorOcorrencia
                 Usuario_id = 1
             };
             Funcionalidade.Ocorrencia.Criar(ocorrencia);
+
+            ButtonConfirar.Enabled = false;
+            ButtonLimpar.Enabled = false;
+
             LabelChamado.Visible = true;
             ButtonSim.Visible = true;
             ButtonNao.Visible = true;
