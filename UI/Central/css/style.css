@@ -1,7 +1,4 @@
-﻿/*falta alinhar tipos de ocorrencia e id da ocorrencia*/
-
-
-@font-face {
+﻿@font-face {
 	font-family: 'mentone';
 	src: url('../fonts/mentone-semibol.eot');
 	src: local('Ã¢ËœÂº'), url('../fonts/mentone-semibol.woff') format('woff'), url('../fonts/mentone-semibol.ttf') format('truetype'), url('../fonts/mentone-semibol.svg') format('svg');
@@ -23,11 +20,11 @@ a
 	height: 100vh;
 	width: 650px;
 	margin: 0 auto;
-}
 
+}
 div#user
 {
-	float: right;
+	Float: right;
 	height: 32px;
 	width: 32px;
 	background-image: url("../img/usuario.png");
@@ -44,7 +41,6 @@ div#titulo
 {
 	margin-top: 15px;
 	text-align: center;
-    cursor:default;
 }
 a#titulo
 {
@@ -68,21 +64,16 @@ div#logo
     cursor: default;
 }
 
-
-
 /*ESTILOS CENTRO*/
 /*estilos opÃ§Ãµes*/
-#center
+.center
 {
-    margin-left: 9px;
 	width:inherit;
 }
 #opcoes
 {
 	margin: 0 auto;
 	margin-top: 60px;
-    padding-left: 56.0165px;
-    padding-right: 56.0165px;
 	width: -webkit-fit-content;
 	height: -webkit-fit-content;
 	width: -moz-fit-content;
@@ -109,20 +100,13 @@ div#logo
 	font-size:18pt;
 	cursor: pointer;
 }
-#opcoes a
-{
-    text-decoration: none;
-}
-#opcoes p {
-    display: inline;
-}
 #opcao1
 {
 
 }
 #imgopcao1
 {
-	background-image: url("../img/hospitais.png");
+	background-image: url("../img/Editar_icon.png");
 }
 #opcao2
 {
@@ -131,7 +115,7 @@ div#logo
 }
 #imgopcao2
 {
-	background-image: url("../img/ocorrencia.png");
+	background-image: url("../img/nova_ocorrencia.png");
 	margin:0 auto;
 }
 #opcao3
@@ -139,7 +123,7 @@ div#logo
 }
 #imgopcao3
 {
-	background-image: url("../img/ambulancia.png");
+	background-image: url("../img/excluir.png");
 }
 /*FIM estilos opÃ§Ãµes*/
 /*estilos ocorrencias*/
@@ -147,9 +131,7 @@ div#logo
 {
 	display: flex;
 	margin-top: 65px;
-    padding-left: 4.5px;
-    padding-right: 4.5px;
-     /*remover depois*/
+     padding-left: 30px; /*remover depois*/
     
 }
 #ocorrenciaopcoes
@@ -235,10 +217,32 @@ div#logo
 
 
 /*PAGE OCORRENCIAS*/
+#ocorr-body {
+    text-align: right;
+    width: 315px;
+    margin: 0 auto;
+}
+.titulosinputask {
+    margin: 75px;
+}
+#RadioButtonList1 {
+    margin: 0 auto;
+}
+.buttonocorr {
+    margin-right: 40px;
+}
 
-#path
-{
-	height: 36px;
+#path {
+    height: 36px;
+}
+
+#imgind {
+    height: 31px;
+    width: 35px;
+    background-image: url('../img/home.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: table-cell;
 }
 
 #imgoc
@@ -274,10 +278,17 @@ div#logo
 	text-align: right;
 
 }
-.inputs
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid rgb(189, 189, 189);
+    resize: none;
+}
+input
 {
     border: none;
     border-bottom: 1px solid rgb(189, 189, 189);
+    resize: none;
 }
 #ocorrenciasinputs
 {
@@ -333,25 +344,25 @@ td
 	width: 205px;
 }
 
+  .menu{
+   list-style: none;
+      margin: 0;
+      padding: 0;   
+  }
 
-.menu
-{  
-    list-style: none;
-    margin: 0;
-    padding: 0; 
-    margin: 50px auto; 
-    margin-left: 0;
-    width: 800px;   
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
-    width: fit-content; 
+  .menu {   
+   margin: 50px auto; 
+   margin-left: 0;
+   width: 800px;   
+   width: -moz-fit-content;
+   width: -webkit-fit-content;
+   width: fit-content; 
   }
 
   .menu > li {
    background-color: #6c000a;
    position: relative;
    transform: skewX(25deg);
-   cursor:default;
   }
 
   .menu p {
@@ -369,5 +380,8 @@ td
 .p_icon{
  float:left;
 }
+
+
+
 
 /*FIM PAGE OCORRENCIAS*/
