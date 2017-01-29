@@ -70,14 +70,21 @@ div#logo
 {
 	width:inherit;
 }
-#opcoes
-{
-	margin: 0 auto;
-	margin-top: 60px;
-	width: -webkit-fit-content;
-	height: -webkit-fit-content;
-	width: -moz-fit-content;
-	height: -moz-fit-content;
+#opcoes {
+    margin: 0 auto;
+    margin-top: -40px;
+    width: -webkit-fit-content;
+    height: -webkit-fit-content;
+    width: -moz-fit-content;
+    height: -moz-fit-content;
+}
+#opcoesprincipal {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: -webkit-fit-content;
+    height: -webkit-fit-content;
+    width: -moz-fit-content;
+    height: -moz-fit-content;
 }
 .opcao
 {
@@ -110,8 +117,7 @@ div#logo
 }
 #opcao2
 {
-	margin-right:80px;
-	margin-left:80px;
+	margin-right:40px;
 }
 #imgopcao2
 {
@@ -120,6 +126,7 @@ div#logo
 }
 #opcao3
 {
+    margin-left: 40px;
 }
 #imgopcao3
 {
@@ -230,6 +237,15 @@ div#logo
 }
 .buttonocorr {
     margin-right: 40px;
+}
+.class1 {
+    width: 50%;
+    float: right;
+    border-left: 1px solid #ddd;
+    padding-left: 12px;
+}
+.panel-heading1 {
+    margin-top: -40px;
 }
 
 #path {

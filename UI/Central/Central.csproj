@@ -99,7 +99,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\login-atendente.css" />
-    <Content Include="css\ocorrencia.css" />
+    <Content Include="css\ocorrenc1ia.css" />
     <Content Include="css\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\mentone-semibol.svg" />

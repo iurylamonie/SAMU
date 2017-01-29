@@ -15,7 +15,7 @@
         <!--Painel de Gerenciamento-->
        <div class="panel panel-danger">
 
-          <div class="panel-heading">
+          <div class="panel-heading1">
               <ul class="menu cf">
                 <li><p>O que você deseja gerenciar?</p></li>     
               </ul>
@@ -41,7 +41,8 @@
 
         <div class="panel panel-default">
         <!--Ocorrências-->
-          <div class="panel-heading">
+        <div class="class1">
+          <div class="panel-heading1">
               <ul class="menu cf">
                 <li><p>Ocorrências recentes:</p></li>     
               </ul>
@@ -58,7 +59,9 @@
                   </ItemTemplate>
               </asp:DataList>
           </div>
-           <div class="panel-heading">
+        </div>
+        <div class="class1">
+           <div class="panel-heading1">
               <ul class="menu cf">
                 <li><p>Chamados recentes:</p></li>     
               </ul>
@@ -74,6 +77,7 @@
                       <asp:Button ID="ButtonIr" runat="server" CommandArgument='<%# Eval("Id") %>' Text='<%# Eval("Id") %>' />
                   </ItemTemplate>
               </asp:DataList>
+          </div>
           </div>
        </div>  
 
