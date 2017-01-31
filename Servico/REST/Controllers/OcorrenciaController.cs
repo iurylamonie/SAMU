@@ -124,5 +124,17 @@ namespace REST.Controllers
             sdc.Ocorrencias.DeleteOnSubmit(r);
             sdc.SubmitChanges();
         }
+
+        [AcceptVerbs("GET")]
+        [Route("ListarUltimo/{usuario_id}")]
+        public Models.Ocorrencia ListarUltimo(int usuario_id)
+        {
+            Models.SAMUDataContext sdc = new Models.SAMUDataContext();
+            Models.Ocorrencia ocorrencia = (from o in sdc.Ocorrencias
+                                            where o.usuario_id == usuario_id
+                                            orderby o.id descending
+                                            select o).FirstOrDefault();
+            return ocorrencia;
+        }
     }
 }

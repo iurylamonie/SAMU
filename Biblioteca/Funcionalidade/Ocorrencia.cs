@@ -55,7 +55,7 @@ namespace Funcionalidade
                 List<Entidade.Ocorrencia> ocorrencia = new List<Entidade.Ocorrencia>();
                 return ocorrencia;
             }
-            
+
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
@@ -143,6 +143,23 @@ namespace Funcionalidade
             httpClient.PutAsync("api/Ocorrencia/AtualizarSituacao/" + _ocorrencia.Id, content);
         }
 
-       
+        public static Entidade.Ocorrencia ListarUltimo(int _usuario_id)
+        {
+            try
+            {
+                IniciarHttp();
+                var response = httpClient.GetAsync("api/Ocorrencia/ListarUltimo/" + _usuario_id);
+                HttpResponseMessage rm = response.Result;
+                string str = rm.Content.ReadAsStringAsync().Result;
+                var ocorrencia = JsonConvert.DeserializeObject<Entidade.Ocorrencia>(str);
+                return ocorrencia;
+            }
+            catch (AggregateException)
+            {
+
+                Entidade.Ocorrencia ocorrencia = new Entidade.Ocorrencia();
+                return ocorrencia;
+            }
+        }
     }
 }

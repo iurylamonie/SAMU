@@ -26,5 +26,16 @@ namespace Central.Atendente.GerenciadorChamado
                 Response.Redirect("~/Atendente/GerenciadorChamado/DetalharChamado.aspx");
             }
         }
+
+        protected void GridViewOcorrencia_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Criar")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                Session["tipo-nc-selecionado"] = "do";
+                Session["ocorrenciaId-nc-selecionado"] = GridViewOcorrencia.Rows[index].Cells[0].Text;
+                Response.Redirect("~/Atendente/GerenciadorChamado/NovoChamadoSelecionado.aspx");
+            }
+        }
     }
 }

@@ -128,7 +128,8 @@ namespace Central.Atendente.GerenciadorOcorrencia
 
         protected void ButtonSim_Click(object sender, EventArgs e)
         {
-
+            Session["tipo-nc-selecionado"] = "no";
+            Response.Redirect("~/Atendente/GerenciadorChamado/NovoChamadoSelecionado.aspx");
         }
 
         /*protected void TextBoxCEP_TextChanged(object sender, EventArgs e)

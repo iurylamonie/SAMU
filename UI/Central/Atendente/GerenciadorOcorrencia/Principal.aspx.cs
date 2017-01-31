@@ -38,9 +38,59 @@ namespace Central.Atendente.GerenciadorOcorrencia
                 string codigoOcorrencia;
                 int index = Convert.ToInt32(e.CommandArgument);
                 codigoOcorrencia = GridViewOcorrencias.Rows[index].Cells[0].Text;
-                Funcionalidade.Ocorrencia.DeletarOcorrencia(int.Parse(codigoOcorrencia));                
+                Funcionalidade.Ocorrencia.DeletarOcorrencia(int.Parse(codigoOcorrencia));
+                Response.Redirect("~/Atendente/GerenciadorOcorrencia/Principal.aspx");
             }
 
+        }
+
+        protected void GridViewOcorrenciaSemChamado_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Detalhar")
+            {
+                string codigoOcorrencia;
+                int index = Convert.ToInt32(e.CommandArgument);
+                codigoOcorrencia = GridViewOcorrenciaSemChamado.Rows[index].Cells[0].Text;
+                Entidade.Ocorrencia ocorrencia = Funcionalidade.Ocorrencia.Consultar(int.Parse(codigoOcorrencia));
+                Session["idOcorrencia"] = ocorrencia.Id;
+                Session["tipoOcorrencia"] = ocorrencia.Tipo;
+                Session["nomeSolicitanteOcorrencia"] = ocorrencia.NomeSolicitante;
+                Session["nomeVitimaOcorrencia"] = ocorrencia.NomeVitima;
+                Session["quantidadeVitimasOcorrencia"] = ocorrencia.QuantidadeVitimas;
+                Session["cepOcorrencia"] = ocorrencia.Cep;
+                Session["enderecoOcorrencia"] = ocorrencia.Endereco;
+                Session["infAdicionalOcorrencia"] = ocorrencia.InformacaoAdicional;
+                Response.Redirect("~/Atendente/GerenciadorOcorrencia/DetalharOcorrencia.aspx");
+            }
+            else if (e.CommandName == "Excluir")
+            {
+                string codigoOcorrencia;
+                int index = Convert.ToInt32(e.CommandArgument);
+                codigoOcorrencia = GridViewOcorrenciaSemChamado.Rows[index].Cells[0].Text;
+                Funcionalidade.Ocorrencia.DeletarOcorrencia(int.Parse(codigoOcorrencia));
+                Response.Redirect("~/Atendente/GerenciadorOcorrencia/Principal.aspx");
+            }
+        }
+
+        protected void GridViewOcorrenciasFinalizadas_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Detalhar")
+            {
+                string codigoOcorrencia;
+                int index = Convert.ToInt32(e.CommandArgument);
+                codigoOcorrencia = GridViewOcorrenciasFinalizadas.Rows[index].Cells[0].Text;
+                Entidade.Ocorrencia ocorrencia = Funcionalidade.Ocorrencia.Consultar(int.Parse(codigoOcorrencia));
+                Session["idOcorrencia"] = ocorrencia.Id;
+                Session["tipoOcorrencia"] = ocorrencia.Tipo;
+                Session["nomeSolicitanteOcorrencia"] = ocorrencia.NomeSolicitante;
+                Session["nomeVitimaOcorrencia"] = ocorrencia.NomeVitima;
+                Session["quantidadeVitimasOcorrencia"] = ocorrencia.QuantidadeVitimas;
+                Session["cepOcorrencia"] = ocorrencia.Cep;
+                Session["enderecoOcorrencia"] = ocorrencia.Endereco;
+                Session["infAdicionalOcorrencia"] = ocorrencia.InformacaoAdicional;
+                Response.Redirect("~/Atendente/GerenciadorOcorrencia/DetalharOcorrencia.aspx");
+            }
+            
         }
     }
     //Classe criada apenas para ver como iria ficar a tabela

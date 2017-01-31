@@ -127,5 +127,12 @@ namespace Central.Atendente.GerenciadorOcorrencia
                 Response.Redirect("~/Atendente/GerenciadorChamado/DetalharChamado.aspx");
             }
         }
+
+        protected void ButtonNovoChamado_Click(object sender, EventArgs e)
+        {
+            Session["tipo-nc-selecionado"] = "do";
+            Session["ocorrenciaId-nc-selecionado"] = Session["idOcorrencia"];
+            Response.Redirect("~/Atendente/GerenciadorChamado/NovoChamadoSelecionado.aspx");
+        }
     }
 }

@@ -88,6 +88,7 @@
   <ItemGroup>
     <Content Include="Atendente\GerenciadorChamado\DetalharChamado.aspx" />
     <Content Include="Atendente\GerenciadorChamado\NovoChamado.aspx" />
+    <Content Include="Atendente\GerenciadorChamado\NovoChamadoSelecionado.aspx" />
     <Content Include="Atendente\GerenciadorChamado\Principal.aspx" />
     <Content Include="Atendente\GerenciadorOcorrencia\DetalharOcorrencia.aspx" />
     <Content Include="Atendente\GerenciadorOcorrencia\NovaOcorrencia.aspx" />
@@ -179,6 +180,13 @@
     </Compile>
     <Compile Include="Atendente\GerenciadorChamado\NovoChamado.aspx.designer.cs">
       <DependentUpon>NovoChamado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorChamado\NovoChamadoSelecionado.aspx.cs">
+      <DependentUpon>NovoChamadoSelecionado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Atendente\GerenciadorChamado\NovoChamadoSelecionado.aspx.designer.cs">
+      <DependentUpon>NovoChamadoSelecionado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Atendente\GerenciadorChamado\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>

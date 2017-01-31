@@ -62,7 +62,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrencia" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencia">
+                      <asp:GridView ID="GridViewOcorrencia" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencia" OnRowCommand="GridViewOcorrencia_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código da Ocorrência" SortExpression="Id" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />

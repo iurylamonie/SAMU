@@ -63,7 +63,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrenciaSemChamado" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarSemChamado" OnRowCommand="GridViewOcorrencias_RowCommand">
+                      <asp:GridView ID="GridViewOcorrenciaSemChamado" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarSemChamado" OnRowCommand="GridViewOcorrenciaSemChamado_RowCommand" >
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
@@ -91,7 +91,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrenciasFinalizadas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceFinalizados" OnRowCommand="GridViewOcorrencias_RowCommand">
+                      <asp:GridView ID="GridViewOcorrenciasFinalizadas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceFinalizados" OnRowCommand="GridViewOcorrenciasFinalizadas_RowCommand" >
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />

@@ -61,6 +61,7 @@
                                     <asp:SessionParameter Name="_ocorrencia_id" SessionField="idOcorrencia" Type="Int32" />
                                 </SelectParameters>
                             </asp:ObjectDataSource>
+                            <asp:Button ID="ButtonNovoChamado" runat="server" Text="Novo Chamado" OnClick="ButtonNovoChamado_Click" />
                         </div>
                     </div>                    
                 </div>
