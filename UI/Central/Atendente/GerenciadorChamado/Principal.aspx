@@ -10,7 +10,7 @@
             </ol>
         </div>
    
-     <div class="center" id="opcoes">
+     <div class="opcoesprincipal">
         <div id="opcao3" class="opcao">
             <a href="NovoChamado.aspx">
 			<div id="imgopcao3" class="imgopcao"></div>
@@ -26,7 +26,7 @@
              
               <div class="panel panel-default">
                 
-                  <div class="panel-heading center-block">
+                  <div class="cabessalhopainel">
                       <ul class="menu cf">
                         <li><p>Chamados</p></li>     
                       </ul>
@@ -55,7 +55,7 @@
             <div class="col-xs-6 col-sm-6">
             <div class="panel panel-default">
 
-                  <div class="panel-heading">
+                  <div class="cabessalhopainel">
                       <ul class="menu cf">
                         <li><p>Ocorrências sem Chamados</p></li>     
                       </ul>

@@ -22,7 +22,7 @@
           <div class="col-xs-6 col-sm-4">
               <div class="panel panel-default">
                 
-                  <div class="panel-heading center-block">
+                  <div class="cabessalhopainelnovochamado" id="cabessalhoesquerdanovochamado">
                       <ul class="menu cf">
                         <li><p>Escolha à Ambulância</p></li>     
                       </ul>
@@ -45,7 +45,7 @@
             <div class="col-xs-6 col-sm-4">
             <div class="panel panel-default">
 
-                  <div class="panel-heading">
+                  <div class="cabessalhopainelnovochamado">
                       <ul class="menu cf">
                         <li><p>Escolha o Hospital</p></li>     
                       </ul>
@@ -71,7 +71,7 @@
              <div class="col-xs-6 col-sm-4 ">
             <div class="panel panel-default">
 
-                  <div class="panel-heading">
+                  <div class="cabessalhopainelnovochamado">
                       <ul class="menu cf">
                         <li><p>Escolher Ocorrência</p></li>     
                       </ul>
@@ -100,7 +100,7 @@
           <div class="col-xs-6 col-sm-4 ">
             <div class="panel panel-default">
 
-                  <div class="panel-heading">
+                  <div class="cabessalhopainelnovochamado">
                       <ul class="menu cf">
                         <li><p>Detalhes do Chamado</p></li>     
                       </ul>

@@ -11,7 +11,7 @@
             </ol>
         </div>
         <div class="center">
-             <div id="opcoesprincipal" >
+             <div class="opcoesprincipal" >
                     <div id="opcao2" class="opcao">
                         <a href="NovaOcorrencia.aspx">
                             <div id="imgopcao2" class="imgopcao"></div>

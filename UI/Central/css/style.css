@@ -78,9 +78,11 @@ div#logo
     width: -moz-fit-content;
     height: -moz-fit-content;
 }
-#opcoesprincipal {
+.opcoesprincipal
+{
     margin: 0 auto;
     margin-top: 40px;
+    margin-bottom: 40px;
     width: -webkit-fit-content;
     height: -webkit-fit-content;
     width: -moz-fit-content;
@@ -126,7 +128,7 @@ div#logo
 }
 #opcao3
 {
-    margin-left: 40px;
+    
 }
 #imgopcao3
 {
@@ -401,3 +403,33 @@ td
 
 
 /*FIM PAGE OCORRENCIAS*/
+/*inicio page chamado*/
+
+.cabessalhopainel
+{
+    color: #333;
+    background-color: #6c000a;
+    border-color: #6c000a;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.cabessalhopainelnovochamado
+{
+    color: #333;
+    background-color: #6c000a;
+    border-color: #ddd;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#cabessalhoesquerdanovochamado
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*fim page chamado*/
