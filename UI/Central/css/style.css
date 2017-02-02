@@ -226,10 +226,19 @@ div#logo
 
 
 /*PAGE OCORRENCIAS*/
+#botoes-ocorrencia {
+    width: 160px;
+    margin: 0 auto;
+}
+
 #ocorr-body {
     text-align: right;
-    width: 315px;
+    width: 406px;
     margin: 0 auto;
+    padding: 39px;
+    background-color: rgb(245, 245, 245);
+    height: 534px;
+    border-radius: 6px;
 }
 .titulosinputask {
     margin: 75px;
@@ -238,7 +247,9 @@ div#logo
     margin: 0 auto;
 }
 .buttonocorr {
-    margin-right: 40px;
+    border-radius: 12px;
+    background-color: #7b7b7b;
+    color: #ffffff;
 }
 .class1 {
     width: 50%;
@@ -430,6 +441,16 @@ td
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
+#heading-painel-1a {
+    margin-bottom: 20px;
+}
+.panel--default {
+    border-color: #6c000a;
+}
+.button--default {
+    background-color: #3e3e3e;
+    color: #959d9d;
 }
 
 /*fim page chamado*/

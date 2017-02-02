@@ -22,7 +22,7 @@
                 
 
                 <div class="col-xs-6 col-sm-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel--default">
                         <div class="panel-heading">
                             <ul class="menu cf">
                                 <li><p>Detalhes do Chamado</p></li>     
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="col-xs-6 col-sm-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel--default">
                         <div class="panel-heading">
                             <ul class="menu cf">
                                 <li><p>Ocorrência do Chamado</p></li>     

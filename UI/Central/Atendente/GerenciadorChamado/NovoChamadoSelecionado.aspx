@@ -21,7 +21,7 @@
          <!--Menus-->
         <div class="row">
           <div class="col-xs-6 col-sm-4">
-              <div class="panel panel-default">
+              <div class="panel panel--default">
                 
                   <div class="panel-heading center-block">
                       <ul class="menu cf">
@@ -44,7 +44,7 @@
           </div>
        
             <div class="col-xs-6 col-sm-4">
-            <div class="panel panel-default">
+            <div class="panel panel--default">
 
                   <div class="panel-heading">
                       <ul class="menu cf">
@@ -72,7 +72,7 @@
             
 
           <div class="col-xs-6 col-sm-4 ">
-            <div class="panel panel-default">
+            <div class="panel panel--default">
 
                   <div class="panel-heading">
                       <ul class="menu cf">

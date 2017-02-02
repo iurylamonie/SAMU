@@ -39,7 +39,7 @@
    
         <!--Painel de Ultimas Ocorrências e Chamados-->
 
-        <div class="panel panel-default">
+        <div class="panel panel--default">
         <!--Ocorrências-->
         <div class="class1">
           <div class="panel-heading1">

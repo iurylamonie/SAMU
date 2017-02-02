@@ -13,14 +13,14 @@
 
     <div class="panel panel-info">
        
-        <div class="panel-heading panel-title">
+        <div class="panel-heading panel-title" id="heading-painel-1a">
             <asp:Label ID="LabelNumeroOcorrencia" Text="Ocorrência Numero X - Criando Chamado" runat="server" />
         </div>
 
          <!--Menus-->
         <div class="row">
           <div class="col-xs-6 col-sm-4">
-              <div class="panel panel-default">
+              <div class="panel panel--default">
                 
                   <div class="cabessalhopainelnovochamado" id="cabessalhoesquerdanovochamado">
                       <ul class="menu cf">
@@ -43,7 +43,7 @@
           </div>
        
             <div class="col-xs-6 col-sm-4">
-            <div class="panel panel-default">
+            <div class="panel panel--default">
 
                   <div class="cabessalhopainelnovochamado">
                       <ul class="menu cf">
@@ -69,7 +69,7 @@
           </div>
 
              <div class="col-xs-6 col-sm-4 ">
-            <div class="panel panel-default">
+            <div class="panel panel--default">
 
                   <div class="cabessalhopainelnovochamado">
                       <ul class="menu cf">
@@ -98,7 +98,7 @@
           </div>
 
           <div class="col-xs-6 col-sm-4 ">
-            <div class="panel panel-default">
+            <div class="panel panel--default">
 
                   <div class="cabessalhopainelnovochamado">
                       <ul class="menu cf">

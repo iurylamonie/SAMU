@@ -20,7 +20,7 @@
         <div class="panel-body">           
             <div class="row">                   
                 <div class="col-xs-6 col-sm-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel--default">
                         <div class="panel-heading">
                             <ul class="menu cf">
                                 <li><p>Detalhas da Ocorrência</p></li>     
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="col-xs-6 col-sm-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel--default">
                         <div class="panel-heading">
                             <ul class="menu cf">
                                 <li><p>Chamados da Ocorrência</p></li>     

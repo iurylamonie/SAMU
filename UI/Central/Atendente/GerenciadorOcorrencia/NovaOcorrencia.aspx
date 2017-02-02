@@ -29,9 +29,10 @@
     <asp:Label ID="LabelNumeroResidencia" runat="server" Text="Número da Residencia:" Visible="false"/> <asp:TextBox ID="TextBoxNumeroResidencia" runat="server" Visible="false"/> <br />
     <a class="titulosinputask">Informação Adicional</a> <br />
     <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" TextMode="MultiLine" Height="156px" Width="360px" />	  <br />  
-    <asp:Button id="ButtonLimpar" class="buttonocorr" Text="Limpar" runat="server"/>
-    <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click"/><br />
-
+    <div id="botoes-ocorrencia">
+        <asp:Button id="ButtonLimpar" class="buttonocorr" Text="Limpar" runat="server"/>
+        <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click"/><br />
+    </div>
     <asp:Label ID="LabelChamado" runat="server"  Text="Deseja Realizar um Chamado?" Visible="false"/><br />
     <asp:Button ID="ButtonSim" runat="server" Text="Sim" visible="false" OnClick="ButtonSim_Click"/>
     <asp:Button ID="ButtonNao" runat="server" Text="Não" visible="false" OnClick="ButtonNao_Click"/>
