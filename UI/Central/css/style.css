@@ -226,7 +226,7 @@ div#logo
 
 
 /*PAGE OCORRENCIAS*/
-#botoes-ocorrencia {
+.botoes-ocorrencia {
     width: 160px;
     margin: 0 auto;
 }
@@ -241,7 +241,12 @@ div#logo
     border-radius: 6px;
 }
 .titulosinputask {
-    margin: 75px;
+}
+.divtitulosinputask 
+{
+    margin: 0 auto;
+    width: 235px;
+    text-align: center;
 }
 #RadioButtonList1 {
     margin: 0 auto;
@@ -451,6 +456,10 @@ td
 .button--default {
     background-color: #3e3e3e;
     color: #959d9d;
+}
+.confchamado
+{
+    width:70px;
 }
 
 /*fim page chamado*/

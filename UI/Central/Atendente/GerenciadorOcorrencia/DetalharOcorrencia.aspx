@@ -21,7 +21,7 @@
             <div class="row">                   
                 <div class="col-xs-6 col-sm-6">
                     <div class="panel panel--default">
-                        <div class="panel-heading">
+                        <div class="cabessalhopainel">
                             <ul class="menu cf">
                                 <li><p>Detalhas da Ocorrência</p></li>     
                             </ul>
@@ -44,7 +44,7 @@
 
                 <div class="col-xs-6 col-sm-6">
                     <div class="panel panel--default">
-                        <div class="panel-heading">
+                        <div class="cabessalhopainel">
                             <ul class="menu cf">
                                 <li><p>Chamados da Ocorrência</p></li>     
                             </ul>

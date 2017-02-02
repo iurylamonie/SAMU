@@ -27,14 +27,20 @@
     <asp:Label ID="LabelBairro" runat="server" Text="Nome da Bairro:" Visible="false"/> <asp:TextBox ID="TextBoxBairro" runat="server" Visible="false"/> <br />
     <asp:Label ID="LabelRua" runat="server" Text="Nome da Rua:" Visible="false"/> <asp:TextBox ID="TextBoxRua" runat="server" Visible="false"/> <br />
     <asp:Label ID="LabelNumeroResidencia" runat="server" Text="Número da Residencia:" Visible="false"/> <asp:TextBox ID="TextBoxNumeroResidencia" runat="server" Visible="false"/> <br />
-    <a class="titulosinputask">Informação Adicional</a> <br />
+    <div class="divtitulosinputask">
+        <a class="titulosinputask">Informação Adicional</a>
+    </div>
     <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" TextMode="MultiLine" Height="156px" Width="360px" />	  <br />  
-    <div id="botoes-ocorrencia">
+    <div class="botoes-ocorrencia">
         <asp:Button id="ButtonLimpar" class="buttonocorr" Text="Limpar" runat="server"/>
         <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click"/><br />
     </div>
-    <asp:Label ID="LabelChamado" runat="server"  Text="Deseja Realizar um Chamado?" Visible="false"/><br />
-    <asp:Button ID="ButtonSim" runat="server" Text="Sim" visible="false" OnClick="ButtonSim_Click"/>
-    <asp:Button ID="ButtonNao" runat="server" Text="Não" visible="false" OnClick="ButtonNao_Click"/>
+    <div class="divtitulosinputask">
+        <asp:Label ID="titulosinputask" runat="server"  Text="Deseja Realizar um Chamado?" Visible="false"/><br />
+    </div>
+    <div class="confchamado botoes-ocorrencia">
+    <asp:Button ID="ButtonSim" class="buttonocorr" runat="server" Text="Sim" visible="false" OnClick="ButtonSim_Click"/>
+    <asp:Button ID="ButtonNao" class="buttonocorr" runat="server" Text="Não" visible="false" OnClick="ButtonNao_Click"/>
+    </div>
         </div>
 </asp:Content>

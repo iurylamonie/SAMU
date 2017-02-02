@@ -184,13 +184,13 @@ namespace Central.Atendente.GerenciadorOcorrencia {
         protected global::System.Web.UI.WebControls.Button ButtonConfirar;
         
         /// <summary>
-        /// Controle LabelChamado.
+        /// Controle titulosinputask.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelChamado;
+        protected global::System.Web.UI.WebControls.Label titulosinputask;
         
         /// <summary>
         /// Controle ButtonSim.
