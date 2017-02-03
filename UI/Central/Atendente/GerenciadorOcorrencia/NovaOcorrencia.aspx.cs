@@ -91,7 +91,7 @@ namespace Central.Atendente.GerenciadorOcorrencia
             ButtonConfirar.Enabled = false;
             ButtonLimpar.Enabled = false;
 
-            LabelChamado.Visible = true;
+            titulosinputask.Visible = true;
             ButtonSim.Visible = true;
             ButtonNao.Visible = true;
             
@@ -120,7 +120,7 @@ namespace Central.Atendente.GerenciadorOcorrencia
 
         protected void ButtonNao_Click(object sender, EventArgs e)
         {
-            LabelChamado.Visible = false;
+            titulosinputask.Visible = false;
             ButtonSim.Visible = false;
             ButtonNao.Visible = false;
             Response.Redirect("~/Atendente/GerenciadorOcorrencia/Principal.aspx");

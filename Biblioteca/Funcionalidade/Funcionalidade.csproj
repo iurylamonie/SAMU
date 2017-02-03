@@ -57,9 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chamado.cs" />
+    <Compile Include="Criptografia.cs" />
     <Compile Include="Hospital.cs" />
     <Compile Include="Ocorrencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="VeiculoAtendimento.cs" />
     <Compile Include="ViaCEP.cs" />
   </ItemGroup>

@@ -86,6 +86,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\Inicial.aspx" />
     <Content Include="Atendente\GerenciadorChamado\DetalharChamado.aspx" />
     <Content Include="Atendente\GerenciadorChamado\NovoChamado.aspx" />
     <Content Include="Atendente\GerenciadorChamado\NovoChamadoSelecionado.aspx" />
@@ -136,6 +137,7 @@
     <Content Include="img\setaesq.png" />
     <Content Include="img\usuario.png" />
     <Content Include="js\glyphicons-halflings-regular.svg" />
+    <Content Include="Login\Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap-theme.min.css.map" />
@@ -167,6 +169,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\Inicial.aspx.cs">
+      <DependentUpon>Inicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Inicial.aspx.designer.cs">
+      <DependentUpon>Inicial.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Atendente\GerenciadorChamado\DetalharChamado.aspx.cs">
       <DependentUpon>DetalharChamado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +246,13 @@
     <Compile Include="CepTest.aspx.designer.cs">
       <DependentUpon>CepTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,10 +265,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Administrador\" />
-    <Folder Include="Login\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
