@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -92,5 +93,31 @@ namespace Funcionalidade
             httpClient.PutAsync("api/Usuario/AlterarNome/" + _cpf, content);
         }
 
+
+        //Funções do Administrador
+        public static void Criar(Entidade.Usuario _usuario)
+        {
+            IniciarHttp();
+            string s = "=" + JsonConvert.SerializeObject(_usuario);
+            var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
+            httpClient.PostAsync("api/Usuario/Criar", content);
+        }
+
+        public static void Deletar(string _cpf)
+        {
+            IniciarHttp();
+            httpClient.DeleteAsync("api/Usuario/Deletar/" + _cpf);
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public static List<Entidade.Usuario> ListarUsuarios(int _tipo)
+        {
+            IniciarHttp();
+            var response = httpClient.GetAsync("api/Usuario/ListarTodos/" + _tipo);
+            HttpResponseMessage rm = response.Result;
+            string s = rm.Content.ReadAsStringAsync().Result;
+            List<Entidade.Usuario> usuarios = JsonConvert.DeserializeObject<List<Entidade.Usuario>>(s);
+            return usuarios;
+        }
     }
 }

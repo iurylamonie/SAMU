@@ -86,6 +86,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\GerenciadorAmbulancia\Principal.aspx" />
+    <Content Include="Administrador\GerenciadorFuncionario\Principal.aspx" />
+    <Content Include="Administrador\GerenciadorHospital\Principal.aspx" />
     <Content Include="Administrador\Inicial.aspx" />
     <Content Include="Atendente\GerenciadorChamado\DetalharChamado.aspx" />
     <Content Include="Atendente\GerenciadorChamado\NovoChamado.aspx" />
@@ -169,6 +172,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\GerenciadorAmbulancia\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorAmbulancia\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorFuncionario\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorFuncionario\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorHospital\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorHospital\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\Inicial.aspx.cs">
       <DependentUpon>Inicial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

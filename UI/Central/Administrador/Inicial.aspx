@@ -21,22 +21,24 @@
           <div class="panel-body">
 
               <div id="opcoes">
-                  <a>
+                 
+                   <a href="GerenciadorHospital/Principal.aspx">
                       <div id="opcao1" class="opcao">
 						<div id="imgopcao1" class="imgopcao"></div>
 						  <a class="tituloopcao" href="#">Hospital</a>                   
 					</div>
                   </a>
 					
-					 <a href="ocorrencia.aspx"><div id="opcao2" class="opcao">
+					 <a href="GerenciadorFuncionario/Principal.aspx"><div id="opcao2" class="opcao">
 						<div id="imgopcao2" class="imgopcao"></div>						
                         <a class="tituloopcao" href="#">Funcionario</a>
 					</div></a>
-
-					<div id="opcao3" class="opcao">
+                  
+                  <a href="GerenciadorAmbulancia/Principal.aspx"><div id="opcao3" class="opcao">
 						<div id="imgopcao3" class="imgopcao"></div>
                         <a class="tituloopcao" href="#">Ambulância</a>
-					</div>
+				    </div></a>
+					
 				</div>
           </div>
            
