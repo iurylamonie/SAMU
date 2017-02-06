@@ -115,8 +115,8 @@
                       <a class="titulosinput">Código da Ambulância(a ser solicitada): </a> <asp:Label ID="LabelAmbulancia" runat="server" /> <br />
                       <a class="titulosinput">Nome do Hospital: </a> <asp:Label ID="LabelHospital" runat="server" /> <br />
                       <br />
-                       <asp:Button id="ButtonCancelar" Text="Cancelar" runat="server"/>
-                       <asp:Button id="ButtonCriar" runat="server" Text="Criar" OnClick="ButtonCriar_Click" /><br />
+                       <asp:Button id="ButtonCancelar" Class="buttonocorr" Text="Cancelar" runat="server"/>
+                       <asp:Button id="ButtonCriar" Class="buttonocorr" runat="server" Text="Criar" OnClick="ButtonCriar_Click" /><br />
                   </div>
            
               </div> 

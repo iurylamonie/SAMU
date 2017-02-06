@@ -36,8 +36,8 @@
                             <a class="titulosinput">Informação Adicional</a> <br />
                             <asp:Label ID="LabelInfoAdicional" runat="server" />
                             <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" Enabled="false" TextMode="MultiLine" Height="156px" Width="360px" />	  <br />  
-                            <asp:Button id="ButtonEditar" Text="Editar" runat="server" OnClick="ButtonEditar_Click"/>
-                            <asp:Button id="ButtonConfirar" runat="server" Text="Confirmar" Enabled="false" OnClick="ButtonConfirar_Click"/>
+                            <asp:Button id="ButtonEditar" Class="buttonocorr" Text="Editar" runat="server" OnClick="ButtonEditar_Click"/>
+                            <asp:Button id="ButtonConfirar" Class="buttonocorr" runat="server" Text="Confirmar" Enabled="false" OnClick="ButtonConfirar_Click"/>
                         </div>
                     </div>                    
                 </div>
@@ -61,7 +61,7 @@
                                     <asp:SessionParameter Name="_ocorrencia_id" SessionField="idOcorrencia" Type="Int32" />
                                 </SelectParameters>
                             </asp:ObjectDataSource>
-                            <asp:Button ID="ButtonNovoChamado" runat="server" Text="Novo Chamado" OnClick="ButtonNovoChamado_Click" />
+                            <asp:Button ID="ButtonNovoChamado" Class="buttonocorr" runat="server" Text="Novo Chamado" OnClick="ButtonNovoChamado_Click" />
                         </div>
                     </div>                    
                 </div>

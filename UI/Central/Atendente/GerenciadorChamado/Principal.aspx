@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col-xs-6 col-sm-6">
              
-              <div class="panel panel-default">
+              <div class="panel panel--default">
                 
                   <div class="cabessalhopainel">
                       <ul class="menu cf">
@@ -53,7 +53,7 @@
           </div>
        
             <div class="col-xs-6 col-sm-6">
-            <div class="panel panel-default">
+            <div class="panel panel--default">
 
                   <div class="cabessalhopainel">
                       <ul class="menu cf">

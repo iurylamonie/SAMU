@@ -5,6 +5,10 @@
 	font-weight: normal;
 	font-style: normal;
 }
+div
+{
+    border-color: #6c000a;
+}
 body
 {
 	font-family: mentone;
