@@ -30,10 +30,11 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAdministradores" runat="server" DataSourceID="ObjectDataSourceAdministradores" AutoGenerateColumns="False">
+                      <asp:GridView ID="GridViewAdministradores" runat="server" DataSourceID="ObjectDataSourceAdministradores" AutoGenerateColumns="False" OnRowCommand="GridViewAdministradores_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
+                              <asp:ButtonField CommandName="Deletar" Text="Deletar"></asp:ButtonField>
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceAdministradores" runat="server" SelectMethod="ListarUsuarios" TypeName="Funcionalidade.Usuario">
@@ -56,10 +57,11 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAtendentes" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceAtendentes">
+                      <asp:GridView ID="GridViewAtendentes" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceAtendentes" OnRowCommand="GridViewAtendentes_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
+                              <asp:ButtonField CommandName="Deletar" Text="Deletar"></asp:ButtonField>
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceAtendentes" runat="server" SelectMethod="ListarUsuarios" TypeName="Funcionalidade.Usuario">
@@ -82,10 +84,11 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewSocorristas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceSocorristas">
+                      <asp:GridView ID="GridViewSocorristas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceSocorristas" OnRowCommand="GridViewSocorristas_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
+                              <asp:ButtonField CommandName="Deletar" Text="Deletar"></asp:ButtonField>
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceSocorristas" runat="server" SelectMethod="ListarUsuarios" TypeName="Funcionalidade.Usuario">

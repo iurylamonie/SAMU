@@ -13,5 +13,38 @@ namespace Central.Administrador.GerenciadorFuncionario
         {
 
         }
+
+        protected void GridViewAdministradores_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Deletar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                string cpf = GridViewAdministradores.Rows[index].Cells[1].ToString();
+                Funcionalidade.Usuario.Deletar(cpf);
+                Response.Redirect("~/Administrador/GerenciadorFuncionario/Principal.aspx");
+            }
+        }
+
+        protected void GridViewSocorristas_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Deletar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                string cpf = GridViewSocorristas.Rows[index].Cells[1].ToString();
+                Funcionalidade.Usuario.Deletar(cpf);
+                Response.Redirect("~/Administrador/GerenciadorFuncionario/Principal.aspx");
+            }
+        }
+
+        protected void GridViewAtendentes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Deletar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                string cpf = GridViewAtendentes.Rows[index].Cells[1].ToString();
+                Funcionalidade.Usuario.Deletar(cpf);
+                Response.Redirect("~/Administrador/GerenciadorFuncionario/Principal.aspx");
+            }
+        }
     }
 }

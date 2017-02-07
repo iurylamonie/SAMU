@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador\GerenciadorAmbulancia\Principal.aspx" />
+    <Content Include="Administrador\GerenciadorFuncionario\NovoFuncionario.aspx" />
     <Content Include="Administrador\GerenciadorFuncionario\Principal.aspx" />
     <Content Include="Administrador\GerenciadorHospital\Principal.aspx" />
     <Content Include="Administrador\Inicial.aspx" />
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="Administrador\GerenciadorAmbulancia\Principal.aspx.designer.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorFuncionario\NovoFuncionario.aspx.cs">
+      <DependentUpon>NovoFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorFuncionario\NovoFuncionario.aspx.designer.cs">
+      <DependentUpon>NovoFuncionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\GerenciadorFuncionario\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
