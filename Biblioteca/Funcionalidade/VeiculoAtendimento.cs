@@ -16,7 +16,7 @@ namespace Funcionalidade
         static private void IniciarHttp()
         {
             httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("http://localhost:51813/");
+            httpClient.BaseAddress = new Uri("http://10.21.0.137/20131011110169/");
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
