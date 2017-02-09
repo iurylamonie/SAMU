@@ -5,6 +5,23 @@
 	font-weight: normal;
 	font-style: normal;
 }
+th 
+{
+    text-align: center;
+}
+tr
+{
+    text-align: center;
+}
+td
+{
+    text-align: center;
+}
+table
+{
+    border: transparent;
+    border-bottom: #6c000a;
+}
 div
 {
     border-color: #6c000a;
@@ -336,8 +353,7 @@ input
 td
 {
 	width: 176px;
-	text-align: right;
-	padding-bottom: 22px;
+	padding: 8px;
 	font-size: 11pt;
 }
 #tbinputs
