@@ -5,7 +5,7 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="placa" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="tipo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Association Name="Ambulancia_VeiculoAtendimento" Member="VeiculoAtendimentos" ThisKey="id" OtherKey="Ambulancia_id" Type="VeiculoAtendimento" />
+      <Association Name="Ambulancia_VeiculoAtendimento" Member="VeiculoAtendimentos" AccessModifier="Internal" ThisKey="id" OtherKey="Ambulancia_id" Type="VeiculoAtendimento" />
     </Type>
   </Table>
   <Table Name="dbo.VeiculoAtendimento" Member="VeiculoAtendimentos">
@@ -16,9 +16,9 @@
       <Column Name="atendimento" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="localizacao" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="disponibilidade" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="VeiculoAtendimento_Chamado" Member="Chamados" ThisKey="id" OtherKey="VeiculoAtendimento_id" Type="Chamado" />
-      <Association Name="Ambulancia_VeiculoAtendimento" Member="Ambulancia" ThisKey="Ambulancia_id" OtherKey="id" Type="Ambulancia" IsForeignKey="true" />
-      <Association Name="Usuario_VeiculoAtendimento" Member="Usuario" ThisKey="Usuario_id" OtherKey="id" Type="Usuario" IsForeignKey="true" />
+      <Association Name="VeiculoAtendimento_Chamado" Member="Chamados" AccessModifier="Internal" ThisKey="id" OtherKey="VeiculoAtendimento_id" Type="Chamado" />
+      <Association Name="Ambulancia_VeiculoAtendimento" Member="Ambulancia" AccessModifier="Internal" ThisKey="Ambulancia_id" OtherKey="id" Type="Ambulancia" IsForeignKey="true" />
+      <Association Name="Usuario_VeiculoAtendimento" Member="Usuario" AccessModifier="Internal" ThisKey="Usuario_id" OtherKey="id" Type="Usuario" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Chamado" Member="Chamados">
@@ -29,9 +29,9 @@
       <Column Name="Hospital_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="trajetoOcorrencia" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="trajetoHospital" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Association Name="VeiculoAtendimento_Chamado" Member="VeiculoAtendimento" ThisKey="VeiculoAtendimento_id" OtherKey="id" Type="VeiculoAtendimento" IsForeignKey="true" />
-      <Association Name="Hospital_Chamado" Member="Hospital" ThisKey="Hospital_id" OtherKey="id" Type="Hospital" IsForeignKey="true" />
-      <Association Name="Ocorrencia_Chamado" Member="Ocorrencia" ThisKey="Ocorrencia_id" OtherKey="id" Type="Ocorrencia" IsForeignKey="true" />
+      <Association Name="VeiculoAtendimento_Chamado" Member="VeiculoAtendimento" AccessModifier="Internal" ThisKey="VeiculoAtendimento_id" OtherKey="id" Type="VeiculoAtendimento" IsForeignKey="true" />
+      <Association Name="Hospital_Chamado" Member="Hospital" AccessModifier="Internal" ThisKey="Hospital_id" OtherKey="id" Type="Hospital" IsForeignKey="true" />
+      <Association Name="Ocorrencia_Chamado" Member="Ocorrencia" AccessModifier="Internal" ThisKey="Ocorrencia_id" OtherKey="id" Type="Ocorrencia" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Hospital" Member="Hospitals">
@@ -40,7 +40,7 @@
       <Column Name="nome" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="endereco" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="tipo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Association Name="Hospital_Chamado" Member="Chamados" ThisKey="id" OtherKey="Hospital_id" Type="Chamado" />
+      <Association Name="Hospital_Chamado" Member="Chamados" AccessModifier="Internal" ThisKey="id" OtherKey="Hospital_id" Type="Chamado" />
     </Type>
   </Table>
   <Table Name="dbo.Ocorrencia" Member="Ocorrencias">
@@ -55,8 +55,8 @@
       <Column Name="cep" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="informacaoAdicional" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="situacao" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Association Name="Ocorrencia_Chamado" Member="Chamados" ThisKey="id" OtherKey="Ocorrencia_id" Type="Chamado" />
-      <Association Name="Usuario_Ocorrencia" Member="Usuario" ThisKey="usuario_id" OtherKey="id" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Ocorrencia_Chamado" Member="Chamados" AccessModifier="Internal" ThisKey="id" OtherKey="Ocorrencia_id" Type="Chamado" />
+      <Association Name="Usuario_Ocorrencia" Member="Usuario" AccessModifier="Internal" ThisKey="usuario_id" OtherKey="id" Type="Usuario" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Usuario" Member="Usuarios">
@@ -66,8 +66,8 @@
       <Column Name="cpf" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="senha" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="tipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Usuario_VeiculoAtendimento" Member="VeiculoAtendimentos" ThisKey="id" OtherKey="Usuario_id" Type="VeiculoAtendimento" />
-      <Association Name="Usuario_Ocorrencia" Member="Ocorrencias" ThisKey="id" OtherKey="usuario_id" Type="Ocorrencia" />
+      <Association Name="Usuario_VeiculoAtendimento" Member="VeiculoAtendimentos" AccessModifier="Internal" ThisKey="id" OtherKey="Usuario_id" Type="VeiculoAtendimento" />
+      <Association Name="Usuario_Ocorrencia" Member="Ocorrencias" AccessModifier="Internal" ThisKey="id" OtherKey="usuario_id" Type="Ocorrencia" />
     </Type>
   </Table>
 </Database>

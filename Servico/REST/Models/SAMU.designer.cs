@@ -222,7 +222,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Ambulancia_id")]
-		public EntitySet<VeiculoAtendimento> VeiculoAtendimentos
+		internal EntitySet<VeiculoAtendimento> VeiculoAtendimentos
 		{
 			get
 			{
@@ -446,7 +446,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VeiculoAtendimento_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="VeiculoAtendimento_id")]
-		public EntitySet<Chamado> Chamados
+		internal EntitySet<Chamado> Chamados
 		{
 			get
 			{
@@ -459,7 +459,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ambulancia_VeiculoAtendimento", Storage="_Ambulancia", ThisKey="Ambulancia_id", OtherKey="id", IsForeignKey=true)]
-		public Ambulancia Ambulancia
+		internal Ambulancia Ambulancia
 		{
 			get
 			{
@@ -493,7 +493,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_VeiculoAtendimento", Storage="_Usuario", ThisKey="Usuario_id", OtherKey="id", IsForeignKey=true)]
-		public Usuario Usuario
+		internal Usuario Usuario
 		{
 			get
 			{
@@ -742,7 +742,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VeiculoAtendimento_Chamado", Storage="_VeiculoAtendimento", ThisKey="VeiculoAtendimento_id", OtherKey="id", IsForeignKey=true)]
-		public VeiculoAtendimento VeiculoAtendimento
+		internal VeiculoAtendimento VeiculoAtendimento
 		{
 			get
 			{
@@ -776,7 +776,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hospital_Chamado", Storage="_Hospital", ThisKey="Hospital_id", OtherKey="id", IsForeignKey=true)]
-		public Hospital Hospital
+		internal Hospital Hospital
 		{
 			get
 			{
@@ -810,7 +810,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ocorrencia_Chamado", Storage="_Ocorrencia", ThisKey="Ocorrencia_id", OtherKey="id", IsForeignKey=true)]
-		public Ocorrencia Ocorrencia
+		internal Ocorrencia Ocorrencia
 		{
 			get
 			{
@@ -981,7 +981,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Hospital_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="Hospital_id")]
-		public EntitySet<Chamado> Chamados
+		internal EntitySet<Chamado> Chamados
 		{
 			get
 			{
@@ -1294,7 +1294,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ocorrencia_Chamado", Storage="_Chamados", ThisKey="id", OtherKey="Ocorrencia_id")]
-		public EntitySet<Chamado> Chamados
+		internal EntitySet<Chamado> Chamados
 		{
 			get
 			{
@@ -1307,7 +1307,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Ocorrencia", Storage="_Usuario", ThisKey="usuario_id", OtherKey="id", IsForeignKey=true)]
-		public Usuario Usuario
+		internal Usuario Usuario
 		{
 			get
 			{
@@ -1517,7 +1517,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_VeiculoAtendimento", Storage="_VeiculoAtendimentos", ThisKey="id", OtherKey="Usuario_id")]
-		public EntitySet<VeiculoAtendimento> VeiculoAtendimentos
+		internal EntitySet<VeiculoAtendimento> VeiculoAtendimentos
 		{
 			get
 			{
@@ -1530,7 +1530,7 @@ namespace REST.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Ocorrencia", Storage="_Ocorrencias", ThisKey="id", OtherKey="usuario_id")]
-		public EntitySet<Ocorrencia> Ocorrencias
+		internal EntitySet<Ocorrencia> Ocorrencias
 		{
 			get
 			{

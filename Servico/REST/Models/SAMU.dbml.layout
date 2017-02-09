@@ -38,42 +38,42 @@
         <elementListCompartment Id="4f1e5a17-dda4-4307-a573-f72f97abeb3c" absoluteBounds="0.765, 3.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.44314697265625); (4.5 : 1.44314697265625); (4.5 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.44314697265625); (4.5 : 1.44314697265625); (4.5 : 2.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SAMUDataContext/Ambulancia/Ambulancia_VeiculoAtendimento" />
       <nodes>
         <classShapeMoniker Id="991e47cd-b288-4b61-be07-bf7602c7da51" />
         <classShapeMoniker Id="103fc76e-3592-47a5-8b62-795f1c7959be" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 3.48159912109375); (7.25 : 3.48159912109375); (7.25 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.48159912109375); (7.25 : 3.48159912109375); (7.25 : 4.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SAMUDataContext/VeiculoAtendimento/VeiculoAtendimento_Chamado" />
       <nodes>
         <classShapeMoniker Id="103fc76e-3592-47a5-8b62-795f1c7959be" />
         <classShapeMoniker Id="824c9425-45c7-4c52-8d29-af1bb0808d42" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 11.5392976888021); (7.25 : 11.5392976888021); (7.25 : 6.4631982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 11.5392976888021); (7.25 : 11.5392976888021); (7.25 : 6.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SAMUDataContext/Hospital/Hospital_Chamado" />
       <nodes>
         <classShapeMoniker Id="5080d503-4f84-4ed4-b9a2-14e5f64807b8" />
         <classShapeMoniker Id="824c9425-45c7-4c52-8d29-af1bb0808d42" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 6.10659912109375); (6.25 : 6.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 6.10659912109375); (6.25 : 6.10659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SAMUDataContext/Ocorrencia/Ocorrencia_Chamado" />
       <nodes>
         <classShapeMoniker Id="a359f673-c552-4247-851e-86f9bd2d8b05" />
         <classShapeMoniker Id="824c9425-45c7-4c52-8d29-af1bb0808d42" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 3.98159912109375); (3.5 : 3.98159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.98159912109375); (3.5 : 3.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SAMUDataContext/Usuario/Usuario_VeiculoAtendimento" />
       <nodes>
         <classShapeMoniker Id="b3d2d26f-877c-4fdf-a353-eef6bacc5c5d" />
         <classShapeMoniker Id="103fc76e-3592-47a5-8b62-795f1c7959be" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 5.27089680989583); (1.75 : 7.11620198567708); (3.5 : 7.11620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 5.27089680989583); (1.75 : 7.11620198567708); (3.5 : 7.11620198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SAMUDataContext/Usuario/Usuario_Ocorrencia" />
       <nodes>
         <classShapeMoniker Id="b3d2d26f-877c-4fdf-a353-eef6bacc5c5d" />

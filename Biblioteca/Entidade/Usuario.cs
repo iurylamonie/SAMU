@@ -13,6 +13,8 @@ namespace Entidade
         private string senha;
         private string cpf;
 
+        public Ocorrencia Ocorrencia { get; set; }
+        public VeiculoAtendimento VeiculoAtendimento { get; set; }
         //Propriedades
         //public int Id { get { return id;  } set { this.id = value; } }
         public int Tipo { get { return tipo; } set { this.tipo = value; } }
