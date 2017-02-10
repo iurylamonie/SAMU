@@ -49,15 +49,22 @@
           </div>
             
           <div class="panel-body">
-              <asp:DataList ID="DataListOcorrencias" runat="server" RepeatDirection="Horizontal">
-                  <ItemTemplate>
-                      <asp:Image ID="Image1" runat="server" Height="80px" ImageUrl="~/img/mapa.png" />
-                      <br />
-                      <asp:Label ID="Label1" runat="server" Text='<%# Eval("Tipo") %>' CssClass="tipoocor"></asp:Label>
-                      <br />
-                      <asp:Button ID="ButtonIr" runat="server" CommandArgument='<%# Eval("Id") %>' Text='<%# Eval("Id") %>' />
-                  </ItemTemplate>
-              </asp:DataList>
+              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencias" OnRowCommand="GridView1_RowCommand">
+                  <Columns>
+                      <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                      <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
+                      <asp:BoundField DataField="NomeSolicitante" HeaderText="Nome do Solicitante" SortExpression="NomeSolicitante" />
+                      <asp:BoundField DataField="NomeVitima" HeaderText="Nome da(s) Vitima(s)" SortExpression="NomeVitima" />
+                      <asp:BoundField DataField="Endereco" HeaderText="Endereço" SortExpression="Endereco" />
+                      <asp:BoundField DataField="Situacao" HeaderText="Situação" SortExpression="Situacao" />
+                      <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                  </Columns>
+              </asp:GridView>
+              <asp:ObjectDataSource ID="ObjectDataSourceOcorrencias" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Ocorrencia">
+                  <SelectParameters>
+                      <asp:SessionParameter DefaultValue="" Name="_usuario_id" SessionField="id" Type="Int32" />
+                  </SelectParameters>
+              </asp:ObjectDataSource>
           </div>
         </div>
         <div class="class1">
@@ -68,15 +75,20 @@
           </div>
           <!--Chamados-->  
           <div class="panel-body">
-              <asp:DataList ID="DataListChamados" runat="server" RepeatDirection="Horizontal">
-                  <ItemTemplate>
-                      <asp:Image ID="Image1" runat="server" Height="80px" ImageUrl="~/img/mapa.png" />
-                      <br />
-                      <asp:Label ID="Label1" runat="server" Text='<%# Eval("Tipo") %>' CssClass="tipoocor"></asp:Label>
-                      <br />
-                      <asp:Button ID="ButtonIr" runat="server" CommandArgument='<%# Eval("Id") %>' Text='<%# Eval("Id") %>' />
-                  </ItemTemplate>
-              </asp:DataList>
+              <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceChamado" OnRowCommand="GridView2_RowCommand">
+                  <Columns>
+                      <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                      <asp:BoundField DataField="Hospital_id" HeaderText="Có. Hospital" SortExpression="Hospital_id" />
+                      <asp:BoundField DataField="Ocorrencia_id" HeaderText="Có. Ocorrencia" SortExpression="Ocorrencia_id" />
+                      <asp:BoundField DataField="VeiculoAtendimento_id" HeaderText="Có. Ambulância" SortExpression="VeiculoAtendimento_id" />
+                      <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                  </Columns>
+              </asp:GridView>
+              <asp:ObjectDataSource ID="ObjectDataSourceChamado" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Chamado">
+                  <SelectParameters>
+                      <asp:SessionParameter Name="_usuario_id" SessionField="id" Type="Int32" />
+                  </SelectParameters>
+              </asp:ObjectDataSource>
           </div>
           </div>
        </div>  

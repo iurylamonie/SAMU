@@ -39,5 +39,27 @@ namespace Funcionalidade
             }
             
         }
+
+        public static void Criar(Entidade.Hospital _hospital)
+        {
+            IniciarHttp();
+            string s = "=" + JsonConvert.SerializeObject(_hospital);
+            var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
+            httpClient.PostAsync("api/Hospital/Criar", content);
+        }
+
+        public static void Deletar(int _id)
+        {
+            IniciarHttp();
+            httpClient.DeleteAsync("api/Hospital/Deletar/" + _id);
+        }
+
+        public static void Alterar(Entidade.Hospital _hospital)
+        {
+            IniciarHttp();
+            string s = "=" + JsonConvert.SerializeObject(_hospital);
+            var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
+            httpClient.PostAsync("api/Usuario/AlterarCPF/" + _hospital.Id, content);
+        }
     }
 }

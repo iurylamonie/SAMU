@@ -13,33 +13,40 @@ namespace Central.Atendente
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            if (!IsPostBack)
+           
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Detalhar")
             {
-                DataListOcorrencias.DataSource = CarregarTabelaTest();
-                DataListOcorrencias.DataBind();
-                DataListChamados.DataSource = CarregarTabelaTest();
-                DataListChamados.DataBind();
+                string codigoOcorrencia;
+                int index = Convert.ToInt32(e.CommandArgument);
+                codigoOcorrencia = GridView1.Rows[index].Cells[0].Text;
+                Entidade.Ocorrencia ocorrencia = Funcionalidade.Ocorrencia.Consultar(int.Parse(codigoOcorrencia));
+                Session["idOcorrencia"] = ocorrencia.Id;
+                Session["tipoOcorrencia"] = ocorrencia.Tipo;
+                Session["nomeSolicitanteOcorrencia"] = ocorrencia.NomeSolicitante;
+                Session["nomeVitimaOcorrencia"] = ocorrencia.NomeVitima;
+                Session["quantidadeVitimasOcorrencia"] = ocorrencia.QuantidadeVitimas;
+                Session["cepOcorrencia"] = ocorrencia.Cep;
+                Session["enderecoOcorrencia"] = ocorrencia.Endereco;
+                Session["infAdicionalOcorrencia"] = ocorrencia.InformacaoAdicional;
+                Response.Redirect("~/Atendente/GerenciadorOcorrencia/DetalharOcorrencia.aspx");
             }
         }
 
-        private DataView CarregarTabelaTest()
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            DataTable dt = new DataTable();
-            DataRow dr;
-
-            dt.Columns.Add(new DataColumn("Id", typeof(int)));
-            dt.Columns.Add(new DataColumn("Tipo", typeof(string)));
-            dr = dt.NewRow();
-            dr[0] = 1;
-            dr[1] = "Iury";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = 2;
-            dr[1] = "Kadson";
-            dt.Rows.Add(dr);
-
-            DataView dv = new DataView(dt);
-            return dv;
+            if (e.CommandName == "Detalhar")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                Session["gc-chamado_id"] = GridView2.Rows[index].Cells[0].Text;
+                Session["gc-hospital_id"] = GridView2.Rows[index].Cells[1].Text;
+                Session["gc-ocorrencia_id"] = GridView2.Rows[index].Cells[2].Text;
+                Session["gc-ambulancia_id"] = GridView2.Rows[index].Cells[3].Text;
+                Response.Redirect("~/Atendente/GerenciadorChamado/DetalharChamado.aspx");
+            }
         }
     }
 }

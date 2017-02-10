@@ -12,6 +12,16 @@ namespace Central
         protected void Page_Load(object sender, EventArgs e)
         {
 
+           
+            LabelNomeFuncionario.Text = Session["nome"].ToString();
+        }
+
+        protected void ButtonSair_Click(object sender, EventArgs e)
+        {
+            Session["nome"] = null;
+            Session["CPF"] = null;
+            Session["tipo"] = null;
+            Response.Redirect("~/Login/Login.aspx");
         }
     }
 }

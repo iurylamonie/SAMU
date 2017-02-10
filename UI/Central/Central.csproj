@@ -87,8 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador\GerenciadorAmbulancia\Principal.aspx" />
+    <Content Include="Administrador\GerenciadorFuncionario\EditarFuncionario.aspx" />
     <Content Include="Administrador\GerenciadorFuncionario\NovoFuncionario.aspx" />
     <Content Include="Administrador\GerenciadorFuncionario\Principal.aspx" />
+    <Content Include="Administrador\GerenciadorHospital\NovoHospital.aspx" />
     <Content Include="Administrador\GerenciadorHospital\Principal.aspx" />
     <Content Include="Administrador\Inicial.aspx" />
     <Content Include="Atendente\GerenciadorChamado\DetalharChamado.aspx" />
@@ -99,7 +101,6 @@
     <Content Include="Atendente\GerenciadorOcorrencia\NovaOcorrencia.aspx" />
     <Content Include="Atendente\GerenciadorOcorrencia\Principal.aspx" />
     <Content Include="Atendente\Inicial.aspx" />
-    <Content Include="CepTest.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -180,6 +181,13 @@
     <Compile Include="Administrador\GerenciadorAmbulancia\Principal.aspx.designer.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\GerenciadorFuncionario\EditarFuncionario.aspx.cs">
+      <DependentUpon>EditarFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorFuncionario\EditarFuncionario.aspx.designer.cs">
+      <DependentUpon>EditarFuncionario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\GerenciadorFuncionario\NovoFuncionario.aspx.cs">
       <DependentUpon>NovoFuncionario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -193,6 +201,13 @@
     </Compile>
     <Compile Include="Administrador\GerenciadorFuncionario\Principal.aspx.designer.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorHospital\NovoHospital.aspx.cs">
+      <DependentUpon>NovoHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorHospital\NovoHospital.aspx.designer.cs">
+      <DependentUpon>NovoHospital.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\GerenciadorHospital\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
@@ -270,13 +285,6 @@
     </Compile>
     <Compile Include="Atendente\Inicial.aspx.designer.cs">
       <DependentUpon>Inicial.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CepTest.aspx.cs">
-      <DependentUpon>CepTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CepTest.aspx.designer.cs">
-      <DependentUpon>CepTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -89,7 +89,7 @@
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceOcorrencias" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">
                           <SelectParameters>
-                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                              <asp:SessionParameter DefaultValue="" Name="_usuario_id" SessionField="id" Type="Int32" />
                           </SelectParameters>
                       </asp:ObjectDataSource>
                   </div>

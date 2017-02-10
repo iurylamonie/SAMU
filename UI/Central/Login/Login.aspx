@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
     <div>
-             <asp:Label ID="LabelAviso" runat="server" Text="Senha" CssClass="label_input" Visible="false" BackColor="Red"></asp:Label>
+             <asp:Label ID="LabelAviso" runat="server" Text="" CssClass="label_input" Visible="false" BackColor="Red"></asp:Label>
                 <div class="imgcontainer">
                     <img src="../img/samu.png" alt="Avatar" class="avatar" />
                 </div>

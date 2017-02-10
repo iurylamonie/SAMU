@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ambulancia.cs" />
     <Compile Include="Chamado.cs" />
     <Compile Include="Criptografia.cs" />
     <Compile Include="Hospital.cs" />

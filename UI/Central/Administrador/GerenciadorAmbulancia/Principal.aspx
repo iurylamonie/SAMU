@@ -30,7 +30,8 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAmbulancias" runat="server"></asp:GridView>
+                      <asp:GridView ID="GridViewAmbulancias" runat="server" DataSourceID="ObjectDataSourceAmbulancias"></asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceAmbulancias" runat="server"></asp:ObjectDataSource>
                   </div>
            
               </div>  

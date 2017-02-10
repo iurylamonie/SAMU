@@ -45,7 +45,7 @@
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceListarOcorrencia" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Ocorrencia">
                           <SelectParameters>
-                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                              <asp:SessionParameter DefaultValue="" Name="_usuario_id" SessionField="id" Type="Int32" />
                           </SelectParameters>
                       </asp:ObjectDataSource>
                   </div>
@@ -73,7 +73,7 @@
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceListarSemChamado" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">
                           <SelectParameters>
-                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                              <asp:SessionParameter DefaultValue="" Name="_usuario_id" SessionField="id" Type="Int32" />
                           </SelectParameters>
                       </asp:ObjectDataSource>
                   </div>
@@ -100,7 +100,7 @@
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceFinalizados" runat="server" SelectMethod="ListarFinalizados" TypeName="Funcionalidade.Ocorrencia">
                           <SelectParameters>
-                              <asp:Parameter DefaultValue="1" Name="_usuario_id" Type="Int32" />
+                              <asp:SessionParameter DefaultValue="" Name="_usuario_id" SessionField="id" Type="Int32" />
                           </SelectParameters>
                       </asp:ObjectDataSource>
                   </div>

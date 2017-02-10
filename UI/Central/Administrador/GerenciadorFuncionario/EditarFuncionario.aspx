@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NovoFuncionario.aspx.cs" Inherits="Central.Administrador.GerenciadorFuncionario.NovoFuncionario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EditarFuncionario.aspx.cs" Inherits="Central.Administrador.GerenciadorFuncionario.EditarFuncionario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <!--Migalha de Pão-->
+         <!--Migalha de Pão-->
     <div>
             <ol class="breadcrumb">
                 <li><a href="../Inicial.aspx">Início</a></li>

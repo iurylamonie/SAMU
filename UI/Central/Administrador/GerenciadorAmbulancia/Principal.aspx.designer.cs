@@ -20,5 +20,14 @@ namespace Central.Administrador.GerenciadorAmbulancia {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewAmbulancias;
+        
+        /// <summary>
+        /// ObjectDataSourceAmbulancias control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceAmbulancias;
     }
 }

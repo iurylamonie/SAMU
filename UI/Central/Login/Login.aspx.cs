@@ -23,6 +23,7 @@ namespace Central.Login
                     if (Funcionalidade.Usuario.VerificarSenha(TextBoxUsuario.Text, TextBoxSenha.Text))
                     {
                         Entidade.Usuario usuario = Funcionalidade.Usuario.ObterUsuario(TextBoxUsuario.Text);
+                        Session["id"] =  usuario.Id;
                         Session["nome"] = usuario.Nome;
                         Session["CPF"] = usuario.Cpf;
                         Session["tipo"] = usuario.Tipo;
@@ -39,6 +40,7 @@ namespace Central.Login
                         else if (usuario.Tipo == 2)
                         {
                             LabelAviso.Text = "Você não tem permissão para usar esse serviço!";
+                            Session["id"] = null;
                             Session["nome"] = null;
                             Session["CPF"] = null;
                             Session["tipo"] = null;
@@ -54,7 +56,7 @@ namespace Central.Login
                 }
                 else
                 {
-                    LabelAviso.Text = "E-mail invalido";
+                    LabelAviso.Text = "CPF invalido";
                     LabelAviso.Visible = true;
                 }
             }

@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Central.Atendente.GerenciadorOcorrencia {
+namespace Central.Administrador.GerenciadorHospital {
     
     
-    public partial class Principal {
+    public partial class NovoHospital {
         
         /// <summary>
-        /// GridViewOcorrencias control.
+        /// TextBoxNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewOcorrencias;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxNome;
         
         /// <summary>
-        /// ObjectDataSourceListarOcorrencia control.
+        /// TextBoxEndereco control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceListarOcorrencia;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEndereco;
         
         /// <summary>
-        /// GridViewOcorrenciaSemChamado control.
+        /// TextBoxTipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewOcorrenciaSemChamado;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTipo;
         
         /// <summary>
-        /// ObjectDataSourceListarSemChamado control.
+        /// ButtonLimpar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceListarSemChamado;
+        protected global::System.Web.UI.WebControls.Button ButtonLimpar;
         
         /// <summary>
-        /// GridViewOcorrenciasFinalizadas control.
+        /// ButtonConfirar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewOcorrenciasFinalizadas;
-        
-        /// <summary>
-        /// ObjectDataSourceFinalizados control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceFinalizados;
+        protected global::System.Web.UI.WebControls.Button ButtonConfirar;
     }
 }

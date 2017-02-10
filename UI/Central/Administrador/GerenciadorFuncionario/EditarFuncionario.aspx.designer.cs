@@ -7,63 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Central {
+namespace Central.Administrador.GerenciadorFuncionario {
     
     
-    public partial class CepTest {
+    public partial class EditarFuncionario {
         
         /// <summary>
-        /// form1 control.
+        /// TextBoxNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxNome;
         
         /// <summary>
-        /// buttonGerar control.
+        /// TextBoxCPF control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buttonGerar;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCPF;
         
         /// <summary>
-        /// labelRua control.
+        /// LabelAvisoCPF control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelRua;
+        protected global::System.Web.UI.WebControls.Label LabelAvisoCPF;
         
         /// <summary>
-        /// Label1 control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// GridView1 control.
+        /// ButtonLimpar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button ButtonLimpar;
         
         /// <summary>
-        /// ObjectDataSource1 control.
+        /// ButtonConfirar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
+        protected global::System.Web.UI.WebControls.Button ButtonConfirar;
     }
 }

@@ -8,6 +8,7 @@ namespace Entidade
 {
     public class Usuario
     {
+        private int id;
         private int tipo;
         private string nome;
         private string senha;
@@ -22,5 +23,17 @@ namespace Entidade
         public string Senha { get { return senha; } set { this.senha = value; } }
         public string Cpf { get { return cpf; } set { this.cpf = value; } }
 
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
     }
 }

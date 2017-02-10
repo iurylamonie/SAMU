@@ -27,12 +27,18 @@ namespace Central.Administrador.GerenciadorFuncionario
                 {
                     Nome = TextBoxNome.Text,
                     Cpf = TextBoxCPF.Text,
-                    Tipo = int.Parse(DropDownList1.SelectedValue.ToString())
+                    Tipo = int.Parse(DropDownList1.SelectedValue.ToString()),
+                    Senha = Funcionalidade.Criptografia.SHA512("123")
                 };
 
                 Funcionalidade.Usuario.Criar(usuario);
                 Response.Redirect("~/Administrador/GerenciadorFuncionario/Principal.aspx");
             }
+        }
+
+        protected void ButtonLimpar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
