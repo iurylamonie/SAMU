@@ -134,5 +134,10 @@ namespace Central.Atendente.GerenciadorOcorrencia
             Session["ocorrenciaId-nc-selecionado"] = Session["idOcorrencia"];
             Response.Redirect("~/Atendente/GerenciadorChamado/NovoChamadoSelecionado.aspx");
         }
+
+        protected void ButtonFinalizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

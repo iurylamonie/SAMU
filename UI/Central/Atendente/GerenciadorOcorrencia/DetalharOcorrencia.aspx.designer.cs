@@ -184,6 +184,15 @@ namespace Central.Atendente.GerenciadorOcorrencia {
         protected global::System.Web.UI.WebControls.Button ButtonConfirar;
         
         /// <summary>
+        /// ButtonFinalizar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonFinalizar;
+        
+        /// <summary>
         /// GridViewChamados control.
         /// </summary>
         /// <remarks>

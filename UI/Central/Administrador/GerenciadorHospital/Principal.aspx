@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div>
             <ol class="breadcrumb">
-                <li><a href="../Inicial.aspx">Início</a></li>
+                <li>&nbsp;<a href="../Inicial.aspx">Início</a></li>
                 <li class="active">Gerenciador de Hospitais</li>
             </ol>
         </div>

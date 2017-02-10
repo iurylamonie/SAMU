@@ -38,6 +38,7 @@
                             <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" Enabled="false" TextMode="MultiLine" Height="156px" Width="360px" />	  <br />  
                             <asp:Button id="ButtonEditar" Class="buttonocorr" Text="Editar" runat="server" OnClick="ButtonEditar_Click"/>
                             <asp:Button id="ButtonConfirar" Class="buttonocorr" runat="server" Text="Confirmar" Enabled="false" OnClick="ButtonConfirar_Click"/>
+                            <asp:Button ID="ButtonFinalizar" runat="server" Text="Finalizar" Class="buttonocorr" OnClick="ButtonFinalizar_Click" />
                         </div>
                     </div>                    
                 </div>

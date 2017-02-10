@@ -34,7 +34,7 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a><asp:Label ID="LabelNomeFuncionario" runat="server" Text="Nome do Funcionario"/></a></li>
-                            <li><a href="#">Atualizar Meu Dados</a></li>
+                            <li><a href="EditarDados.aspx">Atualizar Meu Dados</a></li>
                             <li><a><asp:Button ID="ButtonSair" CssClass="btn button--default btn-xs" runat="server" Text="Sair" OnClick="ButtonSair_Click" /></a></li>
                        </ul>     
                     </div>
