@@ -42,9 +42,9 @@ namespace Central.Atendente
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 Session["gc-chamado_id"] = GridView2.Rows[index].Cells[0].Text;
-                Session["gc-hospital_id"] = GridView2.Rows[index].Cells[1].Text;
-                Session["gc-ocorrencia_id"] = GridView2.Rows[index].Cells[2].Text;
-                Session["gc-ambulancia_id"] = GridView2.Rows[index].Cells[3].Text;
+                Session["gc-hospital_id"] = GridView2.Rows[index].Cells[2].Text;
+                Session["gc-ocorrencia_id"] = GridView2.Rows[index].Cells[3].Text;
+                Session["gc-ambulancia_id"] = GridView2.Rows[index].Cells[4].Text;
                 Response.Redirect("~/Atendente/GerenciadorChamado/DetalharChamado.aspx");
             }
         }

@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="center">
+ 
         <!--Migalha de Pão-->
         <div>
             <ol class="breadcrumb">
@@ -37,6 +38,7 @@
                       <asp:GridView ID="GridViewOcorrencias" CssClass="table table-condensed" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarOcorrencia" AllowPaging="True" HorizontalAlign="Center" OnRowCommand="GridViewOcorrencias_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
                               <asp:BoundField DataField="Situacao" HeaderText="Situação" SortExpression="Situacao" />
                               <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
@@ -66,6 +68,7 @@
                       <asp:GridView ID="GridViewOcorrenciaSemChamado" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarSemChamado" OnRowCommand="GridViewOcorrenciaSemChamado_RowCommand" >
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
                               <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
                               <asp:ButtonField CommandName="Excluir" Text="Excluir" />
@@ -94,6 +97,7 @@
                       <asp:GridView ID="GridViewOcorrenciasFinalizadas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceFinalizados" OnRowCommand="GridViewOcorrenciasFinalizadas_RowCommand" >
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
                               <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
                           </Columns>

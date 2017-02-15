@@ -28,6 +28,7 @@ namespace REST.Controllers
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
             var ocorrencias = from o in sdc.Ocorrencias
                               where o.usuario_id == usuario_id
+                              orderby o.data descending
                               select o;
             return ocorrencias.ToList();
         }
@@ -39,7 +40,7 @@ namespace REST.Controllers
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
             var ocorrencias = from o in sdc.Ocorrencias
                               where o.usuario_id == usuario_id && o.situacao == "Espera"
-                              orderby o.id descending
+                              orderby o.data descending
                               select o;
             return ocorrencias.ToList();
         }
@@ -62,6 +63,7 @@ namespace REST.Controllers
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
             var ocorrencias = from o in sdc.Ocorrencias
                               where o.usuario_id == usuario_id && o.situacao == "Atendimento"
+                              orderby o.data descending
                               select o;
             return ocorrencias.ToList();
         }
@@ -73,6 +75,7 @@ namespace REST.Controllers
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
             var ocorrencias = from o in sdc.Ocorrencias
                               where o.usuario_id == usuario_id && o.situacao == "Finalizado"
+                              orderby o.data descending
                               select o;
             return ocorrencias.ToList();
         }

@@ -58,6 +58,7 @@ namespace REST.Controllers
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
             var r = from c in sdc.Chamados
                     where c.Ocorrencia_id == ocorrencia_id
+                    orderby c.data descending
                     select c;
             return r.ToList();
         }
@@ -89,6 +90,7 @@ namespace REST.Controllers
             {
                 var chamadosOco = from c in sdc.Chamados
                                   where c.Ocorrencia_id == item.id
+                                  orderby c.data descending
                                   select c;
                 foreach (var obj in chamadosOco)
                 {

@@ -10,6 +10,7 @@ namespace Entidade
     {
         private int id, ocorrencia_id, veiculoAtendimento_id, hospital_id;
         private string trajetoOcorrencia, trajetoHospita;
+        private DateTime data;
 
         public int Hospital_id
         {
@@ -87,6 +88,19 @@ namespace Entidade
             set
             {
                 veiculoAtendimento_id = value;
+            }
+        }
+
+        public DateTime Data
+        {
+            get
+            {
+                return data;
+            }
+
+            set
+            {
+                data = value;
             }
         }
     }

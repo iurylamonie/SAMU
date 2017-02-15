@@ -10,6 +10,7 @@ namespace Entidade
     {
         private int id, usuario_id, quantidadeVitimas;
         private string tipo, nomeSolicitante, nomeVitima, endereco, cep, informacaoAdicional, situacao;
+        private DateTime data;
 
         public int Id
         {
@@ -129,6 +130,19 @@ namespace Entidade
             set
             {
                 situacao = value;
+            }
+        }
+
+        public DateTime Data
+        {
+            get
+            {
+                return data;
+            }
+
+            set
+            {
+                data = value;
             }
         }
     }

@@ -36,6 +36,7 @@
                       <asp:GridView ID="GridViewChamados" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceChamados" OnRowCommand="GridViewChamados_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código do Chamado" SortExpression="Id" />
+                              <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data"></asp:BoundField>
                               <asp:BoundField DataField="Hospital_id" HeaderText="Có. Hospital" SortExpression="Hospital_id" />
                               <asp:BoundField DataField="Ocorrencia_id" HeaderText="Có. Ocorrência" SortExpression="Ocorrencia_id" />
                               <asp:BoundField DataField="VeiculoAtendimento_id" HeaderText="Có. Ambulância" SortExpression="VeiculoAtendimento_id" />
@@ -65,6 +66,7 @@
                       <asp:GridView ID="GridViewOcorrencia" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencia" OnRowCommand="GridViewOcorrencia_RowCommand">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código da Ocorrência" SortExpression="Id" />
+                              <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data"></asp:BoundField>
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
                               <asp:BoundField DataField="Endereco" HeaderText="Endereço" SortExpression="Endereco" />
                               <asp:ButtonField CommandName="Criar" Text="Criar Chamado" />

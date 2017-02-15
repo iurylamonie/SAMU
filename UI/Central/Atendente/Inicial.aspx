@@ -52,9 +52,8 @@
               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencias" OnRowCommand="GridView1_RowCommand">
                   <Columns>
                       <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                      <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                       <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
-                      <asp:BoundField DataField="NomeSolicitante" HeaderText="Nome do Solicitante" SortExpression="NomeSolicitante" />
-                      <asp:BoundField DataField="NomeVitima" HeaderText="Nome da(s) Vitima(s)" SortExpression="NomeVitima" />
                       <asp:BoundField DataField="Endereco" HeaderText="Endereço" SortExpression="Endereco" />
                       <asp:BoundField DataField="Situacao" HeaderText="Situação" SortExpression="Situacao" />
                       <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
@@ -62,7 +61,7 @@
               </asp:GridView>
               <asp:ObjectDataSource ID="ObjectDataSourceOcorrencias" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Ocorrencia">
                   <SelectParameters>
-                      <asp:SessionParameter DefaultValue="" Name="_usuario_id" SessionField="id" Type="Int32" />
+                      <asp:SessionParameter Name="_usuario_id" SessionField="id" Type="Int32" />
                   </SelectParameters>
               </asp:ObjectDataSource>
           </div>
@@ -78,6 +77,7 @@
               <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceChamado" OnRowCommand="GridView2_RowCommand">
                   <Columns>
                       <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                      <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                       <asp:BoundField DataField="Hospital_id" HeaderText="Có. Hospital" SortExpression="Hospital_id" />
                       <asp:BoundField DataField="Ocorrencia_id" HeaderText="Có. Ocorrencia" SortExpression="Ocorrencia_id" />
                       <asp:BoundField DataField="VeiculoAtendimento_id" HeaderText="Có. Ambulância" SortExpression="VeiculoAtendimento_id" />

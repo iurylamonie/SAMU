@@ -84,7 +84,9 @@ namespace Central.Atendente.GerenciadorOcorrencia
                 Endereco = TextBoxCidade.Text + ", " + TextBoxBairro.Text + ", " + TextBoxRua.Text + ", " + TextBoxNumeroResidencia.Text,
                 InformacaoAdicional = TextBoxInfAdicional.Text,
                 Situacao = "Espera",
-                Usuario_id = 1
+                Usuario_id = 1,
+                Data = DateTime.Now
+
             };
             Funcionalidade.Ocorrencia.Criar(ocorrencia);
 

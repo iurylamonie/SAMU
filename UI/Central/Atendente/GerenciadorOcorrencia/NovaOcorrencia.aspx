@@ -13,7 +13,34 @@
     
     <!-- Body da Ocorrência -->
     <div id="ocorr-body">
-    <a class="titulosinput">Tipo de Ocorrência:</a> <asp:TextBox ID="TextBoxTipo" runat="server" /> <br />
+    <a class="titulosinput">Tipo de Ocorrência:</a> <asp:TextBox ID="TextBoxTipo" runat="server" /> <asp:DropDownList ID="DropDownListTipo" runat="server">
+            <asp:ListItem>P02</asp:ListItem>
+            <asp:ListItem>P03</asp:ListItem>
+            <asp:ListItem>P04</asp:ListItem>
+            <asp:ListItem>P05</asp:ListItem>
+            <asp:ListItem>P99</asp:ListItem>
+            <asp:ListItem>W32</asp:ListItem>
+            <asp:ListItem>W18</asp:ListItem>
+            <asp:ListItem>W19</asp:ListItem>
+            <asp:ListItem>S59</asp:ListItem>
+            <asp:ListItem>R21</asp:ListItem>
+            <asp:ListItem>R22</asp:ListItem>
+            <asp:ListItem>W03</asp:ListItem>
+            <asp:ListItem>R29</asp:ListItem>
+            <asp:ListItem>R31</asp:ListItem>
+            <asp:ListItem>R32</asp:ListItem>
+            <asp:ListItem>R51</asp:ListItem>
+            <asp:ListItem>R52</asp:ListItem>
+            <asp:ListItem>R53</asp:ListItem>
+            <asp:ListItem>R54</asp:ListItem>
+            <asp:ListItem>R55</asp:ListItem>
+            <asp:ListItem>W20</asp:ListItem>
+            <asp:ListItem>S54</asp:ListItem>
+            <asp:ListItem>W11</asp:ListItem>
+            <asp:ListItem>V05</asp:ListItem>
+            <asp:ListItem>R56</asp:ListItem>
+            <asp:ListItem>R59</asp:ListItem>
+        </asp:DropDownList><br />
     <a class="titulosinput">Nome do Solicitante:</a> <asp:TextBox CssClass="inputs" ID="TextBoxNomeSolicitante" runat ="server" /> <br />
     <a class="titulosinput">Nome da(s) Vítima(s):</a> <asp:TextBox CssClass="inputs" ID="TextBoxNomeNomeVitima" runat ="server" /> <br />
     <a class="titulosinput">Quantidade de Vítimas:</a> <asp:TextBox CssClass="inputs" ID="TextBoxQuantidaVitimas" runat ="server" /> <br />
