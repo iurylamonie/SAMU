@@ -19,7 +19,7 @@
      </div>
 
     <div class="row">
-          <div class="col-xs-6 col-sm-4">
+          <div class="princHosp">
               <div class="panel panel--default">
                 
                   <div class="cabessalhopainelnovochamado" id="cabessalhoesquerdanovochamado">

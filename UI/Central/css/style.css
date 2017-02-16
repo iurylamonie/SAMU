@@ -132,7 +132,7 @@ div#logo
 }
 #opcao1
 {
-
+    margin-right:40px;
 }
 #imgopcao1
 {
@@ -254,11 +254,11 @@ div#logo
 
 #ocorr-body {
     text-align: right;
-    width: 406px;
+    width: 500px;
     margin: 0 auto;
     padding: 39px;
     background-color: rgb(245, 245, 245);
-    height: 534px;
+    height: 585px;
     border-radius: 6px;
 }
 .titulosinputask {
@@ -483,3 +483,23 @@ td
 }
 
 /*fim page chamado*/
+.princHosp
+{
+    margin: 0 auto;
+    width: 768px;
+}
+.newHosp
+{
+    width: 360px;
+    height: inherit;
+    text-align: right;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 7px;
+}
+.marginbottom
+{
+    margin-bottom: 5px;
+    width: 260px;
+}

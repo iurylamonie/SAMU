@@ -10,10 +10,13 @@
                 <li class="active">Novo Hospital</li>
             </ol>
     </div>
-
-    <a class="titulosinput">Nome:</a> <asp:TextBox ID="TextBoxNome" runat="server" /> <br />
-    <a class="titulosinput">Endereço</a> <asp:TextBox CssClass="inputs" ID="TextBoxEndereco" runat ="server" /><br />
-     <a class="titulosinput">Tipo:</a>  <asp:TextBox CssClass="inputs" ID="TextBoxTipo" runat ="server" /> <br />
+    <div class="newHosp">
+    <a class="titulosinput">Nome:</a> <asp:TextBox ID="TextBoxNome" CssClass="marginbottom" runat="server" />
+    <a class="titulosinput">Endereço</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxEndereco" runat ="server" />
+     <a class="titulosinput">Tipo:</a>  <asp:TextBox CssClass="marginbottom" ID="TextBoxTipo" runat ="server" />
+    <div class="botoes-ocorrencia">
      <asp:Button id="ButtonLimpar" class="buttonocorr" Text="Limpar" runat="server" />
-     <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click" /><br />
+     <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click" />
+    </div>
+    </div>
 </asp:Content>

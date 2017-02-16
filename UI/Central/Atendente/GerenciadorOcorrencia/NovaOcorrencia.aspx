@@ -41,23 +41,23 @@
             <asp:ListItem>R56</asp:ListItem>
             <asp:ListItem>R59</asp:ListItem>
         </asp:DropDownList><br />
-    <a class="titulosinput">Nome do Solicitante:</a> <asp:TextBox CssClass="inputs" ID="TextBoxNomeSolicitante" runat ="server" /> <br />
-    <a class="titulosinput">Nome da(s) Vítima(s):</a> <asp:TextBox CssClass="inputs" ID="TextBoxNomeNomeVitima" runat ="server" /> <br />
-    <a class="titulosinput">Quantidade de Vítimas:</a> <asp:TextBox CssClass="inputs" ID="TextBoxQuantidaVitimas" runat ="server" /> <br />
+    <a class="titulosinput">Nome do Solicitante:</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeSolicitante" runat ="server" /> <br />
+    <a class="titulosinput">Nome da(s) Vítima(s):</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeNomeVitima" runat ="server" /> <br />
+    <a class="titulosinput">Quantidade de Vítimas:</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxQuantidaVitimas" runat ="server" /> <br />
     <a class="titulosinputask">O que vai informar?</a>
     <asp:RadioButtonList Style="margin:0 auto;" ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" AutoPostBack="True">
         <asp:ListItem Value="CEP">Informar CEP</asp:ListItem>
         <asp:ListItem Value="Nomes">Informar Nomes</asp:ListItem>
     </asp:RadioButtonList> <br />
-    <asp:Label ID="LabelCEP" runat="server" Text="CEP:" Visible="false"/> <asp:TextBox ID="TextBoxCEP" runat="server" Visible="false" AutoPostBack="True" OnTextChanged="TextBoxCEP_TextChanged"/> <asp:Label Id="LabelAvisoCep" runat="server" /><br />
-    <asp:Label ID="LabelCidade" runat="server" Text="Cidade:" Visible="false"/> <asp:TextBox ID="TextBoxCidade" runat="server" Visible="false"/> <br />
-    <asp:Label ID="LabelBairro" runat="server" Text="Nome da Bairro:" Visible="false"/> <asp:TextBox ID="TextBoxBairro" runat="server" Visible="false"/> <br />
-    <asp:Label ID="LabelRua" runat="server" Text="Nome da Rua:" Visible="false"/> <asp:TextBox ID="TextBoxRua" runat="server" Visible="false"/> <br />
-    <asp:Label ID="LabelNumeroResidencia" runat="server" Text="Número da Residencia:" Visible="false"/> <asp:TextBox ID="TextBoxNumeroResidencia" runat="server" Visible="false"/> <br />
+    <asp:Label ID="LabelCEP" runat="server" Text="CEP:" Visible="false"/> <asp:TextBox ID="TextBoxCEP" runat="server" Visible="false" AutoPostBack="True" OnTextChanged="TextBoxCEP_TextChanged" CssClass="marginbottom" /> <asp:Label Id="LabelAvisoCep" runat="server" /><br />
+    <asp:Label ID="LabelCidade" runat="server" Text="Cidade:" Visible="false"/> <asp:TextBox ID="TextBoxCidade" runat="server" Visible="false" CssClass="marginbottom" /> <br />
+    <asp:Label ID="LabelBairro" runat="server" Text="Nome da Bairro:" Visible="false" CssClass="marginbottom" /> <asp:TextBox ID="TextBoxBairro" runat="server" Visible="false" CssClass="marginbottom" /> <br />
+    <asp:Label ID="LabelRua" runat="server" Text="Nome da Rua:" Visible="false"/> <asp:TextBox ID="TextBoxRua" runat="server" Visible="false" CssClass="marginbottom" /> <br />
+    <asp:Label ID="LabelNumeroResidencia" runat="server" Text="Número da Residencia:" Visible="false"/> <asp:TextBox ID="TextBoxNumeroResidencia" runat="server" Visible="false" CssClass="marginbottom" /> <br />
     <div class="divtitulosinputask">
         <a class="titulosinputask">Informação Adicional</a>
     </div>
-    <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" TextMode="MultiLine" Height="156px" Width="360px" />	  <br />  
+    <asp:TextBox CssClass="inputs" ID="TextBoxInfAdicional" runat ="server" TextMode="MultiLine" Height="156px" Width="416px" />	  <br />  
     <div class="botoes-ocorrencia">
         <asp:Button id="ButtonLimpar" class="buttonocorr" Text="Limpar" runat="server"/>
         <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click"/><br />
