@@ -36,7 +36,7 @@
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Endereco" HeaderText="Endereço" SortExpression="Endereco" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
-                              <asp:ButtonField CommandName="Deletar" Text="Deletar" />
+                              <asp:ButtonField CommandName="Deletar" ControlStyle-CssClass="btn btn-danger" Text="Deletar" />
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceHospital" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Hospital"></asp:ObjectDataSource>

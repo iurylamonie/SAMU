@@ -19,7 +19,7 @@ namespace Central.Administrador.GerenciadorHospital
             if (e.CommandName == "Deletar")
             {
                 int index = int.Parse(e.CommandArgument.ToString());
-                int idHospital = int.Parse(GridView1.Rows[index].Cells[0].ToString());
+                int idHospital = int.Parse(GridView1.Rows[index].Cells[0].Text);
                 Funcionalidade.Hospital.Deletar(idHospital);
                 Response.Redirect("~/Administrador/GerenciadorHospital/Principal.aspx");
             }

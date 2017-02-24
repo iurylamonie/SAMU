@@ -16,7 +16,7 @@ namespace REST.Controllers
         public List<Models.Hospital> Listar()
         {
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
-            var r = from h in sdc.Hospitals select h;
+            var r = from h in sdc.Hospitals orderby h.nome select h;
             return r.ToList();
         }
 

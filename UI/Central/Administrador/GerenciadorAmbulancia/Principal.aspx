@@ -30,8 +30,19 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAmbulancias" runat="server" DataSourceID="ObjectDataSourceAmbulancias"></asp:GridView>
-                      <asp:ObjectDataSource ID="ObjectDataSourceAmbulancias" runat="server"></asp:ObjectDataSource>
+                      <asp:GridView ID="GridViewAmbulancias" runat="server" DataSourceID="ObjectDataSourceAmbulancias" AutoGenerateColumns="False">
+                          <Columns>
+                              <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
+                              <asp:BoundField DataField="Placa" HeaderText="Placa" SortExpression="Placa" />
+                              <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
+                              <asp:ButtonField CommandName="Deletar" ControlStyle-CssClass="btn btn-danger" Text="Deletar" ButtonType="Button" />
+                          </Columns>
+                      </asp:GridView>
+                      <asp:ObjectDataSource ID="ObjectDataSourceAmbulancias" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Ambulancia">
+                          <SelectParameters>
+                              <asp:Parameter DefaultValue="Suporte Básico" Name="_tipo" Type="Int32" />
+                          </SelectParameters>
+                      </asp:ObjectDataSource>
                   </div>
            
               </div>  

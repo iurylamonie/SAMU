@@ -40,7 +40,7 @@
                               <asp:BoundField DataField="Hospital_id" HeaderText="Có. Hospital" SortExpression="Hospital_id" />
                               <asp:BoundField DataField="Ocorrencia_id" HeaderText="Có. Ocorrência" SortExpression="Ocorrencia_id" />
                               <asp:BoundField DataField="VeiculoAtendimento_id" HeaderText="Có. Ambulância" SortExpression="VeiculoAtendimento_id" />
-                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                              <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" ButtonType="Button" />
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceChamados" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Chamado">
@@ -69,8 +69,8 @@
                               <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data"></asp:BoundField>
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
                               <asp:BoundField DataField="Endereco" HeaderText="Endereço" SortExpression="Endereco" />
-                              <asp:ButtonField CommandName="Criar" Text="Criar Chamado" />
-                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                              <asp:ButtonField CommandName="Criar" ControlStyle-CssClass="btn btn-success" Text="Criar Chamado" ButtonType="Button" />
+                              <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" ButtonType="Button" />
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceOcorrencia" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">

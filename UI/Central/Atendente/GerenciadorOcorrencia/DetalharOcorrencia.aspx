@@ -54,7 +54,7 @@
                             <asp:GridView ID="GridViewChamados" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceChamados" OnRowCommand="GridViewChamados_RowCommand">
                                 <Columns>
                                     <asp:BoundField DataField="Id" HeaderText="Código do Chamado" SortExpression="Id" />
-                                    <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                                    <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" ButtonType="Button" />
                                 </Columns>
                             </asp:GridView>
                             <asp:ObjectDataSource ID="ObjectDataSourceChamados" runat="server" SelectMethod="ListarPorOcorrencia" TypeName="Funcionalidade.Chamado">

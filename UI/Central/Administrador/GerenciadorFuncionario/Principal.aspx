@@ -34,10 +34,12 @@
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
-                              <asp:ButtonField CommandName="Deletar" Text="Deletar"></asp:ButtonField>
+                              <asp:ButtonField CommandName="Deletar" ControlStyle-CssClass="btn btn-danger" Text="Deletar" ButtonType="Button">
+<ControlStyle CssClass="btn btn-danger"></ControlStyle>
+                              </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
-                      <asp:ObjectDataSource ID="ObjectDataSourceAdministradores" runat="server" SelectMethod="ListarUsuarios" TypeName="Funcionalidade.Usuario">
+                      <asp:ObjectDataSource ID="ObjectDataSourceAdministradores"  runat="server" SelectMethod="ListarUsuarios" TypeName="Funcionalidade.Usuario">
                           <SelectParameters>
                               <asp:Parameter DefaultValue="0" Name="_tipo" Type="Int32" />
                           </SelectParameters>
@@ -61,7 +63,9 @@
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
-                              <asp:ButtonField CommandName="Deletar" Text="Deletar"></asp:ButtonField>
+                              <asp:ButtonField CommandName="Deletar" ControlStyle-CssClass="btn btn-danger" Text="Deletar" ButtonType="Button">
+<ControlStyle CssClass="btn btn-danger"></ControlStyle>
+                              </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceAtendentes" runat="server" SelectMethod="ListarUsuarios" TypeName="Funcionalidade.Usuario">
@@ -88,7 +92,9 @@
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
-                              <asp:ButtonField CommandName="Deletar" Text="Deletar"></asp:ButtonField>
+                              <asp:ButtonField CommandName="Deletar" ControlStyle-CssClass="btn btn-danger" Text="Deletar" ButtonType="Button">
+<ControlStyle CssClass="btn btn-danger"></ControlStyle>
+                              </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceSocorristas" runat="server" SelectMethod="ListarUsuarios" TypeName="Funcionalidade.Usuario">

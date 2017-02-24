@@ -13,7 +13,7 @@
     
     <!-- Body da Ocorrência -->
     <div id="ocorr-body">
-    <a class="titulosinput">Tipo de Ocorrência:</a> <asp:TextBox ID="TextBoxTipo" runat="server" /> <asp:DropDownList ID="DropDownListTipo" runat="server">
+    <a class="titulosinput">Tipo de Ocorrência:</a> <asp:TextBox ID="TextBoxTipo" runat="server" /> <!-- <asp:DropDownList ID="DropDownListTipo" runat="server">
             <asp:ListItem>P02</asp:ListItem>
             <asp:ListItem>P03</asp:ListItem>
             <asp:ListItem>P04</asp:ListItem>
@@ -40,7 +40,7 @@
             <asp:ListItem>V05</asp:ListItem>
             <asp:ListItem>R56</asp:ListItem>
             <asp:ListItem>R59</asp:ListItem>
-        </asp:DropDownList><br />
+        </asp:DropDownList>--><br />
     <a class="titulosinput">Nome do Solicitante:</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeSolicitante" runat ="server" /> <br />
     <a class="titulosinput">Nome da(s) Vítima(s):</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeNomeVitima" runat ="server" /> <br />
     <a class="titulosinput">Quantidade de Vítimas:</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxQuantidaVitimas" runat ="server" /> <br />

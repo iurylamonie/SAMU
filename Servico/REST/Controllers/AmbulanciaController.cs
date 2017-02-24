@@ -52,7 +52,7 @@ namespace REST.Controllers
         public IEnumerable<Models.Ambulancia> ListarTodas()
         {
             Models.SAMUDataContext sdc = new Models.SAMUDataContext();
-            var r = from a in sdc.Ambulancias select a;
+            var r = from a in sdc.Ambulancias  select a;
             return r.ToList();
         }
 

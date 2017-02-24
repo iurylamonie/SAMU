@@ -41,8 +41,12 @@
                               <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
                               <asp:BoundField DataField="Situacao" HeaderText="Situação" SortExpression="Situacao" />
-                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
-                              <asp:ButtonField CommandName="Excluir" Text="Excluir" />
+                              <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" ButtonType="Button" >
+<ControlStyle CssClass="btn btn-info"></ControlStyle>
+                              </asp:ButtonField>
+                              <asp:ButtonField CommandName="Excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" ButtonType="Button" >
+<ControlStyle CssClass="btn btn-danger"></ControlStyle>
+                              </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceListarOcorrencia" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Ocorrencia">
@@ -70,8 +74,8 @@
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
-                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
-                              <asp:ButtonField CommandName="Excluir" Text="Excluir" />
+                              <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" />
+                              <asp:ButtonField CommandName="Excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceListarSemChamado" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">
@@ -99,7 +103,7 @@
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
-                              <asp:ButtonField CommandName="Detalhar" Text="Detalhar" />
+                              <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" />
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceFinalizados" runat="server" SelectMethod="ListarFinalizados" TypeName="Funcionalidade.Ocorrencia">
