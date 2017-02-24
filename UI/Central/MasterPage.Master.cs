@@ -11,8 +11,6 @@ namespace Central
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-           
             LabelNomeFuncionario.Text = Session["nome"].ToString();
         }
 

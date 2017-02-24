@@ -12,7 +12,7 @@
     <div class="opcoesprincipal">
             <div id="opcao3" class="opcao">
                 <a href="NovoFuncionario.aspx">
-			    <div id="imgopcao3" class="imgopcao"></div>
+			    <div id="imgopcao5" class="imgopcao"></div>
                 </a>
 			    <a class="tituloopcao" href="#">Adicionar Funcionario</a>            
 		    </div>

@@ -23,14 +23,14 @@
               <div id="opcoes">
                  
                    <a href="GerenciadorHospital/Principal.aspx">
-                      <div id="opcao1" class="opcao">
+                      <div id="opcao4" class="opcao">
 						<div id="imgopcao1" class="imgopcao"></div>
 						  <a class="tituloopcao" href="#">Hospital</a>                   
 					</div>
                   </a>
 					
 					 <a href="GerenciadorFuncionario/Principal.aspx"><div id="opcao2" class="opcao">
-						<div id="imgopcao2" class="imgopcao"></div>						
+						<div id="imgopcao5" class="imgopcao"></div>						
                         <a class="tituloopcao" href="#">Funcionario</a>
 					</div></a>
                   
