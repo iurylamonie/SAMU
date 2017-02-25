@@ -29,7 +29,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAmbulancia" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceAmbulancia" OnRowCommand="GridViewAmbulancia_RowCommand">
+                      <asp:GridView ID="GridViewAmbulancia" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceAmbulancia" OnRowCommand="GridViewAmbulancia_RowCommand" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código do Veiculo" SortExpression="Id" />
                               <asp:BoundField DataField="Localizacao" HeaderText="Localização" SortExpression="Localizacao" />
@@ -54,7 +54,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewHospital" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceHospital" OnRowCommand="GridViewHospital_RowCommand">
+                      <asp:GridView ID="GridViewHospital" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceHospital" OnRowCommand="GridViewHospital_RowCommand" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Nome" HeaderText="Nome do Hospital" SortExpression="Nome" />
@@ -82,7 +82,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrencias" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencias" OnRowCommand="GridViewOcorrencias_RowCommand">
+                      <asp:GridView ID="GridViewOcorrencias" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceOcorrencias" OnRowCommand="GridViewOcorrencias_RowCommand" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />

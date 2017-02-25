@@ -44,7 +44,7 @@
                               <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" ButtonType="Button" >
 <ControlStyle CssClass="btn btn-info"></ControlStyle>
                               </asp:ButtonField>
-                              <asp:ButtonField CommandName="Excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" ButtonType="Button" >
+                              <asp:ButtonField CommandName="Excluir" ControlStyle-CssClass="btn btn-danger" Text="Cancelar" ButtonType="Button" >
 <ControlStyle CssClass="btn btn-danger"></ControlStyle>
                               </asp:ButtonField>
                           </Columns>
@@ -69,13 +69,13 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrenciaSemChamado" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarSemChamado" OnRowCommand="GridViewOcorrenciaSemChamado_RowCommand" >
+                      <asp:GridView ID="GridViewOcorrenciaSemChamado" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceListarSemChamado" OnRowCommand="GridViewOcorrenciaSemChamado_RowCommand" AllowPaging="True" >
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo da Ocorrência" SortExpression="Tipo" />
                               <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" />
-                              <asp:ButtonField CommandName="Excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />
+                              <asp:ButtonField CommandName="Excluir" ControlStyle-CssClass="btn btn-danger" Text="Cancelar" />
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceListarSemChamado" runat="server" SelectMethod="ListarSemChamado" TypeName="Funcionalidade.Ocorrencia">
@@ -98,7 +98,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewOcorrenciasFinalizadas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceFinalizados" OnRowCommand="GridViewOcorrenciasFinalizadas_RowCommand" >
+                      <asp:GridView ID="GridViewOcorrenciasFinalizadas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceFinalizados" OnRowCommand="GridViewOcorrenciasFinalizadas_RowCommand" AllowPaging="True" >
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />

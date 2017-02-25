@@ -40,7 +40,10 @@
                               <asp:BoundField DataField="Hospital_id" HeaderText="Có. Hospital" SortExpression="Hospital_id" />
                               <asp:BoundField DataField="Ocorrencia_id" HeaderText="Có. Ocorrência" SortExpression="Ocorrencia_id" />
                               <asp:BoundField DataField="VeiculoAtendimento_id" HeaderText="Có. Ambulância" SortExpression="VeiculoAtendimento_id" />
-                              <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" ButtonType="Button" />
+                              <asp:ButtonField CommandName="Detalhar" ControlStyle-CssClass="btn btn-info" Text="Detalhar" ButtonType="Button" >
+                              <ControlStyle CssClass="btn btn-info"></ControlStyle>
+                              </asp:ButtonField>
+                              <asp:ButtonField ButtonType="Button" CommandName="Cancel" Text="Cancelar"> <ControlStyle CssClass="btn btn-danger"></ControlStyle> </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
                       <asp:ObjectDataSource ID="ObjectDataSourceChamados" runat="server" SelectMethod="Listar" TypeName="Funcionalidade.Chamado">

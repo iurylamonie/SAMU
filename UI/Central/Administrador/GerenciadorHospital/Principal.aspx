@@ -30,7 +30,7 @@
 
                   <div class="panel-body">
                     
-                      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceHospital" OnRowCommand="GridView1_RowCommand">
+                      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceHospital" OnRowCommand="GridView1_RowCommand" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />

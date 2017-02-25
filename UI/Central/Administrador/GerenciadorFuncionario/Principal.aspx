@@ -30,7 +30,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAdministradores" runat="server" DataSourceID="ObjectDataSourceAdministradores" AutoGenerateColumns="False" OnRowCommand="GridViewAdministradores_RowCommand">
+                      <asp:GridView ID="GridViewAdministradores" runat="server" DataSourceID="ObjectDataSourceAdministradores" AutoGenerateColumns="False" OnRowCommand="GridViewAdministradores_RowCommand" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
@@ -59,7 +59,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAtendentes" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceAtendentes" OnRowCommand="GridViewAtendentes_RowCommand">
+                      <asp:GridView ID="GridViewAtendentes" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceAtendentes" OnRowCommand="GridViewAtendentes_RowCommand" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
@@ -88,7 +88,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewSocorristas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceSocorristas" OnRowCommand="GridViewSocorristas_RowCommand">
+                      <asp:GridView ID="GridViewSocorristas" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceSocorristas" OnRowCommand="GridViewSocorristas_RowCommand" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                               <asp:BoundField DataField="Cpf" HeaderText="CPF" SortExpression="Cpf" />
