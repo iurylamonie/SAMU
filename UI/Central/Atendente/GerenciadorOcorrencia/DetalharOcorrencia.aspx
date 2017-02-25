@@ -23,7 +23,7 @@
                     <div class="panel panel--default">
                         <div class="cabessalhopainel">
                             <ul class="menu cf">
-                                <li><p>Detalhas da Ocorrência</p></li>     
+                                <li><p>Detalhes da Ocorrência</p></li>     
                             </ul>
                         </div>
                         <div class="panel-body">
