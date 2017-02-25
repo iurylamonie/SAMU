@@ -30,7 +30,7 @@
                   </div>
 
                   <div class="panel-body">
-                      <asp:GridView ID="GridViewAmbulancias" runat="server" DataSourceID="ObjectDataSourceAmbulancias" AutoGenerateColumns="False">
+                      <asp:GridView ID="GridViewAmbulancias" runat="server" DataSourceID="ObjectDataSourceAmbulancias" AutoGenerateColumns="False" AllowPaging="True">
                           <Columns>
                               <asp:BoundField DataField="Id" HeaderText="Código" SortExpression="Id" />
                               <asp:BoundField DataField="Placa" HeaderText="Placa" SortExpression="Placa" />
