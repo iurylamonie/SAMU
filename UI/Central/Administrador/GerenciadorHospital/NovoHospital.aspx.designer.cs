@@ -40,15 +40,6 @@ namespace Central.Administrador.GerenciadorHospital {
         protected global::System.Web.UI.WebControls.TextBox TextBoxTipo;
         
         /// <summary>
-        /// ButtonLimpar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonLimpar;
-        
-        /// <summary>
         /// ButtonConfirar control.
         /// </summary>
         /// <remarks>
@@ -56,5 +47,14 @@ namespace Central.Administrador.GerenciadorHospital {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonConfirar;
+        
+        /// <summary>
+        /// ButtonLimpar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonLimpar;
     }
 }

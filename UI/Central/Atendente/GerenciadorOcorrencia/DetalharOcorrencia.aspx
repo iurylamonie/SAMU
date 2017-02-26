@@ -62,7 +62,7 @@
                                     <asp:SessionParameter Name="_ocorrencia_id" SessionField="idOcorrencia" Type="Int32" />
                                 </SelectParameters>
                             </asp:ObjectDataSource>
-                            <asp:Button ID="ButtonNovoChamado" Class="buttonocorr" runat="server" Text="Novo Chamado" OnClick="ButtonNovoChamado_Click" />
+                            <asp:Button ID="ButtonNovoChamado" Class="buttonocorr" runat="server" Text="Novo Chamado" OnClick="ButtonNovoChamado_Click" BackColor="#009933" />
                         </div>
                     </div>                    
                 </div>

@@ -67,7 +67,7 @@
             <asp:ListItem>R03-Distúrbios de comportamento</asp:ListItem> 
             <asp:ListItem>R05-Mal súbito</asp:ListItem>
         </asp:DropDownList><br />
-    <a class="titulosinput">Nome do Solicitante:</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeSolicitante" runat ="server" /> 
+    <a class="titulosinput">Nome do Solicitante:</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeSolicitante" runat ="server" Height="21px" Width="282px" /> 
         <br />
     <a class="titulosinput">Quantidade de Vítimas:</a>
         <asp:DropDownList ID="DropDownList1" runat="server">
@@ -174,17 +174,19 @@
         </asp:DropDownList>
         <br />
         <br />
-    <a class="titulosinput">Nome da(s) Vítima(s):</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeNomeVitima" runat ="server" /> <br />
+    <a class="titulosinput">Nome da(s) Vítima(s):</a> <asp:TextBox CssClass="marginbottom" ID="TextBoxNomeNomeVitima" runat ="server" Height="21px" Width="283px" /> <br />
     <a class="titulosinputask">O que vai informar?</a>
     <asp:RadioButtonList Style="margin:0 auto;" ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" AutoPostBack="True">
         <asp:ListItem Value="CEP">Informar CEP</asp:ListItem>
         <asp:ListItem Value="Nomes">Informar Nomes</asp:ListItem>
     </asp:RadioButtonList> <br />
-    <asp:Label ID="LabelCEP" runat="server" Text="CEP:" Visible="false"/> <asp:TextBox ID="TextBoxCEP" runat="server" Visible="false" AutoPostBack="True" OnTextChanged="TextBoxCEP_TextChanged" CssClass="marginbottom" /> <asp:Label Id="LabelAvisoCep" runat="server" /><br />
-    <asp:Label ID="LabelCidade" runat="server" Text="Cidade:" Visible="false"/> <asp:TextBox ID="TextBoxCidade" runat="server" Visible="false" CssClass="marginbottom" /> <br />
-    <asp:Label ID="LabelBairro" runat="server" Text="Nome da Bairro:" Visible="false" CssClass="marginbottom" /> <asp:TextBox ID="TextBoxBairro" runat="server" Visible="false" CssClass="marginbottom" /> <br />
-    <asp:Label ID="LabelRua" runat="server" Text="Nome da Rua:" Visible="false"/> <asp:TextBox ID="TextBoxRua" runat="server" Visible="false" CssClass="marginbottom" /> <br />
-    <asp:Label ID="LabelNumeroResidencia" runat="server" Text="Número da Residencia:" Visible="false"/> <asp:TextBox ID="TextBoxNumeroResidencia" runat="server" Visible="false" CssClass="marginbottom" /> <br />
+    <asp:Label ID="LabelCEP" runat="server" Text="CEP:" Visible="false"/> <asp:TextBox ID="TextBoxCEP" runat="server" Visible="false" AutoPostBack="True" OnTextChanged="TextBoxCEP_TextChanged" CssClass="marginbottom" Height="21px" Width="147px" /> <asp:Label Id="LabelAvisoCep" runat="server" /><br />
+    <asp:Label ID="LabelCidade" runat="server" Text="Cidade:" Visible="false"/> <asp:TextBox ID="TextBoxCidade" runat="server" Visible="false" CssClass="marginbottom"  Height="21px" Width="168px" /> <br />
+    <asp:Label ID="LabelBairro" runat="server" Text="Nome da Bairro:" Visible="false" CssClass="marginbottom" /> <asp:TextBox ID="TextBoxBairro" runat="server" Visible="false" CssClass="marginbottom" Height="21px" Width="197px" /> <br />
+    <asp:Label ID="LabelRua" runat="server" Text="Nome da Rua:" Visible="false"/> <asp:TextBox ID="TextBoxRua" runat="server" Visible="false" CssClass="marginbottom" Height="21px" Width="314px" /> <br />
+    <asp:Label ID="LabelNumeroResidencia" runat="server" Text="Número da Residencia:" Visible="false"/> <asp:TextBox ID="TextBoxNumeroResidencia" runat="server" Visible="false" CssClass="marginbottom" Height="21px" Width="98px" /> 
+        <br />
+        <br />
     <div class="divtitulosinputask">
         <a class="titulosinputask">Informação Adicional</a>
     </div>
@@ -197,8 +199,8 @@
         <asp:Label ID="titulosinputask" runat="server"  Text="Deseja Realizar um Chamado?" Visible="false"/><br />
     </div>
     <div class="confchamado botoes-ocorrencia">
-    <asp:Button ID="ButtonSim" class="buttonocorr" runat="server" Text="Sim" visible="false" OnClick="ButtonSim_Click"/>
-    <asp:Button ID="ButtonNao" class="buttonocorr" runat="server" Text="Não" visible="false" OnClick="ButtonNao_Click"/>
+    <asp:Button ID="ButtonSim" class="buttonocorr" runat="server" Text="Sim" visible="false" OnClick="ButtonSim_Click" BackColor="#009933" Width="54px"/>
+    <asp:Button ID="ButtonNao" class="buttonocorr" runat="server" Text="Não" visible="false" OnClick="ButtonNao_Click" Width="54px"/>
     </div>
         </div>
 </asp:Content>

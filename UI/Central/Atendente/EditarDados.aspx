@@ -27,11 +27,11 @@
                             <a class="titulosinput">Nome:</a> <asp:Label ID="LabelNome" runat="server" /> <br />
                             <a class="titulosinput">CPF:</a> <asp:Label ID="LabelCPF" runat="server" />      <br />
                             <br />
-                            <asp:Button ID="ButtonAlterarSenha" runat="server" Text="Alterar Senha" OnClick="ButtonAlterarSenha_Click" />  <br />
+                            <asp:Button ID="ButtonAlterarSenha" runat="server" Text="Alterar Senha" OnClick="ButtonAlterarSenha_Click" BackColor="#FF9933" ForeColor="White" />  <br />
 
                             <asp:TextBox CssClass="inputs" Enabled="false" ID="TextBoxNovaSenha" runat ="server" visible="false"/> <br /> 
-                            <asp:Button ID="ButtonCancelar" runat="server" Text="Cancelar" visible ="false" OnClick="ButtonCancelar_Click" />
-                            <asp:Button ID="ButtonConfirmar" runat="server" Text="Confirmar" visible ="false" OnClick="ButtonConfirmar_Click" />                         
+                            <asp:Button ID="ButtonCancelar" runat="server" Text="Cancelar" visible ="false" OnClick="ButtonCancelar_Click" BackColor="#7B7B7B" ForeColor="White" />
+                            <asp:Button ID="ButtonConfirmar" runat="server" Text="Confirmar" visible ="false" OnClick="ButtonConfirmar_Click" BackColor="#009933" ForeColor="White" />                         
                         </div>
                     </div>                    
                 </div>

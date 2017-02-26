@@ -34,7 +34,7 @@
                               <asp:BoundField DataField="Id" HeaderText="Código do Veiculo" SortExpression="Id" />
                               <asp:BoundField DataField="Localizacao" HeaderText="Localização" SortExpression="Localizacao" />
                               <asp:ButtonField CommandName="Adicionar" ControlStyle-CssClass="btn btn-primary" Text="Adicionar" ButtonType="Button" >
-<ControlStyle CssClass="btn btn-primary"></ControlStyle>
+<ControlStyle CssClass="btn btn-primary" BackColor="#009933"></ControlStyle>
                               </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
@@ -60,7 +60,7 @@
                               <asp:BoundField DataField="Nome" HeaderText="Nome do Hospital" SortExpression="Nome" />
                               <asp:BoundField DataField="Tipo" HeaderText="Tipo do Hospital" SortExpression="Tipo" />
                               <asp:ButtonField CommandName="Adicionar" ControlStyle-CssClass="btn btn-primary" Text="Adicionar" ButtonType="Button" >
-<ControlStyle CssClass="btn btn-primary"></ControlStyle>
+<ControlStyle CssClass="btn btn-primary" BackColor="#009933"></ControlStyle>
                               </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
@@ -89,7 +89,7 @@
                               <asp:BoundField DataField="NomeSolicitante" HeaderText="Nome do Solicitante" SortExpression="NomeSolicitante" />
                               <asp:BoundField DataField="NomeVitima" HeaderText="Nome(s) da(s) Vitima(s)" SortExpression="NomeVitima" />
                               <asp:ButtonField CommandName="Adicionar" ControlStyle-CssClass="btn btn-primary" Text="Adicionar" ButtonType="Button" >
-<ControlStyle CssClass="btn btn-primary"></ControlStyle>
+<ControlStyle CssClass="btn btn-primary" BackColor="#009933"></ControlStyle>
                               </asp:ButtonField>
                           </Columns>
                       </asp:GridView>
@@ -122,7 +122,7 @@
                       <a class="titulosinput">Nome do Hospital: </a> <asp:Label ID="LabelHospital" runat="server" /> <br />
                       <br />
                        <asp:Button id="ButtonCancelar" Class="buttonocorr" Text="Cancelar" runat="server"/>
-                       <asp:Button id="ButtonCriar" Class="buttonocorr" runat="server" Text="Criar" OnClick="ButtonCriar_Click" /><br />
+                       <asp:Button id="ButtonCriar" Class="buttonocorr" runat="server" Text="Criar" OnClick="ButtonCriar_Click" BackColor="#009933" Height="23px" Width="63px" /><br />
                   </div>
            
               </div> 

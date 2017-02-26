@@ -11,14 +11,16 @@
             </ol>
     </div>
 
-    <a class="titulosinput">Nome:</a> <asp:TextBox ID="TextBoxNome" runat="server" /> <br />
-    <a class="titulosinput">CPF:</a> <asp:TextBox CssClass="inputs" ID="TextBoxCPF" runat ="server" />  <asp:Label ID="LabelAvisoCPF" runat="server" Visible="false" Text="CPF já cadastrado!"/><br />
+    <a class="titulosinput">Nome:</a> <asp:TextBox ID="TextBoxNome" runat="server" Height="20px" Width="189px" /> <br />
+    <a class="titulosinput">CPF:</a>&nbsp;&nbsp; <asp:TextBox CssClass="inputs" ID="TextBoxCPF" runat ="server" />  <asp:Label ID="LabelAvisoCPF" runat="server" Visible="false" Text="CPF já cadastrado!"/><br />
      <a class="titulosinput">Tipo:</a> 
      <asp:DropDownList ID="DropDownList1" runat="server">
          <asp:ListItem Value="0">Administrador</asp:ListItem>
          <asp:ListItem Value="1">Atendente</asp:ListItem>
          <asp:ListItem Value="2">Socorrista</asp:ListItem>
-     </asp:DropDownList> <br />
+     </asp:DropDownList> 
+         <br />
+         <br />
      <asp:Button id="ButtonLimpar" class="buttonocorr" Text="Limpar" runat="server" OnClick="ButtonLimpar_Click"/>
-     <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click"/><br />
+     <asp:Button id="ButtonConfirar" class="buttonocorr" runat="server" Text="Confirmar" OnClick="ButtonConfirar_Click" BackColor="#009933"/><br />
 </asp:Content>
