@@ -76,10 +76,10 @@ namespace Central.Atendente.GerenciadorOcorrencia
         {
             Entidade.Ocorrencia ocorrencia = new Entidade.Ocorrencia
             {
-                Tipo = TextBoxTipo.Text,
+                Tipo = DropDownListTipo.Text,
                 NomeSolicitante = TextBoxNomeSolicitante.Text,
                 NomeVitima = TextBoxNomeNomeVitima.Text,
-                QuantidadeVitimas = int.Parse(TextBoxQuantidaVitimas.Text),
+                QuantidadeVitimas = int.Parse(DropDownList1.Text),
                 Cep = TextBoxCEP.Text,
                 Endereco = TextBoxCidade.Text + ", " + TextBoxBairro.Text + ", " + TextBoxRua.Text + ", " + TextBoxNumeroResidencia.Text,
                 InformacaoAdicional = TextBoxInfAdicional.Text,
