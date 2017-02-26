@@ -91,6 +91,7 @@
     <Content Include="Administrador\GerenciadorFuncionario\EditarFuncionario.aspx" />
     <Content Include="Administrador\GerenciadorFuncionario\NovoFuncionario.aspx" />
     <Content Include="Administrador\GerenciadorFuncionario\Principal.aspx" />
+    <Content Include="Administrador\GerenciadorHospital\AlterarHospital.aspx" />
     <Content Include="Administrador\GerenciadorHospital\NovoHospital.aspx" />
     <Content Include="Administrador\GerenciadorHospital\Principal.aspx" />
     <Content Include="Administrador\Inicial.aspx" />
@@ -211,6 +212,13 @@
     </Compile>
     <Compile Include="Administrador\GerenciadorFuncionario\Principal.aspx.designer.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorHospital\AlterarHospital.aspx.cs">
+      <DependentUpon>AlterarHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GerenciadorHospital\AlterarHospital.aspx.designer.cs">
+      <DependentUpon>AlterarHospital.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\GerenciadorHospital\NovoHospital.aspx.cs">
       <DependentUpon>NovoHospital.aspx</DependentUpon>

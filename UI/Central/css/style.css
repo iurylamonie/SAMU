@@ -496,7 +496,7 @@ td
     margin: 0 auto;
     width: 768px;
 }
-.newHosp
+.Hosp
 {
     width: 360px;
     height: inherit;
@@ -506,6 +506,7 @@ td
     padding: 15px;
     border-radius: 7px;
 }
+
 .marginbottom
 {
     margin-bottom: 5px;

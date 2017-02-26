@@ -33,7 +33,6 @@ namespace Funcionalidade
             }
             catch (AggregateException)
             {
-
                 List<Entidade.Hospital> hospitais = new List<Entidade.Hospital>();
                 return hospitais;
             }

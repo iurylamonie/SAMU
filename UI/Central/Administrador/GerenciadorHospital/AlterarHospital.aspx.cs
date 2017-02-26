@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Central.Administrador.GerenciadorHospital
 {
-    public partial class NovoHospital : System.Web.UI.Page
+    public partial class AlterarHospital : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,24 +18,25 @@ namespace Central.Administrador.GerenciadorHospital
         {
             Entidade.Hospital hospital = new Entidade.Hospital
             {
+                Id = 
                 Nome = TextBoxNome.Text,
                 Endereco = TextBoxEndereco.Text,
                 Tipo = TextBoxTipo.Text
             };
 
-            Funcionalidade.Hospital.Criar(hospital);
+            Funcionalidade.Hospital.Alterar(hospital);
             Response.Redirect("~/Administrador/GerenciadorHospital/Principal.aspx");
         }
 
         protected void ButtonLimpar_Click(object sender, EventArgs e)
         {
-                foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
                 {
-                    if (ctrl is TextBox)
-                    {
-                        ((TextBox)ctrl).Text = String.Empty;
-                    }
+                    ((TextBox)ctrl).Text = String.Empty;
                 }
+            }
         }
     }
 }

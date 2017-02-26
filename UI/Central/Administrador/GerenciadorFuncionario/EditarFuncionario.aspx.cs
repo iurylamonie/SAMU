@@ -13,5 +13,21 @@ namespace Central.Administrador.GerenciadorFuncionario
         {
 
         }
+
+        protected void ButtonLimpar_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Text = String.Empty;
+                }
+            }
+        }
+
+        protected void ButtonConfirar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
